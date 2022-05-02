@@ -5,6 +5,10 @@ title: Bueler's Math F661 Optimization in Fall 2022 at UAF
 
 Welcome to the homepage of **Math F661 Optimization**, Fall 2022, in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
+## UNDER CONSTRUCTION
+
+Most links lead to stubs or nothing at all!
+
 #### Instructor:  [Ed Bueler](http://bueler.github.io/) ([elbueler@alaska.edu](mailto:elbueler@alaska.edu))
 
 I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
