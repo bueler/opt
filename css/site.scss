@@ -1,0 +1,317 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+$sans-font-stack: Verdana, Arial, Helvetica, sans-serif;
+
+$smallscreen: 600px;
+$full-screen-sidenav-allotment: 190px;
+$mobile-screen-sidenav-allotment: 40px;
+$header-height: 50px;
+
+$thin-space: 5px;
+$med-space: 10px;
+
+// CALC 1 PAGE
+//$color-link-fresh: #4459e2;             // cornflower
+//$color-pageheader-background: #8bb1ef;  // pale-cornflower
+//$color-button-background: #8bb1ef;      // pale-cornflower
+//$color-link-visited: #224d93;           // deep-cornflower
+//$color-background: #ccc;                // light-gray
+
+// MATH 302 and MATH 252 PAGES
+//$color-pageheader-background: #fa7041;
+//$color-button-background: #fa7041;
+//$color-link-fresh: #20B2AA;
+//$color-link-visited: #006b6b;
+//$color-background: #ccc;                // light-gray
+
+// MATH 314 page
+//$color-pageheader-background: #0A9396;  // viridian green
+//$color-button-background: #0A9396;      // ditto
+//$color-link-fresh: #CA6702;             // alloy orange
+//$color-link-visited: #9B2226;           // ruby red
+//$color-background: #ccc;                // light-gray
+
+// color palette from https://coolors.co/browser/latest/1
+// 3 colors from
+// https://coolors.co/palette/072ac8-1e96fc-a2d6f9-fcf300-ffc600
+// ukrainish?
+$color-pageheader-background: #FCF300;  // bright yellow
+$color-button-background: #FCF300;      // ditto
+$color-link-fresh: #1E96FC;             // blue
+$color-link-visited: #072AC8;           // darker blue
+$color-background: #ccc;                // light-gray
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html { background: white;
+  height: 100%;
+}
+
+body {
+  font-family: $sans-font-stack;
+  // Body has a default margin. Override.
+  margin: 0px;
+  height: 100%;
+}
+
+.sidenav {
+  height: 100%;
+  width: $full-screen-sidenav-allotment;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  display: block;
+  background-color: $color-background;
+  box-sizing: border-box;
+  transition: 0.3s;
+
+  .entry {
+   a {
+      padding: 4px 8px 4px 20px;
+      font-size: 120%;
+      text-decoration: none;
+      display: block;
+      color: $color-link-visited;
+    }
+
+    a:hover {
+        background-color: $color-button-background;
+    }
+  }
+
+  .header{
+    height: $header-height + $thin-space;
+    padding-left: $med-space;
+    font-size: 120%;
+    font-weight: bold;
+    line-height: $header-height;
+
+    a {
+      padding: 0;
+      color: black;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: black;
+    }
+  }
+}
+
+.main-body {
+   // Clicks via 'onclick' make the screen flash on Safari mobile without this.
+  -webkit-tap-highlight-color: transparent;
+
+  a {
+    color: $color-link-fresh;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: $color-link-visited;
+  }
+
+  .page-header{
+    height: $header-height;
+    background-color: $color-pageheader-background;
+    font-size: 120%;
+    font-weight: bold;
+    line-height: $header-height;
+    padding-left: $med-space;
+
+    a {
+      padding: 0;
+      text-decoration: none;
+      color: black;
+    }
+
+    a:visited {
+      color: black;
+    }
+  }
+}
+
+.page-content{
+  padding-left: $med-space;
+  padding-bottom: 20px;
+}
+
+.sidenavburger {
+    width: 30px;
+    height: 30px;
+
+    font-size:20px!important;
+    text-align: center;
+    line-height: 30px;
+
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+
+    display: inline;
+
+    border-radius: 5px;
+    background-color: $color-background;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.burger-background {
+    width: $mobile-screen-sidenav-allotment;
+    height: $header-height;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    background-color: $color-pageheader-background;  // match pageheader
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+.announce {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 120%;
+
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+
+  p.smaller {
+    font-size: 80%;
+  }
+}
+
+.speaker{
+  font-size: 110%;
+  margin-bottom: 5px;
+}
+
+.organizer{
+  font-size: 100%;
+  margin-bottom: 5px;
+}
+
+.lodging{
+  font-size: 110%;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.indent {
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 600px){
+  .hide-small{display:none!important}
+  .sidenav { width: 0px; }
+  .sidenav.showing{ width: $full-screen-sidenav-allotment }
+  .main-body {
+    margin-left: $mobile-screen-sidenav-allotment;
+  }
+  .page-header{
+    padding-right: 5px
+  }
+  .page-content{
+    padding-right: 5px
+  }
+}
+
+@media only screen and (min-width: 601px){
+  .hide-large{display:none!important}
+  .sidenav{ width: $full-screen-sidenav-allotment; }
+  .main-body {
+    margin-left: $full-screen-sidenav-allotment;
+  }
+  .page-header{
+    padding-right: 20px
+  }
+  .page-content{
+    padding-right: 20px
+  }
+}
+
+img {
+  white-space: nowrap;
+}
+
+div.x-scroll{
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  white-space: nowrap;
+}
+
+table.asst-table {
+    border: 2px solid black;
+    border-collapse: collapse;
+
+    th, td {
+      white-space:nowrap;
+      word-break:break-all;
+      border-bottom: 1px solid black;
+      padding-top:20px;
+      padding-right:10px;
+      padding-bottom:20px;
+      padding-left:15px;
+      text-align:left;
+    }
+
+}
+
+table.inner {
+    border-collapse: collapse;
+
+    th, td {
+      white-space:nowrap;
+      word-break:break-all;
+      padding-top:0px;
+      padding-right:5px;
+      padding-bottom:5px;
+      padding-left:0px;
+      text-align:left;
+      border: none;
+    }
+
+}
+
+a.button {
+  padding: 12px 12px 12px 12px;
+  color: black;
+  background-color: $color-button-background;
+  font: bold 20px;
+}
+
+a.button:visited {
+  color: black;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="Expires" content="-1">
+   <!--- The following magic viewport words are needed for Safari on mobile
+      to make 96px=1in, really -->
+   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/site.css">
+  </head>
+
+<body>
+
+<div class="burger-background"></div>
+<div class="sidenavburger hide-large" onclick="openNav()"><img src="assets/images/menu.svg" style="height: 20px;" ></div>
+
+<div id="nav" class="sidenav" >
+<nav role="navigation">
+<div class="header"><a href="index.html#top" onclick="closeNav()">{{ site.data.toc.sidenavtitle }}</a></div>
+  {% for item in site.data.toc.docs %}
+  <div class="entry"><a  onclick="closeNav()" {% if item.url %}href="{{ site.baseurl }}/{{ item.url }}"
+    {% else %}href="{{ site.baseurl }}index.html#{{ item.anchor }}"{% endif %} alt="{{ item.title }}">{{ item.title }}</a></div>
+  {% endfor %}
+</nav>
+</div>
+
+<div id="main" class="main-body" onclick="closeNav()">
+<a id="top"></a>
+<div class="page-header hide-small"><a href="index.html">Optimization at UAF</a></div>
+<div class="page-header hide-large"><a href="index.html">MATH F661 Optimization</a></div>
+
+<div class="page-content">
+    {{ content }}
+</div>
+</div>
+</body>
+
+<script type="text/javascript">
+function openNav() {
+    x = document.getElementById("nav");
+    if(x.className="sidenav") {
+      x.className += " showing";
+    }
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    x = document.getElementById("nav").className = "sidenav"
+}
+</script>
+</html>

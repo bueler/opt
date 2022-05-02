@@ -1,0 +1,21 @@
+sidenavtitle: 'MATH F661'
+
+docs:
+
+- title: Syllabus
+  url: assets/general/syllabus.pdf
+
+- title: Schedule
+  url: assets/general/schedule.pdf
+
+- title: Homework
+  url: homework.html
+
+- title: Exams
+  url: exams.html
+
+- title: Worksheets
+  url: worksheets.html
+
+- title: Matlab
+  url: matlab.html
