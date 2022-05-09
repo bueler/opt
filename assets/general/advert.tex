@@ -7,7 +7,7 @@
 \addtolength{\textwidth}{2.0in} %\setlength{\parindent}{0pt}
 
 % macros
-\usepackage{wrapfig,caption}
+\usepackage{wrapfig,caption,palatino}
 \usepackage{amssymb,xspace}
 \usepackage[final]{graphicx}
 \usepackage[colorlinks=true]{hyperref}
@@ -49,38 +49,56 @@
 \begin{document}
 
 \begin{center}
-\LARGE Math 661 Optimization
+\Huge Math 661 Optimization
 \end{center}
 
 \thispagestyle{empty}
 
-Optimization is essential mathematical technology for science, engineering, and finance. This course is a graduate-level introduction to continuous optimization.  We focus on ideas, algorithms, and applications, but also mathematical rigor (proof) when appropriate.
+Mathematical optimization is essential technology for science, engineering, and economics.  This course, a graduate-level introduction to continuous optimization, focusses on ideas, algorithms, and applications.  Mathematical rigor, proof, is used when appropriate.
 
 Course Website: \url{https://bueler.github.io/opt/}
 
-Topics:
-
-    Continuous optimization, both nonlinear and linear.
-    Simplex method for linear programming. ("Linear programming" refers to optimization of a linear function subject to linear constraints.)
-    Iterative methods for unconstrained problems, including Newton and quasi-Newton methods.
-    Line search and trust region methods.
-    Constrained problems and Karush-Kuhn-Tucker conditions.
-    Linear algebra related to the above topics.
-    Convergence theorems for some methods.
-    Practical work with the computer. Examples from applications.
-
-
 \begin{wrapfigure}{r}{0.5\textwidth}
   \centering
-    \includegraphics[width=0.2\textwidth]{../images/GitHub-Mark-32px.png}
+    \includegraphics[width=0.5\textwidth]{../images/banana.png}
+\captionsetup{margin=1.2cm}
+  \caption{Birds}
+\end{wrapfigure}
+
+Topics:
+
+\begin{itemize}
+\item    Continuous optimization, both nonlinear and linear.
+\item     Simplex method for linear programming. ("Linear programming" refers to optimization of a linear function subject to linear constraints.)
+\item     Iterative methods for unconstrained problems, including Newton and quasi-Newton methods.
+\item     Line search and trust region methods.
+\item     Constrained problems and Karush-Kuhn-Tucker conditions.
+\item     Linear algebra related to the above topics.
+\item     Convergence theorems for some methods.
+\item     Practical work with the computer. Examples from applications.
+\end{itemize}
+
+
+\begin{wrapfigure}{l}{0.25\textwidth}
+  \centering
+    \includegraphics[width=0.25\textwidth]{../images/smooth-noisy.png}
 \captionsetup{margin=1.2cm}
   \caption{Birds}
 \end{wrapfigure}
 
 Goals and Outcomes:
 The goal of this applied mathematics course is to be able to understand optimization problems as they arise in applied contexts, select algorithms, and apply optimization software based on understanding of theory and standard examples. Understanding of concepts should suffice for the student to assess claims about optimization software performance. Increased student competence with general scientific computing is also a goal.
+
 Textbook:
 Griva, Nash, and Sofer, Linear and Nonlinear Optimization, 2nd ed., SIAM Press 2009 
 
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \centering
+    \includegraphics[width=0.5\textwidth]{../images/lagrange.png}
+\captionsetup{margin=1.2cm}
+  \caption{Birds}
+\end{wrapfigure}
+
+Prerequisites: 
 \end{document}
 
