@@ -5,13 +5,17 @@ title: Computing in optimization
 
 # Computing in optimization
 
-The programming and computational portions of this course are important, but I am very flexible about how you accomplish them.  You will want to use one of the following languages:
+The programming and computational portions of this course are important, and students will need to work at these parts, but I am very flexible about how you accomplish them.
+
+You will want to use one of the following languages:
 
   * [Matlab](https://matlab.mathworks.com/) or [Octave](https://www.gnu.org/software/octave/index); they are interoperable languages
   * [Python](http://python.org/) with the [numpy](https://numpy.org/) and [matplotlib](http://matplotlib.org/) libraries
   * [Julia](https://julialang.org/)
 
-You can turn in homework and projects using any of these.  However, I will support Matlab/Octave by providing lots of examples, both in-class and as the posted solutions to exercises.
+You can turn in homework and projects using any of these.  For a concrete comparison of Matlab/Octave versus Python, see my short note on [Programming languages compared](https://bueler.github.io/compareMOP.pdf).
+
+Note that I will _support_ Matlab/Octave by providing lots of examples, both in-class and as the posted solutions to exercises.
 
 ## Matlab and Octave
 
