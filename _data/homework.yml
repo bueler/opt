@@ -4,3 +4,5 @@ homework:
 - name: Assignment 1
   due: Wednesday 7 September
   blank: A1.pdf
+  seealsopdf: assets/examples/fiveexamples.pdf
+  #sections: 5, pi, exp(4), 6, 90, 10

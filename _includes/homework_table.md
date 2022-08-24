@@ -15,6 +15,11 @@
  		      <td>sections {{ hw.sections }}</td>
 				</tr>
 		  {% endif %}
+		  {% if hw.seealsopdf %}
+			  <tr>
+          <td>see also this <a href="{{ hw.seealsopdf }}">PDF</a></td>
+				</tr>
+		  {% endif %}
 		</table>
 	</td>
 </tr>
