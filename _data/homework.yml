@@ -1,7 +1,6 @@
 semester: Fall 2022
 home: assets/homework
 homework:
-#- name: HW1
-#  due: 11:59pm on Wed Jan 19
-#  sections: 1.1, 1.2
-#  blank: HW1.pdf
+- name: Assignment 1
+  due: Wednesday 7 September
+  blank: A1.pdf

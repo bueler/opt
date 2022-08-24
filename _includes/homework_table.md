@@ -5,21 +5,15 @@
 	<td>
 		<table class="inner">
 		  <tr>
-        <td>{{ hw.name }}, due {{ hw.due }}</td>
+        <td><a href="{{ data.home }}/{{ hw.blank }}">{{ hw.name }} (PDF)</a></td>
+			</tr>
+		  <tr>
+        <td>due {{ hw.due }}</td>
 			</tr>
 		  {% if hw.sections %}
 			  <tr>
  		      <td>sections {{ hw.sections }}</td>
 				</tr>
-		  {% endif %}
-		</table>
-	</td>
-	<td>
-		<table class="inner">
-		  {% if hw.blank %}
-		  <tr>
-			    <td><a href="{{ data.home }}/{{ hw.blank }}">PDF</a></td>
-			</tr>
 		  {% endif %}
 		</table>
 	</td>
