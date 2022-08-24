@@ -27,6 +27,8 @@ Go to the [Canvas course page](https://canvas.alaska.edu/courses/9948) for Homew
 
 * You will do a [two-part Project](projects.html).  See the [Projects](exams.html) tab for details.
 
+* See the one-page [advertisement](assets/general/advert.pdf) for this course.
+
 ---
 _Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
 
