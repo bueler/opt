@@ -12,7 +12,7 @@
 			</tr>
 		  {% if hw.sections %}
 			  <tr>
- 		      <td>sections {{ hw.sections }}</td>
+ 		      <td>sections to read: {{ hw.sections }}</td>
 				</tr>
 		  {% endif %}
 		  {% if hw.seealsopdf %}

@@ -107,39 +107,37 @@ Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM 
 \item Exercise 2.1
 \item Exercise 2.3
 \item Exercise 2.4
-\item Exercise 2.5
-\item Exercise 2.7
+\item Exercise 2.5 \quad (\emph{Also specify the feasible set for your example.})
 \end{itemize}
 % see notes in my copy of textbook for A2 problems
 
-
 \bigskip
-\noindent \textsc{Do the following problems} which are based on the notes \emph{Example optimization problems} which were handed out in class:
+\noindent \textsc{Do the following problems.}  These problems are based on the \emph{5 example optimization problems} notes, handed-out in class and posted at
+
+\centerline{\href{https://bueler.github.io/opt/assets/examples/fiveexamples.pdf}{\texttt{bueler.github.io/opt/assets/examples/fiveexamples.pdf}}}
+
+\noindent Do \emph{not} use optimization-related black boxes, such as the \Matlab commands \texttt{fzero}, \texttt{fsolve}, \texttt{fminsearch}, or \texttt{fminbnd}, for these, or any other, exercises or problems, unless this is specifically requested.
 
 \medskip
-\prob{Problem P1.}  Solve \texttt{calcone}.
+\prob{Problem P1.}  Solve \texttt{calcone} by implementing a strategy for solving this and similar one-variable optimization problems on bounded, closed intervals.  (\emph{There are many correct answers, i.e.~strategies.  Choose one and implement and understand it.})  Describe the strategy in brief and well-written english.  Your strategy will necessarily be iterative, and will not get the exact answer but only an approximate one.  Discuss any issues about the general performance/success of your strategy, emphasizing how it might fail on problems of this type.\footnote{Note that every numerical procedure can be made to fail by careful input (i.e.~problem) design.  In optimization, professionals know how to break what they build.}  Implement the strategy as a \Matlab or other code, using elementary programming structures such as variables, arrays, \texttt{for} loops, \texttt{if} conditionals, and such.  Argue that your answer to this particular problem is given to at least 6-digit accuracy, and, along the way, visualize the function $f(x)$.
 
-Specifically, describe, in brief and well-written english, a strategy (algorithm) for solving this and similar one-variable optimization problems on bounded, closed intervals.  Your strategy will necessarily be iterative, and it will not get the exact answer, but otherwise you can solve any way you want.  Discuss any issues about the general performance/success of your strategy, emphasizing how it might fail on other problems of this type.  (Note that every numerical procedure can be made to fail by careful input (i.e.~problem) design.  Professionals know how to break what they build.)
-
-Use \Matlab\footnote{You may use other languages such as \Python or \Julia, but I will only provide examples and solutions in \Matlab/\Octave.} to visualize the function.  However, your strategy should \emph{not} be based on human interaction with a figure window.  (Why?  Because higher-dimensional problems are un-visualizable by humans.  Programs must run autonomously to be useful.)
-
-Implement your strategy as a \Matlab\footnote{Ditto.} code using elementary programming structures such as variables, arrays, \texttt{for} loops, \texttt{if} conditionals, and such.  Do \emph{not} use black boxes, such as the \Matlab commands \texttt{fzero}, \texttt{fsolve}, \texttt{fminsearch}, or \texttt{fminbnd}, for this or any other exercises.
-
-Demonstrate at least 6-digit accuracy for the solution to this particular problem.
+Note that your solution strategy for \texttt{calcone} should \emph{not} be based on human interaction with a figure window, e.g.~repeated zooming into a figure.  This is because higher-dimensional problems are un-visualizable by humans.  Programs must run autonomously to be useful.
 
 
 \prob{Problem P2.}  Solve \texttt{fit}.
 
 Follow essentially the same rules as above: Describe a strategy (algorithm) for solving this and similar problems.  Discuss any issues about the general performance/success of your strategy.  Implement your strategy as a \Matlab code using elementary programming.  Demonstrate 6 digit accuracy.  Plot the solution curve on the same graph as the data.
  
-Please \emph{avoid} copying formulas from books or online.  \emph{Avoid} recipes you do not understand.  Though problems like \texttt{fit} are standard in the statistics and linear algebra courses, I want you to start from scratch and understand what you are doing.
+Please try to \emph{avoid} copying formulas from books or online.  \emph{Avoid} recipes you do not understand.  Though problems like \texttt{fit} are standard in the statistics and linear algebra courses, I want you to start from scratch and understand what you are doing.
 
 
 \prob{Problem P3.}  Solve \texttt{salmon}.
 
-In fact this problem is embarassingly simple to solve, so start by writing a few clear sentences justifying the solution.  Then visualize, in 3D and probably with pencil and paper, the set of feasible solutions; mark and label the solution as well.  Also use a straightforward substitution to eliminate the equality constraint, and then re-visualize the feasible set and solution in 2D.
+In fact this problem is embarassingly simple to solve, so start by writing a few clear sentences stating and justifying the solution.  Then visualize, in 3D and probably with pencil and paper, the set of feasible solutions; mark and label the solution on this plot.
 
-Is this problem discrete?  Can you reinterpret it as continuous?  Comment.
+Also use a straightforward substitution to eliminate the equality constraint, and then re-visualize the feasible set and solution in 2D.
+
+Is this problem discrete?  Is it fair to interpret it as continuous?  Comment.
 
 
 \prob{Problem P4.}  Complete the following classification table for the example problems:
@@ -159,6 +157,6 @@ name & discrete & constrained & linear & quadratic & dimension \\
 \bigskip \bigskip
 \noindent \emph{Directions.}  Except for the last column, use a check ( \checkmark ) if the property is true, leave blank if it is not, or write ``NA'' for not applicable.  In the last column give an integer for the dimension, or $\infty$, or ``NA''.
 
-Regarding the ``linear'' and ``quadratic'' columns, first check the form of the objective function; is it linear or quadratic or neither?  Check linear or quadratic if both the objective function and the constraints have that property.
+Regarding the ``linear'' and ``quadratic'' columns, first check the form of the objective function; is it linear or quadratic or neither?  Next note that an optimization problem is called linear or quadratic if \emph{both} the objective function and the constraints have that property.  Finally, note that the class of quadratic functions has linear functions as a subset.
 
 \end{document}
