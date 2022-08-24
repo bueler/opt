@@ -7,8 +7,13 @@
 		  <tr>
 			    <td>{{ exam.name }} &nbsp; &nbsp; {{ exam.date }}</td>
 			</tr>
+		  {% if exam.info %}
+		  	<tr>
+			      <td>{{ exam.info }}</td>
+			  </tr>
+			{% endif %}
 			<tr>
-			    <td>sections: {{ exam.sections }}</td>
+			    <td>sections to study: {{ exam.sections }}</td>
 			</tr>
 		  {% if exam.cont %}
 			<tr>

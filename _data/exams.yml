@@ -1,9 +1,15 @@
 semester: Spring 2022
 home: assets/exams
 exams:
-#- name: Midterm Exam 1
-#  date: Monday 2/14
-#  sections: 1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 2.4,
-#  cont: 2.5, 2.6
-#  blank: mid1.pdf
-#  solutions: mid1-solns.pdf
+- name: Midterm Exam
+  date: Friday 28 October
+  info: in class
+  sections: to be determined
+  #blank: mid.pdf
+  #solutions: mid-solns.pdf
+- name: Final Exam
+  date: Friday 16 December
+  info: take-home, due 5pm
+  sections: to be determined
+  #blank: mid.pdf
+  #solutions: mid-solns.pdf
