@@ -1,0 +1,82 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.8in}
+\addtolength{\evensidemargin}{-.8in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\textheight}{1.0in}
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}
+        \tiny\normalsize}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\usepackage{amssymb,verbatim,alltt,xspace,hyperref}
+\newcommand{\mtt}{\texttt}
+
+\usepackage{fancyvrb}
+\newcommand{\mfile}[1]{
+\begin{quote}
+\bigskip
+\VerbatimInput[frame=single,label=\fbox{\normalsize \textsl{\,#1\,}},fontfamily=courier,fontsize=\small]{#1}
+\end{quote}
+}
+
+\usepackage[final]{graphicx}
+\newcommand{\mfigure}[1]{\includegraphics[height=3in,
+keepaspectratio=true]{#1.eps}}
+
+% macros
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\Div}{\nabla\cdot}
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+\newcommand{\tb}{\textsc{Morton \& Mayers}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\pexer}[2]{\bigskip\noindent\textbf{#1.} Exercise #2 in \tb.}
+\newcommand{\prob}[1]{\medskip\noindent\textbf{#1.} }
+\newcommand{\apart}[1]{\quad \textbf{(#1)} }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)} }
+\newcommand{\note}[1]{[\scriptsize #1 \normalsize]}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+\newcommand{\MOP}{\textsc{MOP}\xspace}
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization \hfill  Bueler; \today
+\normalsize\bigskip
+
+\thispagestyle{empty}
+\noindent\large\centerline{\textbf{Project Part I (Proposal) Evaluation}} \normalsize
+
+\medskip
+\noindent\centerline{\emph{Part I total is 25 points.}}
+
+\bigskip\bigskip
+
+\noindent (\emph{5 pts}) \textbf{Problem choice is reasonable.}  
+\vspace{0.6in}
+
+\noindent (\emph{5 pts}) \textbf{Context and motivation (scientific/engineering/algorithmic).}
+\vspace{0.6in}
+
+\noindent (\emph{5 pts}) \textbf{Several quality references.}
+\vspace{0.6in}
+
+\noindent (\emph{10 pts}) \textbf{Proposed computation and analysis are sketched appropriately.}
+\vspace{0.8in}
+
+
+\noindent \textbf{COMMENTS:}
+\vfill
+
+\end{document}
