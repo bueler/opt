@@ -1,9 +1,9 @@
 ---
 layout: course-page
-title: Projects
+title: Project
 ---
 
-## Projects
+## Project
 
 Don't worry about your project until after the Midterm Exam on Friday, 28 October!  At that point I will address it in class and hand out the "About your project" document below.
 
