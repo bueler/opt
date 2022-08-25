@@ -3,10 +3,10 @@ sidenavtitle: 'MATH F661'
 docs:
 
 - title: Syllabus
-  url: assets/general/syllabus.pdf
+  url: assets/general/syllabus.pdf  # rebuild by "make syllabus.pdf" in assets/general/
 
 - title: Schedule
-  url: assets/general/schedule.pdf
+  url: assets/general/schedule.pdf  # rebuild by "make schedule.pdf" in assets/general/
 
 - title: Homework
   url: homework.html
