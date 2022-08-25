@@ -5,25 +5,25 @@ title: Bueler's Math F661 Optimization in Fall 2022 at UAF
 
 Welcome to the homepage of **Math F661 Optimization**, Fall 2022, in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
-#### Instructor:  [Ed Bueler](http://bueler.github.io/) ([elbueler@alaska.edu](mailto:elbueler@alaska.edu))
+#### Instructor:  [Ed Bueler](http://bueler.github.io/)
 
-I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
+Email me at [elbueler@alaska.edu](mailto:elbueler@alaska.edu).  I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
 ### [Canvas course page](https://canvas.alaska.edu/courses/9948)
 
-Go to the [Canvas course page](https://canvas.alaska.edu/courses/9948) for Homework and Exam solutions, and seeing your grades.
+Log in to [canvas.alaska.edu/courses/9948](https://canvas.alaska.edu/courses/9948) for Homework and Exam solutions, and to see your grades.
 
 ### Getting Started
 
 * Read the [Syllabus](assets/general/syllabus.pdf).
 
-* See the [Schedule](assets/general/schedule.pdf).  Check it often for due dates, and to see which topics come next!
+* See the [Schedule](assets/general/schedule.pdf).  Check it often for due dates, and for which topics come next!
 
-* Check out the weekly [Homework](homework.html) assignments.  You will do programming in Matlab/Octave or another scientific computing language on every assignment and on the project.  See [_Programming languages compared_](https://bueler.github.io/compareMOP.pdf) for recommended languages.
+* Check out the weekly [homework Assignments](homework.html).  These require some programming in Matlab/Octave or another scientific computing language on every assignment and on the project.  See [_Programming languages compared_](https://bueler.github.io/compareMOP.pdf) for recommended languages.
+
+* You will do a [two-part project](projects.html) on a topic of your choice.  See the [Projects](projects.html) tab for details.
 
 * There are [two Exams](exams.html), a Midterm and a Final.  Both are in class, and the Final will happen at the scheduled time (Friday, December 16, 3:15pm--5:15pm).  See the [Exams](exams.html) tab for the sections covered, and old exams for review.
-
-* You will do a [two-part Project](projects.html).  See the [Projects](exams.html) tab for details.
 
 [<img src="assets/images/banana.png" height="200">](https://en.wikipedia.org/wiki/Mathematical_optimization "mathematical optimization") &nbsp; &nbsp; [<img src="assets/images/lagrange.png" height="200">](https://en.wikipedia.org/wiki/Lagrange_multiplier "lagrange multipliers visualization") &nbsp; &nbsp; [<img src="assets/images/cover.jpg" height="250">](https://my.siam.org/Store/Product/viewproduct/?ProductId=1008 "the textbook")
 
