@@ -71,7 +71,9 @@
 \hfil}}
 
 \heading{Description and Topics}
-Optimization is essential mathematical technology for science, engineering, statistics, machine learning, and finance.  This graduate-level introduction focusses on ideas, algorithms, and applications, but it uses mathematical rigor (theorems and proofs) when appropriate.
+Optimization is essential mathematical technology for science, engineering, statistics, machine learning, and finance.  This graduate-level introduction focusses on ideas, algorithms, and applications, but it uses mathematical rigor (theorems and proofs) when appropriate.  The course will combine lectures, in-class activities, homework assignments which include both writing and programming, a project reflecting the student's particular interests, and in-class exams.
+
+We cover these topics:
 \begin{itemize}[nosep]
 \item Continuous optimization, both nonlinear and linear.
 \item Iterative methods for unconstrained problems:
@@ -80,13 +82,13 @@ Optimization is essential mathematical technology for science, engineering, stat
     \item Newton and quasi-Newton methods
     \item conjugate gradients
     \end{itemize}
-\item Iterative methods for constrained problems:
+\item Methods for constrained problems:
     \begin{itemize}[nosep]
     \item simplex method for linear programming
     \item interior point methods
     \end{itemize}
 \item Line search and trust region methods.
-\item Constrained problems and Karush-Kuhn-Tucker conditions.
+\item Constrained problems and the Karush-Kuhn-Tucker conditions.
 \item Linear algebra related to the above topics.
 \item Convergence theorems for some methods.
 \item Examples from applications.
@@ -99,34 +101,35 @@ The goal of this applied mathematics course is to be able to understand optimiza
 
 
 \heading{Schedule and Online Materials}
-The \href{https://bueler.github.io/opt/}{public course website} includes a \href{https://bueler.github.io/opt/assets/general/schedule.pdf}{schedule} listing the textbook sections to be covered during each lecture, the dates each homework Assignment is due, the dates for the Midterm and Final Exam, and so on.  You should consult this schedule frequently; it is subject to change and will be kept up to date.
+The \href{https://bueler.github.io/opt/}{public course website} includes a \href{https://bueler.github.io/opt/assets/general/schedule.pdf}{schedule} listing the textbook sections to be covered during each lecture, the due date of each homework Assignment, and the dates for the Midterm and Final Exams.  Please consult this schedule frequently; it is subject to change and will be kept up to date.
 
-Most course materials (syllabus, homework Assignments, etc.) will be posted on the \href{https://bueler.github.io/opt/}{public course webpage}.  Some course materials (grades, solutions, etc.) will be available on the \href{https://canvas.alaska.edu/courses/9948}{Canvas site}.  Each website links to the other.
+Most course materials (syllabus, schedule, homework Assignments, code examples, project description, etc.) will be posted on the \href{https://bueler.github.io/opt/}{public course webpage}.  Some course materials (student grades, homework and exam solutions, etc.) will go on the \href{https://canvas.alaska.edu/courses/9948}{Canvas site}.
 
 
 \heading{Office Hours and Communication}
-My Office Hours are online at \href{http://bueler.github.io/OffHrs.htm}{\texttt{bueler.github.io/OffHrs.htm}}.  Students can also schedule meetings with me outside of regular office hours.  I will use Canvas to send announcements.  If I need to contact you outside of class times, I'll try to email via Canvas.  Please set the email address in Canvas to one that you check regularly!
+My Office Hours are online at \href{http://bueler.github.io/OffHrs.htm}{\texttt{bueler.github.io/OffHrs.htm}}.  Students can also schedule meetings with me outside of regular office hours.  I will use Canvas to send announcements.  If I need to contact you outside of class times, I'll try to email via Canvas, so please set your email address in Canvas to one that you check regularly!
 
 
 \heading{Evaluation and Grades}
-Grades are determined as follows.  (Each component of the grade is discussed below.)
+Grades are determined as follows.
 
-\noindent \emph{CORRECTED FINAL DATE!!}
-
-\begin{multicols}{2}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-Homework & 30\% \\
+Homework & nearly weekly & 40\% \\
 \hline
-Midterm Exam 1: Mon 2/14, in-class & 20\% \\
+Project Part I & due Friday 11 November & 5\%  \\
 \hline
-Midterm Exam 2: Mon 3/28, in-class & 20\%  \\
+Project Part II & due Monday 12 December & 15\%  \\
 \hline
-Final Exam: \emph{Friday 4/29} 8--10am & 30\% \\
+Midterm Exam & in-class Friday 28 October & 20\%  \\
 \hline
-total & 100\% \, \\
+Final Exam & \, in-class \emph{Friday 16 December}, 3:15--5:15pm \, & 25\% \\
+\hline
+total & & 100\% \, \\
 \hline
 \end{tabular}
+
+Scores for specific assignments/projects/exams may be adjusted based on the actual difficulty of the work and/or on average class performance.  Any such adjustments will be applied to all students equally.  The scores of the various parts will be summed and the final course grade will be assigned as follows.
 
 \begin{tabular}{llll}
 A  & 93--100\%& C  & 68--75\%  \\
@@ -136,24 +139,28 @@ B  & 82--86\% & D  & 60--65\%  \\
 B- & 79--81\% & D- & 57--59\%  \\
 C+ & 76--78\% & F  & $\le$ 56\%
 \end{tabular}
-\end{multicols}
 
-\vspace{-3mm}
-These ranges are a guarantee and a lower bound. I reserve the right to increase your grade above these ranges based on the actual difficulty of the work and/or on average class performance. Any such increases will preserve grade ordering by weighted total score. 
+These ranges are a guarantee and a lower bound.  I reserve the right to increase your grade above these ranges based on the actual difficulty of the work and/or on average class performance.  Any such increases will preserve grade ordering by weighted total score.
 
 
 \heading{Homework}
-The weekly Homework assignments will include a selection of problems from the textbook, plus problems I have written (the ``\textbf{P}'' problems).  Each Homework assignment should be turned in as a PDF via Gradescope, accessed via Canvas.  (Help with scanning homework can be found on the \href{https://uaf-math251.github.io/techHelp.html}{Calculus II Tech Help page}.)  Assignments are due by 11:59pm on the dates stated on the \href{https://bueler.github.io/math314/assets/general/schedule.pdf}{Schedule}.  The list of Homework problems is at the \href{https://bueler.github.io/math314/homework.html}{Homework} webpage.
+The homework consists of by-hand computations, design and analysis of numerical algorithms, computer implementation of those algorithms, by-hand and computer visualization of functions and sets, rigorously-justified examples and counter-examples, and some proofs.
 
-Complete worked solutions to all textbook Homework problems are already available online at the author's website.  (See the \href{https://bueler.github.io/math314/resources.html}{Resources} page.)  Thus this part of the Homework will be graded for \emph{completion}.  The ``\textbf{P}'' problems will be graded for \emph{correctness}.
+Examples in lecture and exercises on the homework will use Matlab/Octave, both as a supercalculator and as a programming language, and help will be given to learn Matlab/Octave.  While Matlab/Octave is well-suited to implementing optimization algorithms, other languages are accepted for all student work.  However, only Matlab/Octave is fully instructor-supported, so, for example, codes on homework solutions will only be in Matlab.  See the separate document \textsl{Programming languages compared} (\href{https://bueler.github.io/compareMOP.pdf}{\texttt{bueler.github.io/compareMOP.pdf}}) for other recommended scientific computing languages.
 
-Problems very similar to the Homework problems will appear on the in-class Exams.
+Homework assignments and their due dates will regularly be posted at the \href{https://bueler.github.io/opt/}{\texttt{public website}}.  The site also has a daily schedule of topics.  The schedule will be updated on an ongoing basis to reflect which topics were actually covered each day, so it is subject to change.  The public website will also have links to a growing list of short Matlab codes; this is a good resource for coding examples.
 
+Late Assignments will not be accepted.  If you have unavoidable circumstances which do not allow you to turn in an Assignment on time then please contact me (\href{mailto:elbueler@alaska.edu}{\texttt{elbueler\@@alaska.edu}}) in advance.
+
+Problems very similar to, or shortened versions of, Homework problems will appear on the in-class Exams.
+
+\heading{Project}
+The project is in two parts, with the first part due midsemester and the second due just before final exams (dates above).  The topic will mostly be up to you, but I will make suggestions, and I reserve veto power on choice of topics.  The project must include both theory and practical computation.  A detailed handout will appear on Monday 31 October, outlining how you might choose a project, and what are the expectations.
 
 \heading{Exams}
-There are two Midterm Exams this semester, to be held on the dates shown in the schedule.  Midterms are given during the class time.  Make-up Midterms will be given only for documented extenuating circumstances, at my discretion.
+There will be one in-class Midterm Exam covering mostly basic concepts and definitions. The in-class Final Exam will have similar problems from the whole semester, but weighted toward the latter half of the course.
 
-The cumulative Final Exam will be held at the day/time listed in the online schedule: \textbf{8:00am--10:00am Wednesday April 27}.
+A make-up Midterm will be given only for documented extenuating circumstances, at my discretion.  Department policy (below) does not allow me to move the time of the Final Exam.
 
 
 \heading{Rules and Policies}
@@ -177,13 +184,7 @@ A withdrawal after the deadline from a DMS course will
   the instructor, Department Chair and the Dean.
 
 \subheading{No Early Final Examinations}
-Final examinations for DMS
-  courses shall not be held earlier than the date and time published
-  in the official term schedule. Normally, a student will not be
-  allowed to take a final exam early. Exceptions can be made by
-  individual instructors, but should only be allowed in exceptional
-  circumstances and in a manner which doesn't endanger the security of
-  the exam.
+Final examinations for DMS courses shall not be held earlier than the date and time published in the official term schedule.  Normally, a student will not be allowed to take a final exam early.  Exceptions can be made by individual instructors, but should only be allowed in exceptional circumstances and in a manner which doesn't endanger the security of the exam.
 
 \subheading{Academic Dishonesty}
 Academic dishonesty, including cheating and plagiarism, will not be tolerated.  It is a violation of the Student Code of Conduct and will be punished according to UAF procedures.
