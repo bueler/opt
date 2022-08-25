@@ -27,9 +27,9 @@ Go to the [Canvas course page](https://canvas.alaska.edu/courses/9948) for Homew
 
 * You will do a [two-part Project](projects.html).  See the [Projects](exams.html) tab for details.
 
-* See the one-page [advertisement](assets/general/advert.pdf) for this course.
-
 [<img src="assets/images/banana.png" height="200">](https://en.wikipedia.org/wiki/Mathematical_optimization "mathematical optimization") &nbsp; &nbsp; [<img src="assets/images/lagrange.png" height="200">](https://en.wikipedia.org/wiki/Lagrange_multiplier "lagrange multipliers visualization") &nbsp; &nbsp; [<img src="assets/images/cover.jpg" height="250">](https://my.siam.org/Store/Product/viewproduct/?ProductId=1008 "the textbook")
+
+* See the one-page [advertisement](assets/general/advert.pdf) for this course.
 
 ---
 _Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
