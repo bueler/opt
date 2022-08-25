@@ -3,13 +3,13 @@ home: assets/exams
 exams:
 - name: Midterm Exam
   date: Friday 28 October
-  info: in class
+  info: in class Chapman 206
   sections: to be determined
   #blank: mid.pdf
   #solutions: mid-solns.pdf
 - name: Final Exam
   date: Friday 16 December
-  info: take-home, due 5pm
+  info: in class 3:15pm--5:15pm Chapman 206
   sections: to be determined
-  #blank: mid.pdf
-  #solutions: mid-solns.pdf
+  #blank: final.pdf
+  #solutions: final-solns.pdf
