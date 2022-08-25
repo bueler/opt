@@ -21,7 +21,7 @@ Log in to [canvas.alaska.edu/courses/9948](https://canvas.alaska.edu/courses/994
 
 * Check out the weekly [homework Assignments](homework.html).  These require some programming in Matlab/Octave or another scientific computing language on every assignment and on the project.  See [_Programming languages compared_](https://bueler.github.io/compareMOP.pdf) for recommended languages.
 
-* You will do a [two-part project](projects.html) on a topic of your choice.  See the [Project](projects.html) tab for details.
+* You will do a [two-part project](project.html) on a topic of your choice.  See the [Project](project.html) tab for details.
 
 * There are [two Exams](exams.html), a Midterm and a Final.  Both are in class, and the Final will happen at the scheduled time (Friday, December 16, 3:15pm--5:15pm).  See the [Exams](exams.html) tab for the sections covered, and old exams for review.
 
