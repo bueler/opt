@@ -17,7 +17,7 @@
 		  {% endif %}
 		  {% if hw.seealsopdf %}
 			  <tr>
-          <td>see also this <a href="{{ hw.seealsopdf }}">PDF</a></td>
+          <td>see also: <a href="{{ hw.seealsopdf }}">{{ hw.seealsoname }} (PDF)</a></td>
 				</tr>
 		  {% endif %}
 		</table>
