@@ -13,7 +13,7 @@ You will want to use one of the following languages:
   * [Python](http://python.org/) with the [numpy](https://numpy.org/) and [matplotlib](http://matplotlib.org/) libraries
   * [Julia](https://julialang.org/)
 
-You can turn in homework and projects using any of these.  For a concrete comparison of Matlab/Octave versus Python, see my short note on [Programming languages compared](https://bueler.github.io/compareMOP.pdf).
+You can turn in homework and projects using any of these.  For a concrete comparison of Matlab/Octave versus Python, see my short note on [_Programming languages compared_](https://bueler.github.io/compareMOP.pdf).
 
 Note that I will _support_ Matlab/Octave by providing lots of examples, both in-class and as the posted solutions to exercises.  I will not support Python and Julia in this manner.
 
