@@ -5,7 +5,7 @@ title: Exams
 
 ## Exams
 
-The table below gives the date and coverage for the two Exams; also see the [Schedule](assets/general/schedule.pdf).
+The table below gives the date and coverage for the two Exams; also see the [Schedule](assets/general/F22/schedule.pdf).
 
 {% include exam_table.md  data=site.data.exams %}
 
