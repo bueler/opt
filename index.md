@@ -15,9 +15,9 @@ Log in to [canvas.alaska.edu/courses/9948](https://canvas.alaska.edu/courses/994
 
 ### Getting Started
 
-* Read the [Syllabus (PDF)](assets/general/syllabus.pdf).
+* Read the [Syllabus (PDF)](assets/general/F22/syllabus.pdf).
 
-* See the [Schedule (PDF)](assets/general/schedule.pdf).  Check it often for due dates, and for which topics come next!
+* See the [Schedule (PDF)](assets/general/F22/schedule.pdf).  Check it often for due dates, and for which topics come next!
 
 * Check out the weekly [homework Assignments](homework.html).
 
@@ -29,7 +29,7 @@ Log in to [canvas.alaska.edu/courses/9948](https://canvas.alaska.edu/courses/994
 
 [<img src="assets/images/banana.png" height="200">](https://en.wikipedia.org/wiki/Mathematical_optimization "mathematical optimization") &nbsp; &nbsp; [<img src="assets/images/lagrange.png" height="200">](https://en.wikipedia.org/wiki/Lagrange_multiplier "lagrange multipliers visualization") &nbsp; &nbsp; [<img src="assets/images/cover.jpg" height="250">](https://my.siam.org/Store/Product/viewproduct/?ProductId=1008 "the textbook")
 
-* See the one-page [advertisement (PDF)](assets/general/advert.pdf) for this course.
+* See the one-page [advertisement (PDF)](assets/general/F22/advert.pdf) for this course.
 
 ---
 _Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
