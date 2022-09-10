@@ -11,14 +11,17 @@ docs:
 - title: Homework
   url: homework.html
 
-- title: Project
-  url: project.html
-
 - title: Exams
   url: exams.html
 
+- title: Project
+  url: project.html
+
 - title: Worksheets
   url: worksheets.html
+
+- title: Codes
+  url: codes.html
 
 - title: Computing
   url: computing.html
