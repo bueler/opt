@@ -1,11 +1,11 @@
 ---
 layout: course-page
-title: Matlab Codes from Solutions
+title: Matlab/Octave Codes from Solutions
 ---
 
-# Matlab Codes from Solutions
+# Matlab/Octave Codes from Solutions
 
-I will post Matlab/Octave codes from Assignment solutions here, in chronological order.
+Assignment #1:
 
   * [calcone_brute.m](assets/codes/calcone_brute.m)
   * [calcone_newton.m](assets/codes/calcone_newton.m)
