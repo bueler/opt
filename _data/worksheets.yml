@@ -4,7 +4,7 @@ worksheets:
 - name: Fri 9 September
   description: worksheet on convexity proofs
   blank: convexity.pdf
-  #solutions: convexity-solns.pdf
+  solutions: convexity-solns.pdf
 - name: (for Chapter 5)
   description: template for symplex method
   blank: simplextemplate.pdf
