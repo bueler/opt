@@ -9,6 +9,6 @@ Our nearly-weekly homework Assignments each have their own PDF (links below).  A
 
 Please turn in each Assignment on paper, stapled in the upper-left corner, and with your name on the upper-right corner.  Also, please clearly indicate "Assignment X" as the title.
 
-After they are due, complete solutions will be posted at the **Modules tab** of the [Canvas course page](https://canvas.alaska.edu/courses/9948).
+After each Assignment is due, complete solutions will be posted at the **Modules tab** of the [Canvas course page](https://canvas.alaska.edu/courses/9948).
 
 {% include homework_table.md  data=site.data.homework %}
