@@ -1,0 +1,195 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.6in} 
+\addtolength{\evensidemargin}{-.6in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\textheight}{.6in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim,fancyvrb}
+
+\usepackage{palatino}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\mtt}{\texttt}
+\usepackage{alltt,xspace}
+\newcommand{\mfile}[1]
+{\medskip\begin{quote}\scriptsize \begin{alltt}\input{#1.m}\end{alltt} \normalsize\end{quote}\medskip}
+
+\usepackage[final]{graphicx}
+\newcommand{\mfigure}[1]{\includegraphics[height=2.5in,
+width=3.5in]{#1.eps}}
+\newcommand{\regfigure}[2]{\includegraphics[height=#2in,
+keepaspectratio=true]{#1.eps}}
+\newcommand{\widefigure}[3]{\includegraphics[height=#2in,
+width=#3in]{#1.eps}}
+
+\usepackage{amssymb}
+
+\usepackage[pdftex, colorlinks=true, plainpages=false, linkcolor=black, citecolor=red, urlcolor=red]{hyperref}
+
+% macros
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+%\renewcommand{\det}{\operatorname{det}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+
+\newcommand{\Julia}{\textsc{Julia}\xspace}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\Python}{\textsc{Python}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\chapexers}[2]{\prob{Chapter #1, pages #2, Exercises:}}
+\newcommand{\exer}[2]{\prob{Exercise #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=ellipse,draw,inner sep=2pt] (char) {#1};}}
+
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 19 September, 2022
+\normalsize
+
+\medskip\bigskip
+
+\Large\centerline{\textbf{Assignment \#3}}
+\large
+\bigskip
+
+\centerline{\textbf{Due Wednesday, 28 September 2022, at the start of class}}
+\bigskip
+\normalsize
+
+\thispagestyle{empty}
+
+\bigskip
+\noindent Make sure you have a copy of the textbook:
+
+\begin{quote}
+Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.
+\end{quote}
+
+\noindent Please read sections 2.4, 2.6, and 3.1, plus Appendices B.4 through B.8.  We will get back to sections 2.5 (``rates of convergence'') and 2.7 (``Newton's method for nonlinear equations'') soon enough.
+
+\bigskip
+\noindent \textsc{Do the following exercise} from section 2.4, page 58:
+
+\begin{itemize}
+\item Exercise 4.3
+\end{itemize}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 2.6, page 66:
+
+\begin{itemize}
+\item Exercise 6.5
+\item Exercise 6.6
+\end{itemize}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 3.1, page 82:
+
+\begin{itemize}
+\item Exercise 1.1
+\item Exercise 1.3
+\end{itemize}
+
+\prob{Problem P8.}  \emph{This exercise uses a simple, \textbf{\emph{and totally inadequate}}, algorithm to illustrate ``General Optimization Algorithm II'' on page 55.  We will do much better soon, but the reason I am asking this weird question is that some of the difficulties seen here will remain for all time; optimization is not easy and the user needs to know some properties of their problem.  Note this exercise asks you to analyze the deficiencies of this particular algorithm, not propose a better one!\footnote{I would, in fact, expect that you can propose a better one.}}
+
+Consider one-dimensional unconstrained optimization problems
+    $$\min_{x\in \RR} f(x)$$
+for objective functions $f$ which have one continuous derivative $f'$.  I propose the following algorithm:
+
+\medskip
+\fbox{\parbox{\textwidth}{\begin{quote}
+\textbf{Algorithm P8A.}  Assume functions $f(x)$ and $f'(x)$ are supplied.  
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\begin{enumerate}
+\item Set $x_0=1$.
+\item For $k=0,1,2,\dots$
+    \renewcommand{\labelenumii}{(\roman{enumii})}
+    \begin{enumerate}
+    \item If $|f'(x_k)| < 10^{-3}$ then stop.
+    \item If $f'(x_k) > 0$ then let $p_k=-1$.  Otherwise let $p_k=+1$.
+    \item Let $\alpha_k=0.01$.  Let $x_{k+1}=x_k+\alpha_k p_k$.
+    \end{enumerate}
+\end{enumerate}
+\end{quote}}}
+
+\medskip
+\renewcommand{\labelenumi}{\textbf{\alph{enumi})}}
+\begin{enumerate}
+\item Implement Algorithm P8A.  In \Matlab it will be a function
+
+    \centerline{\texttt{function z = p8a(f,df)}}
+
+\noindent where the inputs are functions $f=$ \texttt{f} and $f'=$ \texttt{df}.  The output \texttt{z} is the proposed $x$-coordinate of the solution, i.e.~it is the minimizer.
+
+\item Run the algorithm, and state briefly what happens, in the following cases:
+    \renewcommand{\labelenumii}{(\roman{enumii})}
+    \begin{enumerate}
+    \item $f(x) = x^2 - 3 x + 2$
+    \item $f(x) = \cos(x/50)$
+    \item $f(x) = e^{\sin(10 x)}$
+    \item $f(x) = \operatorname{sech}(x)$
+    \end{enumerate}
+
+\item In several complete sentences, describe the main deficiencies of Algorithm P8A.  It is a good idea to use the results of part \textbf{b)} to illustrate some of your points.
+
+\item Next, observe that there are magic, fixed numbers inside Algorithm P8A which we can instead put under the control of the user.  This gives a new algorithm:
+
+\medskip
+\fbox{\parbox{\textwidth}{\begin{quote}
+\textbf{Algorithm P8B.}  Assume functions $f(x)$ and $f'(x)$ and numbers $x_0\in \RR$, $\eps>0$, and $\delta >0$ are supplied.
+\renewcommand{\labelenumii}{\arabic{enumii}.}
+\begin{enumerate}
+\item (\emph{The user has supplied $x_0$.})
+\item For $k=0,1,2,\dots$
+    \renewcommand{\labelenumiii}{(\roman{enumiii})}
+    \begin{enumerate}
+    \item If $|f'(x_k)| < \eps$ then stop.
+    \item If $f'(x_k) > 0$ then let $p_k=-1$.  Otherwise let $p_k=+1$.
+    \item Let $\alpha_k=\delta$.  Let $x_{k+1}=x_k+\alpha_k p_k$.
+    \end{enumerate}
+\end{enumerate}
+\end{quote}}}
+\medskip
+
+\noindent There is no request to implement it, but in \Matlab it would be the function
+
+    \centerline{\texttt{function z = p8b(f,df,x0,eps,delta)}}
+
+\noindent In complete sentences, address whether Algorithm P8B is significantly better than P8A.  Specifically, consider what the user needs to know about $f(x)$ in order to use P8B effectively.
+
+\end{enumerate}
+
+\end{document}
