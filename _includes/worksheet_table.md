@@ -2,7 +2,18 @@
 <table class="asst-table">
 {% for ws in data.worksheets %}
 <tr>
-	<td>{{ ws.name }}</td>
+	<td>
+		<table class="inner">
+			<tr>
+			    <td>{{ ws.name }}</td>
+			</tr>
+			{% if ws.description %}
+			<tr>
+			    <td>{{ ws.description }}</td>
+			</tr>
+			{% endif %}
+		</table>
+	</td>
 	<td>
 		<table class="inner">
 			{% if ws.blank %}

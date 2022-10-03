@@ -5,6 +5,6 @@ worksheets:
   description: worksheet on convexity proofs
   blank: convexity.pdf
   solutions: convexity-solns.pdf
-- name: (for Chapter 5)
-  description: template for symplex method
+- name: simplex method template
+  description: (for by-hand symplex method; see Chapter 5)
   blank: simplextemplate.pdf
