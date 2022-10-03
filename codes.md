@@ -1,9 +1,17 @@
 ---
 layout: course-page
-title: Matlab/Octave Codes from Solutions
+title: Matlab/Octave Codes
 ---
 
-# Matlab/Octave Codes from Solutions
+# Matlab/Octave Codes
+
+## from lecture
+
+  * [mysimplex.m](assets/codes/mysimplex.m)
+  * [booklpexample.m](assets/codes/booklpexample.m)
+  * [kleeminty.m](assets/codes/kleeminty.m)
+
+## from homework solutions
 
 From Assignment #1:
 
