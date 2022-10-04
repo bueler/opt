@@ -12,6 +12,11 @@
 			    <td>{{ ws.description }}</td>
 			</tr>
 			{% endif %}
+			{% if ws.more %}
+			<tr>
+			    <td>{{ ws.more }}</td>
+			</tr>
+			{% endif %}
 		</table>
 	</td>
 	<td>
