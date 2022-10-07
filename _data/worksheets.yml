@@ -7,7 +7,7 @@ worksheets:
   solutions: convexity-solns.pdf
 - name: simplex method template
   description: for by-hand simplex method (Chapter 5)
-  more: see the <a href="https://en.wikipedia.org/wiki/Revised_simplex_method">revised simplex method page</a>
+  more: see: <a href="https://en.wikipedia.org/wiki/Revised_simplex_method">revised simplex method wiki page</a>
   blank: simplextemplate.pdf
 - name: Fri 7 October
   description: simplex template example (filled-in)
