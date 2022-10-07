@@ -18,7 +18,7 @@ function kleeminty(n)
 % Usage:   kleeminty(n)
 % where:
 %          n = dimension; defaults to n = 4.
-% Requires: MYSIMPLEX
+% Requires: EZSIMPLEX, SFSIMPLEX
 
 if nargin < 1,  n = 4;  end
 
@@ -40,4 +40,4 @@ disp('b'' =')
 disp(b')
 
 % call simplex method
-[x, z] = mysimplex(c,A,b,true,2^n+1)   % show iterations; raise maxiter
+[x, z] = ezsimplex(c,A,b,true,2^n+1)   % show iterations; raise maxiter

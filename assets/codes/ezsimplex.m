@@ -1,15 +1,14 @@
 function [x,z] = ezsimplex(c,A,b,showiters,maxiters)
-% FIXME NEEDS TESTING ONCE SFSIMPLEX IS WRITTEN
 % EZSIMPLEX  Solve a linear programming problem in the special, easy
 % form:      minimize    z = c'*x
 %            subject to  A*x <= b
 %                        x >= 0
-% where c is length n, A is m x n, and b >= 0 is length m.
+% where c is length n, A is m x n, and b >= 0 is length m, using the
+% revised simplex method.
 % Usage:  [x, z] = ezsimplex(c,A,b)
 %         [x, z] = ezsimplex(c,A,b,true)    % show iterations
 %         [x, z] = ezsimplex(c,A,b,?,K)     % maximum of K iterations
-% Requires ISBFS and SFSIMPLEX.  See BOOKLPEXAMPLE and KLEEMINTY
-% for test examples.
+% Requires SFSIMPLEX.  BOOKLPEXAMPLE and KLEEMINTY are test examples.
 
 % set optional arguments to defaults
 if nargin < 4,  showiters = false;  end
@@ -27,8 +26,7 @@ fprintf('original variables x_%d,..,x_%d\n',1,n)
 fprintf('adding slack variables x_%d,..,x_%d\n',n+1,n+m)
 A = [A eye(m,m)];
 c = [c; zeros(m,1)];
-x = [zeros(n-m,1); b];
-if ~isbfs(x),  error('something wrong: x is not b.f.s.'),  end
+x = [zeros(n,1); b];
 
-% now the problem is in standard form, so solve it
+% now the problem is in standard form; solve it
 [x,z] = sfsimplex(c,A,b,x,showiters,maxiters);

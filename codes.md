@@ -8,7 +8,8 @@ title: Matlab/Octave Codes
 ## from lecture
 
   * [isbfs.m](assets/codes/isbfs.m)
-  * [mysimplex.m](assets/codes/mysimplex.m)
+  * [sfsimplex.m](assets/codes/sfsimplex.m)
+  * [ezsimplex.m](assets/codes/ezsimplex.m)
   * [booklpexample.m](assets/codes/booklpexample.m)
   * [kleeminty.m](assets/codes/kleeminty.m)
 
