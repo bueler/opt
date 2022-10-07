@@ -9,3 +9,6 @@ worksheets:
   description: for by-hand simplex method (Chapter 5)
   more: see the <a href="https://en.wikipedia.org/wiki/Revised_simplex_method">revised simplex method page</a>
   blank: simplextemplate.pdf
+- name: Fri 7 October
+  description: simplex template example (filled-in)
+  solutions: 7octfilledtemplate.pdf
