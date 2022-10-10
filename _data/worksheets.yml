@@ -1,14 +1,14 @@
 semester: Fall 2022
 home: assets/worksheets/F22
 worksheets:
-- name: Fri 9 September
+- name: Friday 9 September
   description: worksheet on convexity proofs
   blank: convexity.pdf
   solutions: convexity-solns.pdf
 - name: simplex method template
   description: for by-hand simplex method (Chapter 5)
-  more: see: <a href="https://en.wikipedia.org/wiki/Revised_simplex_method">revised simplex method wiki page</a>
+  more: see <a href="https://en.wikipedia.org/wiki/Revised_simplex_method">revised simplex method wiki page</a>
   blank: simplextemplate.pdf
-- name: Fri 7 October
+- name: Monday 10 October
   description: simplex template example (filled-in)
-  solutions: 7octfilledtemplate.pdf
+  solutions: 10octworksheet.pdf
