@@ -12,8 +12,8 @@ function [x,z] = sfsimplex(c,A,b,x,showiters,maxiters)
 %         [x, z] = mysimplex(c,A,b,x,?,K)     % maximum of K iterations
 
 % set optional arguments to defaults
-if nargin < 4,  showiters = false;  end
-if nargin < 5,  maxiters = 100;  end
+if nargin < 5,  showiters = false;  end
+if nargin < 6,  maxiters = 100;  end
 
 % get sizes and check inputs
 [m n] = size(A);
