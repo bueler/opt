@@ -71,8 +71,7 @@ for k = 1:maxiters
         fprintf(hatAtsf,hatAt)
     end
     if all(hatAt <= 0)
-        fprintf('ending: detected unbounded on iteration %d\n',k)
-        break
+        error('ending: detected unbounded on iteration %d\n',k)
     end
     % use ratio test to get leaving index (s)
     hatAt(hatAt <= 0) = -1;

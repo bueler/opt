@@ -1,8 +1,13 @@
 function x = phaseone(A,b)
-% PHASEONE  Compute an initial basic feasible solution x to a
+% PHASEONE  Compute an initial basic feasible solution x0 to a
 % standard-form LP problem with feasible set
 %   A x = b
 %   x >= 0
+% Example:
+%   >> A = [-2 1 1 0 0; -1 2 0 1 0; 1 0 0 0 1],  b = [2 7 3]'
+%   >> x0 = phaseone(A,b)
+%   >> c = [-1 -2 0 0 0]'
+%   >> [x, z] = sfsimplex(c,A,b,x0)
 % Requires SFSIMPLEX.
 
 [m n] = size(A);
@@ -13,6 +18,9 @@ if any(b < 0),  error('b >= 0 required for standard form'),  end
 newA = [A eye(m,m)];
 newc = [zeros(n,1); ones(m,1)];
 x0 = [zeros(n,1); b];
-xart = sfsimplex(newc,newA,b,x0,false);
+[xart, zart] = sfsimplex(newc,newA,b,x0,false);
+if zart > 0.0
+    error('phase 1 failed to find a basic feasible solution')
+end
 fprintf('phase 1 complete ... x is basic feasible solution\n')
 x = xart(1:n);
