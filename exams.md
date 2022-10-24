@@ -10,3 +10,10 @@ The table below gives the date and coverage for the two Exams; also see the [Sch
 {% include exam_table.md  data=site.data.exams %}
 
 Note that PDFs for the exams will appear here the day after they occur.  Solutions will be posted at the [Canvas page for the course](https://canvas.alaska.edu/courses/9948).
+
+<div style="padding-bottom: 40px"></div>
+
+---
+### Exams from Fall 2018
+
+{% include exam_table.md  data=site.data.examsF18 %}
