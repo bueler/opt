@@ -2,12 +2,10 @@ semester: Fall 2018
 home: assets/exams/F18
 exams:
 - name: Midterm Exam
-  date: 
-  info: in-class exam
+  info: (in-class)
   blank: mid.pdf
   solutions: mid-solns.pdf
 - name: Final Exam
-  date: 
-  info: take home exam
+  info: (take home)
   blank: final.pdf
   solutions: final-solns.pdf

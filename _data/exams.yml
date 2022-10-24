@@ -3,13 +3,14 @@ home: assets/exams/F22
 exams:
 - name: Midterm Exam
   date: Friday 28 October
-  info: in class Chapman 206
-  sections: to be determined
+  info: <b>in class</b>, Chapman 206
+  #reviewsheet: midreview.pdf
+  sections: 1.1-1.5, 2.1-2.7, 3.1-3.3, 4.1-4.4,
+  cont: 5.1-5.4 (no tableaus), 6.1-6.2, 9.1-9.3,
+  contcont: 11.1-11.2, Appendices A.1-A.7, B.1-B.7
   #blank: mid.pdf
-  #solutions: mid-solns.pdf
 - name: Final Exam
   date: Friday 16 December
-  info: in class 3:15pm--5:15pm Chapman 206
+  info: <b>in class</b>, Chapman 206, 3:15pm--5:15pm
   sections: to be determined
   #blank: final.pdf
-  #solutions: final-solns.pdf

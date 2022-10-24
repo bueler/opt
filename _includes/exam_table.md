@@ -12,12 +12,19 @@
 			      <td>{{ exam.info }}</td>
 			  </tr>
 			{% endif %}
+		  {% if exam.sections %}
 			<tr>
-			    <td>sections to study: {{ exam.sections }}</td>
+			    <td>sections covered: {{ exam.sections }}</td>
 			</tr>
+			{% endif %}
 		  {% if exam.cont %}
 			<tr>
-			    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {{ exam.cont }}</td>
+			    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {{ exam.cont }}</td>
+			</tr>
+			{% endif %}
+		  {% if exam.contcont %}
+			<tr>
+			    <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  {{ exam.contcont }}</td>
 			</tr>
 			{% endif %}
 		</table>
