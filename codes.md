@@ -27,3 +27,7 @@ From Assignment #3:
 
   * [ratiotest.m](assets/codes/ratiotest.m)
   * [p8a.m](assets/codes/p8a.m)
+
+From Assignment #5:
+
+  * [mynull.m](assets/codes/mynull.m)
