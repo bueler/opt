@@ -12,6 +12,7 @@ title: Matlab/Octave Codes
   * [ezsimplex.m](assets/codes/ezsimplex.m)
   * [booklpexample.m](assets/codes/booklpexample.m)
   * [kleeminty.m](assets/codes/kleeminty.m)
+  * [newtonex1.m](assets/codes/newtonex1.m)
 
 ## from homework solutions
 
