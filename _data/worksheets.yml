@@ -12,3 +12,6 @@ worksheets:
 - name: Monday 10 October
   description: simplex template example (filled-in)
   solutions: 10octworksheet.pdf
+- name: Wednesday 26 October
+  description: page number "solutions" to Midterm Review Guide
+  solutions: pagenumbers.pdf
