@@ -21,3 +21,7 @@ homework:
 - name: Assignment 6 (revised again!)
   due: Wednesday 26 October
   blank: A6.pdf
+- name: Assignment 7
+  due: Wednesday 9 November
+  blank: A7.pdf
+  seealsopdf: assets/slides/sd.pdf
