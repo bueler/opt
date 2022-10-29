@@ -1,0 +1,235 @@
+\documentclass[11pt]{amsart}
+%\pagestyle{empty} 
+\setlength{\topmargin}{-0.5in} % usually -0.25in
+\addtolength{\textheight}{1.2in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.95in}
+\addtolength{\evensidemargin}{-0.95in}
+\addtolength{\textwidth}{1.9in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amssymb,xspace,alltt,verbatim}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+
+\newtheorem*{lem*}{Lemma}
+
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bbf}{\mathbf{f}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\Log}{\operatorname{Log}}
+
+\newcommand{\grad}{\nabla}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.} }
+\newcommand{\pts}[1]{(\emph{#1 pts})}
+
+\newcommand{\probpts}[2]{\prob{#1} \pts{#2}}
+\newcommand{\ppartpts}[2]{\textbf{(#1)} \pts{#2}}
+\newcommand{\epartpts}[2]{\medskip\noindent \textbf{(#1)} \pts{#2}}
+
+
+% from ../wksheets/simplextemplate.tex
+\newcommand{\blankset}{\Big\{\hspace{0.7in}\Big\}}
+\newcommand{\blankmatrix}{\begin{bmatrix} \hspace{1.0in} \\ \hspace{1.0in} \\ \hspace{1.0in} \\ \hspace{1.0in} \end{bmatrix}}
+\newcommand{\blankcolumn}{\begin{bmatrix} \phantom{mm} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \end{bmatrix}}
+
+\newcommand{\boxint}{\boxed{\phantom{m\big|}}}
+
+\newcommand{\longblankset}{\Big\{\hspace{1.5in}\Big\}}
+\newcommand{\blanktallcolumn}{\begin{bmatrix} \phantom{mm} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \end{bmatrix}}
+\newcommand{\wideblankmatrix}{\begin{bmatrix} \hspace{2.0in} \\ \hspace{2.0in} \\ \hspace{2.0in} \\ \hspace{2.0in} \end{bmatrix}}
+
+\newcommand{\stacksarrow}[2]{\quad {\small \begin{matrix} #1 \\ \to \\ #2 \end{matrix}} \quad}
+
+\newcommand{\lpstep}{%
+\noindent\hrulefill
+\small
+\begin{align*}
+\mathcal{B} &= \blankset, & B &= \blankmatrix, & c_B &= \blankcolumn, & \underline{B x_B = b} \implies x_B = \hat b &= \blankcolumn \\
+\mathcal{N} &= \blankset, & N &= \blankmatrix, & c_N &= \blankcolumn
+\end{align*}
+$$\underline{B^\top y = c_B} \implies y = \blankcolumn \qquad \implies \qquad \underline{\hat c_N = c_N - N^\top y} = \blankcolumn$$
+
+\noindent $\boxed{\hat c_N \ge 0 \text{?: stop with optimum}}$ \quad $\hat c_N \stacksarrow{\text{index of }}{\min} t = \boxint$ \, $\to$ \, $\underline{B \hat A_t = A_t} \implies \hat A_t = \begin{bmatrix} \hat a_{1,t} \\ \vdots \\ \hat a_{m,t} \end{bmatrix} = \blankcolumn$
+
+\medskip
+\noindent $\boxed{\hat A_t \le 0 \text{?: stop, unbounded}}$ \quad $\Big\{\frac{\hat b_i}{\hat a_{i,t}}\Big\} = \longblankset \quad \stacksarrow{\text{index of }}{\min \text{over } \hat a_{i,t}>0} \quad s = \boxint$}
+
+
+
+\begin{document}
+\hfill \Large Name:\underline{\phantom{Ed Bueler really really long long long name}}
+\medskip
+
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill Friday, 28 October 2022
+\medskip
+
+\Large\centerline{\textbf{Midterm Exam}}
+
+\smallskip
+\large
+\begin{center}
+\textbf{In class.  No book.  No calculator.  $1/2$ sheet of notes allowed.}
+
+(100 \emph{points possible})
+\end{center}
+
+\medskip
+\thispagestyle{empty}
+
+
+\prob{1}  Consider Newton's method to solve the scalar equation $f(x)=0$.
+
+\epartpts{a}{8}  Draw and label a sketch of one step of Newton's method.  In particular, your graph should show $y=f(x)$ as a generic curve, then an iterate $x_k$, and then show (graphically) how the next iterate $x_{k+1}$ is determined.
+\vfill
+
+\epartpts{b}{5}  Do one step of Newton's method to solve the equation $x^3 - x + 1 = 0$, starting at $x_0=1$.  That is, compute $x_1$.
+\vspace{2.5in}
+
+\clearpage
+\newpage
+
+\prob{2}  Let $f(x) = 4 x_3 x_2 + x_3^2 + x_2 - 2 x_1^2$ for $x\in \RR^3$.
+
+\epartpts{a}{4}   Compute the gradient and Hessian of $f$ at $x_k = (-1,1,1)^\top \in \RR^3$.
+\vspace{2.3in}
+
+\epartpts{b}{4}   Does $f(x)$ have any stationary points?  If so, find them.
+\vfill
+
+\epartpts{c}{4}   Find all the local minima $x_*$ of $f$, or explain why none exist.  Justify your answer using appropriate 1st- or 2nd-order necessary or sufficient conditions.
+\vspace{2.5in}
+
+\epartpts{d}{4}   Is $p = (-2,1,0)^\top$ a descent direction for $f$ at $x_k$ from part \textbf{(a)}?
+\vfill
+
+
+\clearpage\newpage
+\prob{3}  Consider the optimization problem
+    $$\begin{matrix}
+    \text{minimize}\phantom{x} & \phantom{xxxx}f(x) = \exp(x_1^4 + x_2^2) - x_1^4 + \sin(x_1 x_2 x_3)\\
+    \text{subject to} & 2 x_1 - 2 x_2 + x_3 = -1 \\
+                      & x_1 + 4 x_2 \ge -3 \\
+                      & 7 x_2 - 5 x_3 \ge -1
+    \end{matrix}$$
+
+\epartpts{a}{4}  Is $x=(-2,0,3)^\top$ feasible?
+\vspace{1.0in}
+
+\epartpts{b}{4}  Considering both equality and inequality constraints, which constraints are active and which are inactive at $x=(1,3,3)^\top$?
+\vfill
+
+\probpts{Extra Credit}{3}  For $x\in\RR^n$, completely solve the standard-form linear programming problem when there are no equality constraints:
+    $$\begin{matrix}
+    \text{minimize}\phantom{x} & \phantom{xxxx}c^\top x\\
+    \text{subject to} & x \ge 0
+    \end{matrix} \hspace{5.0in}$$
+%(\emph{Hint.}  Consider all cases for $c$.)
+\vspace{2.5in}
+
+
+\clearpage\newpage
+\probpts{4}{10}  Consider general minimization problems of the form
+\begin{align*}
+    \text{minimize}\phantom{dflkaj} & f(x)\\
+    \text{subject to}\phantom{dflkaj} & a_j^\top x = b_j \quad \text{for } j \in \mathcal{E} \\
+                      & a_j^\top x \ge b_j \quad \text{for } j \in \mathcal{I}
+\end{align*}
+for given vectors $a_j \in \RR^n$ and scalars $b_j$.
+
+\medskip
+Suppose $\bar x$ is a point in the feasible set.  Let $\hat{\mathcal{I}}$ be the set of indices $j \in \mathcal{I}$ where the inequality constraint $a_j^\top x \ge b_j$ is active at $\bar x$.  Show that if $a_j^\top p = 0$ for all $j\in \mathcal{E}$, and if $a_j^\top p \ge 0$ for all $j\in \hat{\mathcal{I}}$, then $p$ is a feasible direction.
+\vfill
+
+
+\clearpage\newpage
+\probpts{5}{5}  Given a matrix $A\in \RR^{n\times n}$, define what it means for $A$ to be \emph{positive definite}.
+\vfill
+
+\prob{6} \ppartpts{a}{4} Define \emph{convex set} (for a subset $S$ of $\RR^n$).
+\vfill
+
+\epartpts{b}{4} Define \emph{convex function} (for a scalar valued function $f(x)$).
+\vfill
+
+\probpts{7}{5}  For a linear programming problem in standard form, define \emph{basic feasible solution}.
+\vfill
+
+
+\clearpage\newpage
+\prob{8} \epartpts{a}{6}  Sketch the feasible set for the following linear programming problem:
+    $$\begin{matrix}
+    \text{minimize}\phantom{xxx} & \phantom{x}z = 3 x_1 - 9 x_2 \\
+    \text{subject to}\phantom{xx} & 5 x_1 + 2 x_2 \le 30 \\
+                      & 3 x_1 - x_2 \ge -4 \\
+                      & x_1 \ge 0, x_2 \ge 0
+    \end{matrix} \hspace{4.0in}$$
+\vfill
+
+\epartpts{b}{6}  Convert the problem in \textbf{(a)} to standard form.
+\vfill
+
+\clearpage\newpage
+\epartpts{c}{8}  Let $x$ be the basic feasible solution to the standard-form problem, as computed in \textbf{8(b)}, for which $x_1=0$ and $x_2=0$.  Use the template to complete one iteration of the (reduced) simplex method.  \textbf{At the bottom}, fill in the basic and non-basic variables (indices) at the completion of this first iteration.
+
+\bigskip
+
+\lpstep
+
+\hrulefill
+
+\vspace{1.0in}
+\normalsize
+\noindent  result: \hspace{0.5in} $\displaystyle \mathcal{B} = \left\{\phantom{\big| adlsadf a adkjf}\right\}, \qquad \mathcal{N} = \left\{\phantom{\big| ada da fdsdf lkjf}\right\}$
+
+
+\clearpage\newpage
+\probpts{9}{5}  Given a linear programming problem in standard form
+    $$\begin{matrix}
+    \text{minimize}\phantom{xxx} & \phantom{x} z = c^\top x \\
+    \text{subject to}\phantom{xx} & A x = b \\
+                      & x \ge 0.
+    \end{matrix}$$
+What is the dual problem?
+\vspace{2.2in}
+
+\probpts{10}{10}  Prove:  \qquad
+\textbf{Theorem.}  \emph{Let $x_*$ be a local minimizer of a convex optimization problem.  Then $x_*$ is also a global minimizer.}
+
+\medskip
+\noindent \emph{Proof.}
+\vfill
+
+
+%\newpage
+%\bigskip
+%\small
+%\begin{center}
+%\textsc{blank page for scratch work.  clearly-label anything you want to be graded}
+%\end{center}
+%\vfill
+
+\end{document}
