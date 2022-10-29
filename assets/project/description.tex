@@ -72,11 +72,11 @@
 
 \subsection*{Goal}  The goal of the Math 661 project is for you to focus on topics of particular interest, and become more familiar with certain optimization problems and algorithms than is possible with the brief coverage typical of the rest of the course.
 
-\subsection*{Expectations}  Your project may be application-driven (\emph{choose the problem(s) first}) or algorithm-driven (\emph{choose the algorithm(s) first}).  However, all projects must include both a specific optimization problem and a specific optimization algorithm.  You will implement at least one algorithm, i.e.~by a code you write in \Matlab/\Python/ \Julia/etc., and then apply your code to at least one example problem.
+\subsection*{Expectations}  All projects must include at least one specific optimization problem and at least one specific optimization algorithm.  You will implement at least one algorithm, i.e.~by a code you write in \Matlab/\Python/\Julia/etc., and then apply your code to at least one example problem, to solve it.
 
-Both numerical computation and mathematical analysis are required.  For the latter you will analyze the problem(s) and algorithm(s) using theory from the textbook\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.} and/or from other references.  Once your code is running you should provide some empirical (numerical experimentation) evidence regarding the error and/or performance of your algorithm(s).
+However, your project may be application-driven (\emph{choose the problems first}) or algorithm-driven (\emph{choose the algorithms first}).  See the flowchart on page 3.
 
-Analysis is important as it shows you have absorbed ideas from the course, and because it distinquishes between algorithms.  Numerical evidence shows that you understood the algorithm well enough to implement it correctly.
+Both mathematical analysis and numerical computation are required.  Your analysis should use theory from the textbook\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.} and/or from other references.  Analysis is important as it shows you have absorbed ideas from the course, and because it distinquishes between algorithms.  Once your code is running you should provide some empirical (numerical experimentation) evidence regarding the error and/or performance of your algorithm(s).  Numerical evidence shows that you understood the algorithm well enough to implement it correctly.
 
 The problem(s) you choose must be in the following form:
 \begin{equation}
@@ -87,16 +87,14 @@ The problem(s) you choose must be in the following form:
 \end{equation}
 (Of course you may replace $\min$ with $\max$.)  If your project is algorithm-driven then you must identify which such problems are solved by your algorithms(s).
 
-Form \eqref{genform} describes a very large class of problems.  Your problem(s) must be finite-dimensional, but they may arise from an infinite-dimensional source.  The problem(s) must be well-enough understood to allow you to both precisely identify the objective function $f(x)$ and to precisely identify a feasible set $S$ defined by finitely-many equality and inequality constraints $g_i(x)$.  It is o.k.~if there are no constraints, with $\mathcal{E}$ and $\mathcal{I}$ as empty sets, but I may provide feedback on your Part I proposal which suggests you consider a constrained form of your problem.
+Form \eqref{genform} describes a very large class of problems.  Your chosen problems must be finite-dimensional, but they may arise from an infinite-dimensional source.  The problems must be well-enough understood to allow you to both precisely identify the objective function $f(x)$ and to precisely identify a feasible set $S$ defined by finitely-many equality and inequality constraints $g_i(x)$.  It is o.k.~if there are no constraints, with $\mathcal{E}$ and $\mathcal{I}$ as empty sets, but I may provide feedback on your Part I proposal which suggests you consider a constrained form of your problem.
 
 
 \subsection*{Due dates}  There are two due dates for the project:
 
 \subsubsection*{Part I = project proposal:}  \textbf{Part I is due Friday 11 November at the start of class.}
 
-There are no format requirements for this part, but it must be \textbf{two pages or less}.
-
-The proposal should precisely say what problem(s) or algorithm(s) you will address.  If application-driven it should explain \emph{briefly} where the optimization problem(s) came from.  In any case it should briefly motivate your proposed choice(s) of algorithm(s).  Several quality references are \emph{expected}; online references are o.k.~though many informal online documents are of low quality.  Please make specific references to our textbook when that is appropriate.  Finally, your proposal should talk though what the complete project will contain, to the degree possible.
+There are no format requirements for the proposal, but it must be \textbf{two pages or less}.  It should precisely say what problem(s) or algorithm(s) you will address.  If application-driven it should explain \emph{briefly} where the optimization problem(s) came from.  In any case it should briefly motivate your proposed choice(s) of algorithm(s).  Several quality references are \emph{expected}; online references are o.k.~though many informal online documents are of low quality.  Please make specific references to our textbook when that is appropriate.  Your proposal should talk though what the complete project will contain, to the degree possible.
 
 Spending at least a few hours on thinking and research at this stage can be very effective, but I suggest that you spend at most 6 hours on Part I.
 
@@ -104,12 +102,12 @@ Spending at least a few hours on thinking and research at this stage can be very
 
 It should have the format as shown below on page 4.  Please use the indicated section headings!  The total length \textbf{must be 20 pages or less}; I will not accept longer projects.  The total time spent on the whole project should be at most 25 hours.
 
-The format expectations can be met by using the \LaTeX\xspace template posted online at \href{https://bueler.github.io/opt/projects.html}{\texttt{bueler.github.io/opt/projects.html}}, but you do not have to use \LaTeX.
+The format expectations can be met by using the \LaTeX\xspace template posted online at \href{https://bueler.github.io/opt/projects.html}{\texttt{bueler.github.io/opt/projects.html}}, but this is certainly not required.
 
 
-\subsection*{Choosing a topic}  One of my jobs will be to help you choose problem(s) and algorithm(s) so that your project has reasonable difficulty.  The bigger the scope the easier it is to get lost in the application, the algorithmic details, or difficulties with programming/debugging/analysis.  Your Part I proposal allows me to give good feedback on the topic, perhaps a gentle nudge in the direction of a nice variation in topic, or a different analysis to consider, or that you bite off less, and etc.
+\subsection*{Choosing a topic}  I will help you choose problem(s) and algorithm(s) of reasonable difficulty.  The bigger the scope the easier it is to get lost in the application, or in difficulties with programming/debugging/analysis.  Your Part I proposal allows me to give good feedback on the topic, a gentle nudge in the direction of a variation, or a different analysis to consider, or that you bite off less, and etc.
 
-You may \textbf{not} choose a topic which will be adequately covered in lecture.  For example, the basic simplex method is not a good topic.  However, continuing the example, implementations of the simplex method which respect sparsity, a topic we do not cover, would be a great choice (Chapter 7).  Similarly, the classical Newton method is not a good subject, but comparing quasi-Newton methods beyond BFGS, or line search methods beyond backtracking, or trust region methods, would all be good choices (Chapters 11 and 12).  Finally, there are many constrained optimization algorithms we will not get to, especially Chapters 8, 10, and 16. 
+You may \textbf{not} choose a topic which will be adequately covered in lecture.  For example, neither the basic simplex method nor basic line search is a good topic.  However, for example, implementations of the simplex method which respect sparsity would be a great choice (Chapter 7).  Comparing line search methods beyond backtracking, or quasi-Newton methods beyond BFGS, or trust-region methods, would all be good choices (Chapters 11 and 12).  There are many constrained optimization algorithms we will not get to, especially Chapters 8, 10, and 16. 
 
 Here are three approaches to choosing a topic if you don't already have one:
 
@@ -119,9 +117,9 @@ See the ``Major subfields,'' ``Computational \dots techniques'', and ``Applicati
 
    \centerline{\href{https://en.wikipedia.org/wiki/Mathematical_optimization}{\texttt{en.wikipedia.org/wiki/Mathematical\_optimization}}}
 
-\subsubsection*{Approach 2: Investigate skipped material from the textbook}  Consider section(s) that you find interesting and which we did not cover.  However, don't just choose a section at random; the above Wikipedia page is better for starting from scratch.
+\subsubsection*{Approach 2: Investigate skipped material from the textbook}  Consider section(s) that you find interesting and which we did not cover.
 
-\subsubsection*{Approach 3: A topic related to your thesis (if you have one)}  Please talk to your thesis advisor.  It is reasonable to ask ``are there optimization problems related to my expected thesis''?  Often these are parameter fitting, inverse modeling, or optimal design problems.  On the other hand there may be significant algorithms which arise in your field of interest.  There may be a paper to read about optimization in your field.  Please \textbf{do not} cover territory comparable to your whole thesis; instead extract a little part and do it carefully.  You should also talk to me, but it may take a while for me to understand the context of your problem.
+\subsubsection*{Approach 3: A topic related to your thesis (if you have one)}  Please talk to your thesis advisor.  It is reasonable to ask ``are there optimization problems related to my expected thesis''?  There may be significant algorithms which arise in your field of interest, or problems like parameter fitting, inverse modeling, or optimal design.  There may be a paper to read about optimization in your field.  Please \textbf{do not} cover territory comparable to your whole thesis; instead extract a little part, or extend a little part, and do it carefully.  In any case, please make an effort to explain the context of your problem in your proposal.
 
 
 \newpage
