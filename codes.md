@@ -14,6 +14,8 @@ title: Matlab/Octave Codes
   * [kleeminty.m](assets/codes/kleeminty.m)
   * [newtonex1.m](assets/codes/newtonex1.m)
   * [newtonex2.m](assets/codes/newtonex2.m)
+  * [rosenbrock.m](assets/codes/rosenbrock.m)
+  * [sdbt.m](assets/codes/sdbt.m)
 
 ## from homework solutions
 
