@@ -131,7 +131,7 @@ Please read sections 11.2, 11.3, 11.4, 11.5, 12.1, and 12.2 from the textbook.\f
 \end{enumerate}
 
 \medskip
-\prob{Problem P14.}  In the slides I show a \Matlab implementation of steepest descent using back-tracking line search, something we will cover carefully in section 11.5.  If we restrict the objective function $f(x)$ to being quadratic then we can use the result in \textbf{P13 c)} to choose the step size.
+\prob{Problem P14.}  In the slides I show a \Matlab implementation of steepest descent using back-tracking line search, something we will cover carefully in section 11.5.  If we restrict the objective function $f(x)$ to being quadratic then we can instead use the result in \textbf{P13 c)} to choose the step size.
 \begin{enumerate}
 \item Implement steepest descent with optimal step size for quadratic functions \eqref{quad}:
 
@@ -145,7 +145,7 @@ Please read sections 11.2, 11.3, 11.4, 11.5, 12.1, and 12.2 from the textbook.\f
     0.19  &  1.84 &  0.32 \\
     -0.89 &  0.32 &  1.86
     \end{pmatrix}$$
-but keep the same $c$, $x_0$, and \texttt{tol} as in part \textbf{b)}.  What is $x^*$?  How many iterations does \texttt{sdquad()} need?  Why is this problem easier than part (b)?  (\emph{Hint.  What does} \texttt{eig(Q)} \emph{tell you?})
+but keep the same $c$, $x_0$, and \texttt{tol} as in part \textbf{b)}.  What is $x^*$?  How many iterations does \texttt{sdquad()} need?  Why is this problem easier than part \textbf{b)}?  (\emph{Hint.  What does} \texttt{eig(Q)} \emph{tell you?})
 \end{enumerate}
 
 \medskip
