@@ -16,6 +16,8 @@ title: Matlab/Octave Codes
   * [newtonex2.m](assets/codes/newtonex2.m)
   * [rosenbrock.m](assets/codes/rosenbrock.m)
   * [sdbt.m](assets/codes/sdbt.m)
+  * [sr1bt.m](assets/codes/sr1bt.m)
+  * [rosencompare.m](assets/codes/rosencompare.m)
 
 ## from homework solutions
 
@@ -39,3 +41,9 @@ From Assignment #5:
 From Assignment #6:
 
   * [phaseone.m](assets/codes/phaseone.m)
+
+From Assignment #7:
+
+  * [exer3p2.m](assets/codes/exer3p2.m)
+  * [exer3p3.m](assets/codes/exer3p3.m)
+  * [sdquad.m](assets/codes/sdquad.m)
