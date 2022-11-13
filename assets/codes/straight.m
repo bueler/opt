@@ -37,6 +37,7 @@ fstar = 0.5 * ustar' * Q * ustar - c' * ustar + d
 
 % plot
 x = 0.0:h:1.0;  % length n+2
-plot(x,[a ustar' b],'ro-')
+plot(x,[a ustar' b],'r-'), hold on
+plot(x(2:end-1), ustar, 'ro-'), hold off
 xlabel x, ylabel u, grid on
 title('u(x) solves  min (1/2) \int_0^1 (du/dx)^2 dx')
