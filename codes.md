@@ -18,6 +18,7 @@ title: Matlab/Octave Codes
   * [sdbt.m](assets/codes/sdbt.m)
   * [sr1bt.m](assets/codes/sr1bt.m)
   * [rosencompare.m](assets/codes/rosencompare.m)
+  * [straight.m](assets/codes/straight.m)
 
 ## from homework solutions
 
