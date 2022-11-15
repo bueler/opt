@@ -1,8 +1,9 @@
 % EXER3P2  Solve exercise 3.2 in section 11.3 of Griva, Nash, Sofer (2009).
+% Corrected version.
 
-f   = @(x) 5*x.^5 + 2*x.^3 - 4*x.^2 - 3*x + 2;
-df  = @(x) 25*x^4 + 8*x^2 - 8*x - 3;
-ddf = @(x) 100 * x^3 + 16 * x - 8;
+f   = @(x) 5 * x.^5 + 2 * x.^3 - 4 * x.^2 - 3 * x + 2;
+df  = @(x) 25 * x^4 + 6 * x^2 - 8 * x - 3;
+ddf = @(x) 100 * x^3 + 12 * x - 8;
 
 xx = -2:.2:2;
 
