@@ -48,3 +48,7 @@ From Assignment #7:
   * [exer3p2.m](assets/codes/exer3p2.m)
   * [exer3p3.m](assets/codes/exer3p3.m)
   * [sdquad.m](assets/codes/sdquad.m)
+
+From Assignment #8:
+
+  * [secant1d.m](assets/codes/secant1d.m)
