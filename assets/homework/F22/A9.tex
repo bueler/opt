@@ -1,10 +1,10 @@
 \documentclass[12pt]{amsart}
 %prepared in AMSLaTeX, under LaTeX2e
-\addtolength{\oddsidemargin}{-.6in} 
-\addtolength{\evensidemargin}{-.6in}
-\addtolength{\topmargin}{-.4in}
-\addtolength{\textwidth}{1.2in}
-\addtolength{\textheight}{.6in}
+\addtolength{\oddsidemargin}{-.7in} 
+\addtolength{\evensidemargin}{-.7in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\textheight}{.9in}
 
 \renewcommand{\baselinestretch}{1.05}
 
@@ -76,7 +76,7 @@ width=#3in]{#1.eps}}
 
 
 \begin{document}
-\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 18 November, 2022
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 19 November, 2022
 \normalsize
 
 \medskip\bigskip
@@ -98,19 +98,44 @@ Please read sections 12.3, 12.4, 13.5, 14.1, 14.2, and 14.3 from the textbook.\f
 \noindent \textsc{Do the following exercises} from section 12.3, pages 420--421:
 
 \begin{itemize}
-\item Exercise X
+\item Exercise 3.1 \quad \begin{minipage}[t]{4.5in} \emph{Please write your own code, or modify} \href{https://bueler.github.io/opt/assets/codes/sr1bt.m}{\texttt{sr1bt.m}} \emph{to use exact line search.} \end{minipage}
+\item Exercise 3.3
+\item Exercise 3.4 \quad \begin{minipage}[t]{4.5in} \emph{Hint.  What do you know about a rank one matrix?  Thus you can write it as an outer product.} \end{minipage}
+\item Exercise 3.8
 \end{itemize}
 
 
 \bigskip
-\noindent \textsc{Do the following exercises} from section 12.4, pages x--x:
+\noindent \textsc{Do the following exercises} from section 13.5, pages 473--474:
 
 \begin{itemize}
-\item Exercise x
+\item Exercise 5.5 \quad \begin{minipage}[t]{4.5in} \emph{Hint.  Assume matrix $B_k$ has a known inverse $H_k=B_k^{-1}$.  Let $v=y_k - B_k s_k$.  Then set $u=-v/(v^\top s_k)$ in Sherman-Morrison.} \end{minipage}
+\end{itemize}
+
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 14.2, pages 489--491:
+
+\begin{itemize}
+\item Exercise 2.1
 \end{itemize}
 
 
 \medskip
-\prob{Problem P18.}  x
+\prob{Problem P18.}  \emph{This problem simplifies/clarifies Exercise 4.4 in section 12.4.}
+
+\medskip
+Apply the forward difference formula $f'(x) \approx (f(x+h)-f(x))/h$ to estimate the gradient of the function
+    $$f(x) = \exp(10 x_1 + 2 x_2^2),$$
+at the point $x=(-1,1)$.  (Obviously, $f:\RR^2 \to \RR$.)  Assuming that $\eps_{\text{mach}} = 2.2204 \times 10^{-16}$ on the computer you used, how accurate is the approximated gradient when you actually compute using the ``best'' value of $h$ and the ``simpler'' value of $h$, from page 425?  (\emph{Use a norm to quantify the error in the gradient.})
+
+\medskip
+\prob{Problem P19.}  Suppose a user wants to solve $\min_{x\in\RR^n} f(x)$ for a smooth objective function $f:\RR^n\to \RR$, but they do not provide a gradient function $\grad f(x)$.  We can still use quasi-Newton if we apply finite differences to replace the missing gradient (section 12.4).  Use this idea to write a new code
+
+\medskip
+\centerline{\texttt{function [xk, xklist] = sr1btfd(x0,f,tol,maxiters)}}
+
+\medskip
+\noindent which replaces the user-provided gradient in \,\href{https://bueler.github.io/opt/assets/codes/sr1bt.m}{\texttt{sr1bt.m}}\, with a finite-difference gradient.  Test it on the Rosenbrock example, as is done in \,\href{https://bueler.github.io/opt/assets/codes/rosencompare.m}{\texttt{rosencompare.m}}, and give iterations.  (\emph{Don't worry about visualizing, or the contours.})  How would it help if the user provided values for the typical scales of the gradient and the Hessian?
 
 \end{document}
