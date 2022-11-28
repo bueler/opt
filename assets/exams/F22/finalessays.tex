@@ -1,0 +1,122 @@
+\documentclass[12pt]{amsart}
+\addtolength{\topmargin}{-0.6in} % usually -0.25in
+\addtolength{\textheight}{1.1in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.5in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.05}\tiny\normalsize}
+\newcommand{\bigspacing}{\renewcommand{\baselinestretch}{1.13}\tiny\normalsize}
+\newcommand{\tablespacing}{\renewcommand{\baselinestretch}{1.0}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amssymb,xspace}
+\usepackage{tikz}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+
+\newcommand{\mtt}{\texttt}
+\newcommand{\mtl}[1]{{\texttt{>>#1}}}
+\usepackage{alltt}
+\usepackage{fancyvrb}
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+\newcommand{\erf}{\operatorname{erf}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Arg}{\operatorname{Arg}}
+
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\Null}{\operatorname{null}}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+\newcommand{\longMOP}{\textsc{Matlab}\big|\textsc{Octave}\big|\textsc{pylab}\xspace}
+\newcommand{\MOP}{\textsc{M}\big|\textsc{O}\big|\textsc{p}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\large\textbf{#1.} \normalsize}
+\newcommand{\bookprob}[1]{\bigskip\noindent\large\textbf{Exercise #1.} \normalsize}
+\newcommand{\probpart}[1]{\smallskip\noindent\textbf{(#1)}\quad }
+\newcommand{\aprobpart}[1]{\textbf{(#1)}\quad }
+
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 30 November 2022
+\thispagestyle{empty}
+
+\bigskip
+\Large\textbf{\centerline{Final Exam: 2 Short Essays on Algorithms}}
+
+\bigskip
+\large\textbf{\centerline{Friday, 16 December 2022, 3:15--5:15 pm, Chapman 206}}
+
+\normalsize
+\bigskip\bigskip
+The in-class Final Exam will be a bit different, but relatively short.  I would like you to write two essays, each with length in the range from 200 to 300 words, on certain optimization algorithms we have covered, or on important algorithm components.  These are topics we \emph{have} covered in lecture and homework, and this is an exam not a project.
+
+\smallskip
+In particular, please
+
+\medskip
+\centerline{\textbf{\underline{choose 2 topics} from the 7 topics listed at the bottom,}}
+
+\medskip
+\noindent and write a 200--300 word essay on a separate sheet for each of your two topics.  Make sure to read the indicated sections of the textbook for your topics.
+
+\smallskip
+\textbf{You may not bring notes to the final}, but you are \textbf{strongly encouraged to practice} your planned essays.  Feel free to get feedback on your practice essays from other students or faculty/friends/family/pets.  Then think through, in preparation, how you will remember enough detail so as to recreate the essay during the Final Exam itself.
+
+\smallskip
+Note that 200 words equals 20 lines of text with 10 words on each line, or 30 lines with 6.7 words each.  Thus each essay should be less than a page, though perhaps close to a page if you write large.  Use equations as appropriate to communicate meaning, but not more than a few, and likewise one or two figures as needed.  Most of your essays should be words.
+
+\smallskip
+Your goal is to write something like a short wikipedia entry on the topic.  For example, if someone searches \, \texttt{line search} \, in google, what they should get on the first two screens of the Wikipedia entry might be something like your essay for topic \circled{4} below.  Said a different way, if a friend asks you to explain what a ``line search'' is, and why you want one, what would be your 5 minute answer?  A good 5 minute oral answer, perhaps augmented with scribbling on a whiteboard, should be converted here into a clean, clear, short essay.
+
+\smallskip
+For reference, the three paragraphs just above this sentence total 218 words.
+
+\vspace{0.2in}
+\noindent {\large \textbf{The 7 Topics.}}
+
+\newcommand{\ecomment}[1]{ \hfill \mbox{\emph{(#1)}} }
+
+\smallskip
+\renewcommand{\labelenumi}{\circled{\arabic{enumi}}}
+\begin{enumerate}
+\setlength{\itemsep}{4pt}
+\item How to move around a feasible set defined by linear equality and inequality constraints, including the ratio test. \hfill \mbox{\emph{(section 3.1, especially pages 80, 81)}}
+\item How to put linear programming (LP) problems in standard form.  \ecomment{section 4.2}
+\item The simplex method for LP problems in standard form.  \ecomment{sections 5.2--5.4}
+\item Back-tracking line search to generate sufficient decrease. \ecomment{section 11.5}
+\item Steepest descent using exact line search on quadratic functions.  \ecomment{section 12.2}
+\item Quasi-Newton methods, with symmetric rank-one as the example. \ecomment{section 12.3}
+\item Optimality conditions for minimization subject to \emph{linear} equality and inequality constraints.  \ecomment{sections 14.3-14.4}
+\end{enumerate}
+
+\end{document}
+
