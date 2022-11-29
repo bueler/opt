@@ -33,7 +33,7 @@ for k = 1:maxiters
     end
     pk = - B \ dfxk;             % quasi-Newton step
     if dfxk' * pk >= 0.0
-        fprintf('warning: non-descent direction at step %d (use steepest-descent)\n',k)
+        fprintf('warning: non-descent direction at step %d .. revert to steepest-descent\n',k)
         pk = - dfxk;
     end
     alpha = bt(xk,pk,dfxk,f);    % back-tracking line search
