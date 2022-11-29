@@ -51,10 +51,6 @@ for k = 1:maxiters
     if denom == 0
         break                    % in this case we are certainly done
     end
-    if abs(denom) < 1.0e-14
-        warning(strcat('divide by near-zero in symmetric rank-one update',...
-                       ' at iteration %d; convergence?'),k)
-    end
     B = B + v * (v / denom)';    % symmetric rank-one update
 end
 end % function
