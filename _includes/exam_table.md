@@ -2,7 +2,7 @@
 <table class="asst-table">
 {% for exam in data.exams %}
 <tr>
-	<td> 
+	<td>
 		<table class="inner">
 		  <tr>
 			    <td>{{ exam.name }} &nbsp; &nbsp; {{ exam.date }}</td>
@@ -15,6 +15,11 @@
 		  {% if exam.reviewsheet %}
 		  	<tr>
 			      <td><a href="{{ data.home }}/{{ exam.reviewsheet }}">review guide</a></td>
+			  </tr>
+			{% endif %}
+		  {% if exam.doc %}
+		  	<tr>
+			      <td><a href="{{ data.home }}/{{ exam.doc }}">exam document</a></td>
 			  </tr>
 			{% endif %}
 		  {% if exam.sections %}
@@ -34,7 +39,7 @@
 			{% endif %}
 		</table>
 	</td>
-	<td> 
+	<td>
 		<table class="inner">
 		  {% if exam.blank %}
 		  <tr>

@@ -13,5 +13,4 @@ exams:
 - name: Final Exam
   date: Friday 16 December
   info: <b>in class</b>, Chapman 206, 3:15pm--5:15pm
-  sections: to be determined
-  #blank: final.pdf
+  doc: finalessays.pdf
