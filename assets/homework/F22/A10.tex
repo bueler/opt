@@ -95,10 +95,10 @@ width=#3in]{#1.eps}}
 Please read sections 14.1--14.7 and 15.1--15.4 from the textbook.\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.}
 
 \bigskip
-\noindent \textsc{Do the following exercises} from section 14.2, pages x--y:
+\noindent \textsc{Do the following exercises} from section 14.2, pages 489--491:
 
 \begin{itemize}
-\item Exercise 2.7 \quad \begin{minipage}[t]{4.5in} \emph{Use techniques from either section 14.2 or 14.3.} \end{minipage}
+\item Exercise 2.7 \quad \begin{minipage}[t]{4.5in} \emph{You may use techniques from \emph{either} section 14.2 or 14.3.} \end{minipage}
 \end{itemize}
 
 \medskip
@@ -108,7 +108,7 @@ Please read sections 14.1--14.7 and 15.1--15.4 from the textbook.\footnote{Griva
     \text{minimize}   &&  z = c^\top &x \\
     \text{subject to} && \quad \sum_{i=1}^n x_i^2 &= 1
 \end{alignat*}
-where $x\in\RR^n$.  Note there is a single equality constraint, which can be written $\|x\|^2=1$.
+where $x\in\RR^n$.  Note that the single equality constraint can be written as $\|x\|^2=1$.
 
 \epart{a}  By arguing informally explain why the solution is
     $$x_* = - \frac{c}{\|c\|}.$$
@@ -121,7 +121,10 @@ Use a sketch of the $n=2$ case to explain.
 
 \medskip
 % F3
-\prob{Problem P22.}  (\emph{Before doing this problem read Example 14.20 on pages 506--507.  This problem asks for a similar analysis.})  Consider the problem
+\prob{Problem P22.}  \emph{Before doing this problem read Example 14.20 on pages 506--507.  This problem asks for a similar analysis.}
+
+\medskip
+Consider the problem
 \begin{alignat*}{2}
     \text{minimize}   &&  f(x) &= (x_1-1)^2 + (x_2+1)^2 \\
     \text{subject to} && \quad x_1^2 + x_2^2 &\le 9 \\
@@ -130,7 +133,7 @@ Use a sketch of the $n=2$ case to explain.
 
 \epart{a}  Sketch the feasible set and explain informally, perhaps using contours of $f$, why $x_*=(1,0)^\top$ is the solution.
 
-\epart{b}  Write the constraints in the form $g_i(x)\ge 0$.  Compute the Lagrangian and its gradient.  For each of the points $A = (0,0)^\top$, $B=(0,3)^\top$, and $C=(1,0)^\top$ compute the values of $\lambda_i$ satisfying the zero-gradient condition.  Address whether these points satisfy the first-order optimality conditions, that is, whether they are candidates for a local minimizer.  Show in particular that $C$ satisfies all the first-order conditions in Theorem 14.18.  (\emph{You do \emph{not} need to find any null-space matrices in order to answer this question.})
+\epart{b}  Write the constraints in the form $g_i(x)\ge 0$.  Compute the Lagrangian and its gradient.  For each of the points $A = (0,0)^\top$, $B=(0,3)^\top$, and $C=(1,0)^\top$ compute the values of $\lambda_i$ satisfying the zero-gradient condition.  Address whether these points satisfy the first-order optimality conditions, that is, whether they are candidates for a local minimizer.  Show in particular that $C$ satisfies all the first-order conditions in Theorem 14.18.  (\emph{You do \emph{not} need to find null-space matrices to answer this question.})
 
 
 \medskip
@@ -141,9 +144,9 @@ Use a sketch of the $n=2$ case to explain.
     \text{subject to} \qquad & Ax = b \\
                       & x \ge 0
     \end{matrix}$$
-Assume $f$ is smooth, that there are $m$ scalar constraint equations, and that $A$ has full row rank.  Thus $A\in \RR^{m\times n}$, $b\in \RR^m$, and $m\le n$ (as usual).
+Assume that there are $m$ scalar constraint equations and that $A$ has full row rank.  Thus $A\in \RR^{m\times n}$, $b\in \RR^m$, and $m\le n$ (as usual).
 
-In 2D ($n=2$) there are exactly three possibilities for the dimension of the feasible set.  The cartoons below illustrate these possibilities when the feasible set $S$ is ``generic'', meaning non-empty and bounded (for $m>0$).
+We want to visualize the possible feasible sets for such problems.  In 2D ($n=2$) there are exactly three possibilities for the dimension of the feasible set.  The cartoons below illustrate these possibilities when the feasible set $S$ is non-empty and bounded.  (Except that for $m=0$ the set is unbounded.)
 
 \bigskip
 \begin{tikzpicture}[scale=0.75]
@@ -171,23 +174,25 @@ In 2D ($n=2$) there are exactly three possibilities for the dimension of the fea
 \end{tikzpicture}
 
 \bigskip
-For 3D ($n=3$) there are four generic possibilities $m=0,1,2,3$.  Sketch the four corresponding cartoons.  These cartoons should have the same annotations as the 2D versions above.
+For 3D ($n=3$) there are four nonempty, and bounded if $m>0$, possibilities.  Sketch the four corresponding cartoons.  These cartoons should have the same annotations as the 2D versions above.
 
 
 \medskip
 % F6
-\prob{Problem P24.}  (\emph{This problem asks you to write the general KKT conditions.})  Consider the general nonlinear constrained optimization problem
+\prob{Problem P24.}  \emph{This problem asks you to write the general KKT conditions.}
+
+\medskip
+Consider the general nonlinear constrained optimization problem over $x\in\RR^n$:
 \begin{alignat*}{2}
     \text{minimize}   &&  &f(x) \\
     \text{subject to} && \qquad g_i(x) &= 0, \quad i=1,\dots,\ell \\
                       &&       h_i(x) &\ge 0, \quad i=1,\dots,m
 \end{alignat*}
 
-\epart{a}  In section 14.5 the meaning of the phrase ``$x_*$ \emph{is a regular point of the constraints}'' is given.  State this definition precisely for the above problem.  Also state the Lagrangian for this problem.
+\epart{a}  In section 14.5 the meaning of the phrase ``$x_*$ \emph{is a regular point of the constraints}'' is given.  State this definition precisely for the above problem.
 
-\epart{b}  Suppose $x_*$ is a local minimizer of the above problem which is also a regular point.  State the first-order necessary conditions for the above problem.  (\emph{Again note that you do \emph{not} need to find any null-space matrices $Z(x)$ in order to answer this question.})
+\epart{b}  State the Lagrangian for this problem.
 
-
-% consider using F4, which is a grid-search wrapper around an unconstrained method
+\epart{c}  Suppose $x_*$ is a local minimizer of the above problem which is also a regular point.  State the first-order necessary conditions for the above problem.  (\emph{Again, you do \emph{not} need to find null-space matrices to answer this question.})
 
 \end{document}
