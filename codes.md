@@ -52,3 +52,10 @@ From Assignment #7:
 From Assignment #8:
 
   * [secant1d.m](assets/codes/secant1d.m)
+
+From Assignment #9:
+
+  * [sr1quadratic.m](assets/codes/sr1quadratic.m)
+  * [fdgradient.m](assets/codes/fdgradient.m)
+  * [sr1btfd.m](assets/codes/sr1btfd.m)
+  * [rosencomparefd.m](assets/codes/rosencomparefd.m)
