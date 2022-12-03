@@ -1,7 +1,7 @@
 function [xk, xklist] = sr1btfd(x0,f,tol,maxiters)
 % SR1BTFD  Symmetric rank-one quasi-Newton algorithm using back-tracking line
 % search, but only requiring the user to provide an objective function.
-% The gradients are computed through finite-differencing.  Compare SR1BTFD.
+% The gradients are computed through finite-differencing.  Compare SR1BT.
 % Usage:
 %    [xk, xklist] = sr1btfd(x0,f,tol)
 % where
@@ -10,8 +10,8 @@ function [xk, xklist] = sr1btfd(x0,f,tol,maxiters)
 %                f.m); f() needs to return function value f(x_k)
 %    tol         stop when norm of gradient is less than this number
 % and (outputs)
-%    xk          Nth iterate
-%    xklist      all iterates as N+1 column matrix
+%    xk          kth iterate
+%    xklist      all iterates as k+1 column matrix
 % Example: ROSENCOMPAREFD
 
 if nargin < 4
@@ -78,4 +78,3 @@ end % function
         dfxk(i) = (f(xkh) - fxk) / h;
     end
     end % function
-
