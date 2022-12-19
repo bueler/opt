@@ -22,6 +22,11 @@
 			      <td><a href="{{ data.home }}/{{ exam.doc }}">exam document</a></td>
 			  </tr>
 			{% endif %}
+		  {% if exam.rubric %}
+		  <tr>
+			    <td><a href="{{ data.home }}/{{ exam.rubric }}">rubric</a></td>
+			</tr>
+			{% endif %}
 		  {% if exam.sections %}
 			<tr>
 			    <td>sections covered: {{ exam.sections }}</td>
