@@ -2,10 +2,13 @@ sidenavtitle: 'MATH F661'
 
 docs:
 
-- title: Syllabus
+- title: Advertisement
+  url: assets/general/F24/advert.pdf
+
+- title: (old) Syllabus
   url: assets/general/F22/syllabus.pdf  # rebuild by "make syllabus.pdf" in assets/general/F22/
 
-- title: Schedule
+- title: (old) Schedule
   url: assets/general/F22/schedule.pdf  # rebuild by "make schedule.pdf" in assets/general/F22/
 
 - title: Homework

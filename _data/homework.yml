@@ -1,37 +1,12 @@
-semester: Fall 2022
-home: assets/homework/F22
+semester: Fall 2024
+home: assets/homework/F24
 homework:
 - name: Assignment 1
-  due: Wednesday 7 September
-  blank: A1.pdf
-  seealsopdf: assets/examples/fiveexamples.pdf
-  seealsoname: 5 Example Optimization Problems
-- name: Assignment 2
-  due: Monday 19 September
-  blank: A2.pdf
-- name: Assignment 3
-  due: Wednesday 28 September
-  blank: A3.pdf
-- name: Assignment 4
-  due: Wednesday 5 October
-  blank: A4.pdf
-- name: Assignment 5
-  due: Monday 17 October
-  blank: A5.pdf
-- name: Assignment 6 (revised again!)
-  due: Wednesday 26 October
-  blank: A6.pdf
-- name: Assignment 7
-  due: Wednesday 9 November
-  blank: A7.pdf
-  seealsopdf: assets/slides/sd.pdf
-  seealsoname: Steepest descent needs help
-- name: Assignment 8
-  due: Wednesday 16 November
-  blank: A8.pdf
-- name: Assignment 9
-  due: Wednesday 30 November
-  blank: A9.pdf
-- name: Assignment 10
-  due: Friday 9 December
-  blank: A10.pdf
+  due: TODO
+  blank: TODO
+#  seealsopdf: assets/examples/fiveexamples.pdf
+#  seealsoname: 5 Example Optimization Problems
+
+#- name: Assignment 7
+#  seealsopdf: assets/slides/sd.pdf
+#  seealsoname: Steepest descent needs help

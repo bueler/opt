@@ -1,19 +1,25 @@
 ---
 layout: course-page
-title: Bueler's Math F661 Optimization in Fall 2022 at UAF
+title: Bueler's Math F661 Optimization at UAF
 ---
 
-Welcome to the homepage of **Math F661 Optimization**, Fall 2022, in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
+Welcome to the homepage of **Math F661 Optimization** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
+
+## WARNING: WEBPAGE UNDER CONSTRUCTION
+
+### MANY LINKS ARE OUT OF DATE, BUT SEE THE [FALL 2024 ADVERTISEMENT](assets/general/F24/advert.pdf)
 
 #### Instructor:  [Ed Bueler](http://bueler.github.io/)
 
 Email me at [elbueler@alaska.edu](mailto:elbueler@alaska.edu).  I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
-### [Canvas course page](https://canvas.alaska.edu/courses/9948)
+### [Canvas course page](TODO)
 
-Log in to [canvas.alaska.edu/courses/9948](https://canvas.alaska.edu/courses/9948) for Homework and Exam solutions, and to see your grades.
+Log in to [TODO](TODO) for Homework and Exam solutions, and to see your grades.
 
 ### Getting Started
+
+#### WARNING: WEBPAGE UNDER CONSTRUCTION; MANY LINKS ARE OUT OF DATE
 
 * Read the [Syllabus (PDF)](assets/general/F22/syllabus.pdf).
 
@@ -27,9 +33,9 @@ Log in to [canvas.alaska.edu/courses/9948](https://canvas.alaska.edu/courses/994
 
 * There are [two Exams](exams.html), a Midterm and a Final.  Both are in class, and the Final will happen at the scheduled time (Friday, December 16, 3:15pm--5:15pm).  See the [Exams](exams.html) tab for the sections covered, and old exams for review.
 
-[<img src="assets/images/banana.png" height="200">](https://en.wikipedia.org/wiki/Mathematical_optimization "mathematical optimization") &nbsp; &nbsp; [<img src="assets/images/lagrange.png" height="200">](https://en.wikipedia.org/wiki/Lagrange_multiplier "lagrange multipliers visualization") &nbsp; &nbsp; [<img src="assets/images/cover.jpg" height="250">](https://my.siam.org/Store/Product/viewproduct/?ProductId=1008 "the textbook")
+[<img src="assets/images/banana.png" height="200">](https://en.wikipedia.org/wiki/Mathematical_optimization "mathematical optimization") &nbsp; &nbsp; [<img src="assets/images/lagrange.png" height="200">](https://en.wikipedia.org/wiki/Lagrange_multiplier "lagrange multipliers visualization") &nbsp; &nbsp; [<img src="assets/images/cover.jpg" height="250">](https://epubs.siam.org/doi/10.1137/1.9780898717730 "the textbook")
 
-* See the one-page [advertisement (PDF)](assets/general/F22/advert.pdf) for this course.
+* See the one-page [advertisement (PDF)](assets/general/F24/advert.pdf) for this course.
 
 ---
 _Site design derived from [coordinated Calc I](https://uaf-math251.github.io/), an original [Jekyll](https://jekyllrb.com/) design by [David Maxwell](https://damaxwell.github.io/)._
