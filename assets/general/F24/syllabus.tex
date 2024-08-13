@@ -1,0 +1,218 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1.2in, bottom=0.9in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=1.0]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfauthor={Ed Bueler}
+    pdftitle={Syllabus for MATH F661 Fall 2024},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+%\chead{\large\sf\textbf{}}
+\lhead{\large\sf\textbf{Syllabus}}
+\rhead{\large\sf\textbf{MATH F661 Optimization, Fall 2024}}
+  
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1} \smallskip\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+
+\strut\par\vskip-12pt
+\heading{Essential Information}
+
+\vskip -12pt
+\strut\hbox to \hsize{\tableindent\vtop{\halign{#\hfill\ts&#\hfil\cr
+{\emph{Instructor}} & Ed Bueler \quad \href{mailto:elbueler@alaska.edu}{\texttt{elbueler\@@alaska.edu}} \cr
+\strut & \cr
+{\emph{Class meeting}} & MWF 2:15--3:15 pm, Chapman 206 \cr
+\strut & \cr
+{\emph{CRNs}} & in-person 74506 (section 901), online 74515 (section 701)\cr
+\strut & \cr
+{\emph{Public website}} & \href{https://bueler.github.io/opt/}{\texttt{bueler.github.io/opt/}}\cr
+\strut & \cr
+{\emph{Canvas website}} & \href{https://canvas.alaska.edu/courses/21663}{\texttt{canvas.alaska.edu/courses/21663}} \cr
+\strut & \cr
+\emph{Prerequisite} & Knowledge of calculus, linear algebra and computer programming.\cr
+\strut & \cr
+{\emph{Required text}} & Griva, Nash, \& Sofer, \emph{Linear and Nonlinear Optimization},\cr
+  & 2nd ed., SIAM Press 2009 \cr
+}
+\hfil}}
+
+\heading{Description and Topics}
+Optimization is essential mathematical technology for science, engineering, economics, statistics, and machine learning.  This graduate-level introduction focusses on ideas, algorithms, and applications, using mathematical rigor (theorems and proofs) when appropriate.  The course will combine lectures, in-class activities, homework assignments (which include both writing and programming), a project reflecting the student's particular interests, and in-class exams.
+
+We cover these topics:
+\begin{itemize}[nosep]
+\item Continuous optimization, both nonlinear and linear.
+\item Iterative methods for unconstrained problems:
+    \begin{itemize}[nosep]
+    \item gradient descent
+    \item Newton and quasi-Newton methods
+    \item conjugate gradients
+    \end{itemize}
+\item Methods for constrained problems:
+    \begin{itemize}[nosep]
+    \item simplex method for linear programming
+    \item interior point methods
+    \end{itemize}
+\item Line search and trust region methods.
+\item Constrained problems and the Karush-Kuhn-Tucker conditions.
+\item Linear algebra related to the above topics.
+\item Convergence theorems for some methods.
+\item Examples from applications.
+\item Practical work with a scientific computing language.
+\end{itemize}
+
+\heading{Course Goals and Student Learning Outcomes}
+The goal of this applied mathematics course is to be able to understand optimization problems as they arise in applied contexts.  At the end of the course you should be able to select algorithms and apply optimization software based on an understanding of theory and standard examples.  Understanding of concepts should suffice for the student to assess claims about optimization software performance.  Increased student competence with general scientific computing, using languages like Matlab or Python, is also a goal.
+
+\heading{The Hybrid Classroom}
+There are two sections: in-person (901; crn 74506) and online (701; crn 74515).  They are treated as one course: they occur synchronously and share all materials.  In this ``hybrid'' set-up, each lecture will be a recorded Zoom session generated from Chapman 206.  (The link for the Zoom session is \href{https://canvas.alaska.edu/courses/21663}{in Canvas}.  Recordings will be linked from inside Canvas only; they are not public.)  I will try to treat all students the same regarding proctored assessments---see below---and participation during class time.  Students have certain obligations to help make this work:
+\begin{itemize}
+\item \textbf{in-person students}: Please participate as energetically as you can.  I prefer for in-person students to turn in their homework assignments on paper.
+\item \textbf{online students}:  Please sign into the Zoom session, from Canvas, just before class starts.  Please participate as energetically as you can, and, if convenient, keep your camera on.  Regarding in-class group work, check for worksheet PDFs from the \href{https://bueler.github.io/opt/}{public site} before class starts.  When you turn in homework assignments electronically, please generate clear, well-ordered, and combined PDFs.  You will need to schedule proctoring for the Midterm Exam and the Final Exam (see below), or attend in person on those days.
+\end{itemize}
+
+\heading{Schedule and Online Materials}
+The \href{https://bueler.github.io/opt/}{public course website} includes a \href{https://bueler.github.io/opt/assets/general/F24/schedule.pdf}{schedule} listing the textbook sections to be covered during each lecture, the due date of each homework Assignment, and the dates for the Midterm and Final Exams.  Please consult this schedule frequently; it is subject to change and will be kept up to date.
+
+Most course materials (syllabus, schedule, homework Assignments, code examples, project information, etc.) will be posted on the \href{https://bueler.github.io/opt/}{public course webpage}.  Some course materials (student grades, homework and exam solutions, etc.) will go on the \href{https://canvas.alaska.edu/courses/21663}{Canvas site}.
+
+The zoom link for getting the lecture online is also on the \href{https://canvas.alaska.edu/courses/21663}{Canvas site}.
+
+\heading{Office Hours and Communication}
+My Office Hours are shown online at \href{http://bueler.github.io/OffHrs.htm}{\texttt{bueler.github.io/OffHrs.htm}}; I hold office hours in Chapman 306C.  Students can also schedule meetings with me outside of regular office hours.  I will use Canvas to send announcements.  If I need to contact you outside of class times, I'll try to email via Canvas, so please set your email address in Canvas to one that you check regularly!
+
+
+\heading{Evaluation and Grades}
+Grades are determined as follows.
+
+\begin{tabular}{|c|c|c|}
+\hline
+Homework & nearly weekly & 50\% \\
+\hline
+Project Part I & due Friday 8 November & 5\%  \\
+\hline
+Project Part II & due Friday 13 December & 15\%  \\
+\hline
+Midterm Exam & in-class Friday 18 October & 15\%  \\
+\hline
+Final Exam & \, in-class \emph{Wednesday 11 December}, 1:00--3:00pm \, & 15\% \\
+\hline
+total & & 100\% \, \\
+\hline
+\end{tabular}
+
+Scores for specific assignments/projects/exams may be adjusted based on the actual difficulty of the work and/or on average class performance.  Any such adjustments will be applied to all students equally.  The scores of the various parts will be summed and the final course grade will be assigned as follows.
+
+\begin{tabular}{llll}
+A  & 93--100\%& C  & 68--75\%  \\
+A- & 90--92\% & C- & not given \\
+B+ & 87--89\% & D+ & 65--67\%  \\
+B  & 82--86\% & D  & 60--65\%  \\
+B- & 79--81\% & D- & 57--59\%  \\
+C+ & 76--78\% & F  & $\le$ 56\%
+\end{tabular}
+
+These ranges are a guarantee and a lower bound.  I reserve the right to increase your grade above these ranges based on the actual difficulty of the work and/or on average class performance.  Any such increases will preserve the final grade ordering by weighted total score.
+
+%\clearpage\newpage
+%\strut\vspace{-10pt}
+
+\heading{Homework}
+The homework consists of by-hand computations, design and analysis of numerical algorithms, computer implementation of those algorithms, by-hand and computer visualization of functions and sets, rigorously-justified examples and counter-examples, and some proofs.
+
+Examples in lecture and exercises on the homework will use Matlab/Octave, both as a command-line supercalculator and as a programming language.  Codes on homework solutions will only be in Matlab/Octave.  These examples will help you learn Matlab/Octave, if you want to use that language.
+
+While Matlab/Octave is well-suited to implementing optimization algorithms, \emph{other languages are accepted for all student work}.  See the separate document \textsl{Programming languages compared} (\href{https://bueler.github.io/compareMOP.pdf}{\texttt{bueler.github.io/compareMOP.pdf}}) for other recommended scientific computing languages, especially Python and Julia.
+
+Homework assignments and their due dates will regularly be posted at the \href{https://bueler.github.io/opt/}{\texttt{public website}}.  The site also has a daily schedule of topics.  The schedule will be updated on an ongoing basis to reflect which topics were actually covered each day, so it is subject to change.  The public website will have links to a growing list of short Matlab/Octave codes; this is a good resource for coding examples.
+
+Late Assignments will not be accepted.  If you have unavoidable circumstances which do not allow you to turn in an Assignment on time then please contact me (\href{mailto:elbueler@alaska.edu}{\texttt{elbueler\@@alaska.edu}}) in advance.
+
+Problems very similar to, or shortened versions of, Homework problems will appear on the in-class Exams.
+
+\heading{Project}
+The project is in two parts, with the first part due midsemester and the second due during the week of final exams; see dates above.  The topic will mostly be up to you, but I will make suggestions, and I reserve veto power on choice of topics.  The project must include both theory and practical computation.  A detailed handout will appear on Monday 28 October, outlining how you might choose a project, and what are the expectations.
+
+\heading{Exams}
+There will be one in-class Midterm Exam covering mostly basic concepts and definitions. The in-class Final Exam will have similar problems from the whole semester, but weighted toward the latter half of the course.
+
+A make-up Midterm will be given only for documented extenuating circumstances, at my discretion.  Department policy (below) does not allow me to move the time of the Final Exam.
+
+\heading{Internet and AI usage, and other assistance}
+You will not have access to AI tools, or any other tools except a writing implement, during the Midterm and Final Exam.  These assessments are proctored and on-paper.
+
+Regarding Homework and your Project, you are encouraged to talk to other students about the problems, and to use other tools appropriately, but the work you turn in must be your own.  Please do not copy solutions or proofs from online sources, whether found from searching or generated via AI tools like ChatGPT.   If I detect this then I have the right to give you a zero on that assignment.
+
+Even when you get assistance, it goes without saying that your own thinking, as you do the homework, will have the greatest benefits.  Fully understand the materials you turn in, even if hints from other sources were used in creating them.
+
+\heading{Rules and Policies}
+\vskip -20pt
+
+\subheading{Incomplete Grade} 
+Incomplete (I) will only be given in
+  DMS courses in cases where
+  the student has completed the majority (normally all but the last
+  three weeks) of a course with a grade of C or better, but for
+  personal reasons beyond his/her control has been unable to complete
+  the course during the regular term. Negligence or indifference are
+  not acceptable reasons for granting an incomplete grade.
+
+%\clearpage\newpage
+%\strut\vspace{-10pt}
+\subheading{Late Withdrawals} 
+A withdrawal after the deadline from a DMS course will
+  normally be granted only in cases where the student is performing
+  satisfactorily (i.e., C or better) in a course, but has exceptional
+  reasons, beyond his/her control, for being unable to complete the
+  course.  These exceptional reasons should be detailed in writing to
+  the instructor, Department Chair and the Dean.
+
+\subheading{No Early Final Examinations}
+Final examinations for DMS courses shall not be held earlier than the date and time published in the official term schedule.  Normally, a student will not be allowed to take a final exam early.  Exceptions can be made by individual instructors, but should only be allowed in exceptional circumstances and in a manner which doesn't endanger the security of the exam.
+
+\subheading{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not be tolerated.  It is a violation of the Student Code of Conduct and will be punished according to UAF procedures.
+
+\subheading{Student protections and service statement}
+Every qualified student is welcome in my classroom.  As needed, I am happy to work with you, Disability Services, Veterans' Services, Rural Student Services, and so on, to find reasonable accommodations.  Students at this University are protected against sexual harassment and discrimination (Title IX), and minors have additional protections.  For more information on your rights as a student and the resources available to you to resolve problems, please go the following site: \href{https://www.uaf.edu/handbook/}{\texttt{www.uaf.edu/handbook}}.
+
+\hfill  \scriptsize [syllabus version: \today] \normalsize
+
+\end{document}
