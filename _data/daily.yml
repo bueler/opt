@@ -1,0 +1,8 @@
+semester: Fall 2024
+home: assets/
+daily:
+- name: Monday 26 August
+  covered: Chapter 1
+  handout: worksheets/F24/5exs.pdf
+  handoutname: 5 example optimization problems
+#  more: x

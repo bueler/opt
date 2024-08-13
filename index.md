@@ -7,31 +7,29 @@ Welcome to the homepage of **Math F661 Optimization** in the [Dept. of Mathemati
 
 ## WARNING: WEBPAGE UNDER CONSTRUCTION
 
-### MANY LINKS ARE OUT OF DATE, BUT SEE THE [FALL 2024 ADVERTISEMENT](assets/general/F24/advert.pdf)
+### MANY LINKS ARE OUT OF DATE OR BROKEN
 
 #### Instructor:  [Ed Bueler](http://bueler.github.io/)
 
 Email me at [elbueler@alaska.edu](mailto:elbueler@alaska.edu).  I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
-### [Canvas course page](TODO)
+### [Canvas course page](https://canvas.alaska.edu/courses/21663)
 
-Log in to [TODO](TODO) for Homework and Exam solutions, and to see your grades.
+Log in to [canvas.alaska.edu/courses/21663](https://canvas.alaska.edu/courses/21663) for Homework and Exam solutions, and to see your grades.
 
 ### Getting Started
 
-#### WARNING: WEBPAGE UNDER CONSTRUCTION; MANY LINKS ARE OUT OF DATE
+* Read the [Syllabus (PDF)](assets/general/F24/syllabus.pdf).
 
-* Read the [Syllabus (PDF)](assets/general/F22/syllabus.pdf).
+* See the [Schedule (PDF)](FIXME).  Check it often for due dates, and for which topics come next!
 
-* See the [Schedule (PDF)](assets/general/F22/schedule.pdf).  Check it often for due dates, and for which topics come next!
+* Check out the weekly [Homework assignments](homework.html).
 
-* Check out the weekly [homework Assignments](homework.html).
+* There are two Exams, a Midterm and a Final.  Both are in class, and the Final will happen at the scheduled time (Friday, December 16, 3:15pm--5:15pm).  See the [Exams tab](exams.html) for the sections covered, and old exams for review.
 
-* You will do a [two-part project](project.html) on a topic of your choice.  See the [Project](project.html) tab for details.
+* You will do a two-part project on a topic of your choice.  See the [Project tab](project.html) for details.
 
-* Homework and projects will require some programming in Matlab/Octave or some other suitable scientific computing language.  See the [Computing](computing.html) tab and [_Programming languages compared_ (PDF)](https://bueler.github.io/compareMOP.pdf) for recommended languages.
-
-* There are [two Exams](exams.html), a Midterm and a Final.  Both are in class, and the Final will happen at the scheduled time (Friday, December 16, 3:15pm--5:15pm).  See the [Exams](exams.html) tab for the sections covered, and old exams for review.
+* Homework and your Project will require some programming in Matlab/Octave or some other suitable scientific computing language.  See the [Computing tab](computing.html) and [_Programming languages compared_ (PDF)](https://bueler.github.io/compareMOP.pdf) for recommended languages.
 
 [<img src="assets/images/banana.png" height="200">](https://en.wikipedia.org/wiki/Mathematical_optimization "mathematical optimization") &nbsp; &nbsp; [<img src="assets/images/lagrange.png" height="200">](https://en.wikipedia.org/wiki/Lagrange_multiplier "lagrange multipliers visualization") &nbsp; &nbsp; [<img src="assets/images/cover.jpg" height="250">](https://epubs.siam.org/doi/10.1137/1.9780898717730 "the textbook")
 

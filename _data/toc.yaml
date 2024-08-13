@@ -2,9 +2,6 @@ sidenavtitle: 'MATH F661'
 
 docs:
 
-- title: Advertisement
-  url: assets/general/F24/advert.pdf
-
 - title: Syllabus
   url: assets/general/F24/syllabus.pdf
 
@@ -20,11 +17,8 @@ docs:
 - title: Project
   url: project.html
 
-- title: Worksheets
-  url: worksheets.html
-
-- title: Codes
-  url: codes.html
+- title: Daily Log
+  url: daily.html
 
 - title: Computing
   url: computing.html

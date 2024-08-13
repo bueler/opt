@@ -2,10 +2,10 @@ semester: Fall 2024
 home: assets/homework/F24
 homework:
 - name: Assignment 1
-  due: TODO
-  blank: TODO
-#  seealsopdf: assets/examples/fiveexamples.pdf
-#  seealsoname: 5 Example Optimization Problems
+  due: 26 August
+  blank: A1.pdf
+  seealsopdf: assets/worksheets/F24/5exs.pdf
+  seealsoname: 5 example optimization problems
 
 #- name: Assignment 7
 #  seealsopdf: assets/slides/sd.pdf
