@@ -21,7 +21,7 @@ Log in to [canvas.alaska.edu/courses/21663](https://canvas.alaska.edu/courses/21
 
 * Check out the weekly [Homework assignments](homework.html).
 
-* There are two Exams, a Midterm and a Final.  Both are in class, and the Final will happen at the scheduled time (Friday, December 16, 3:15pm--5:15pm).  See the [Exams tab](exams.html) for the sections covered, and old exams for review.
+* There are two Exams, a Midterm and a Final.  Both are in class, and the Final will happen at the scheduled time (Wednesday, December 11, 1:00pm--3:00pm).  See the [Exams tab](exams.html) for the sections covered, and old exams for review.
 
 * You will do a two-part project on a topic of your choice.  See the [Project tab](project.html) for details.
 
