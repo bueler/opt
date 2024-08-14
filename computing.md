@@ -3,7 +3,7 @@ layout: course-page
 title: Computing for optimization
 ---
 
-# Computing for optimization
+## Computing for optimization
 
 The programming and computational portions of this course are important, and students will need to work at these parts, but I am very flexible about how you accomplish them.
 
@@ -19,7 +19,7 @@ Note that I will _support_ Matlab/Octave by providing lots of examples, both in-
 
 The above languages are all reasonably natural for linear algebra.  Tutorials are often not needed for standard tasks, but they are available online, and furthermore you should feel free to ask programming questions in class!  Yes, I'm happy to answer "dumb syntax" questions.  (I have such questions all the time about new computer stuff!  For new languages, everyone gets hung-up at some point on what to type next.)
 
-## Matlab and Octave
+### Matlab and Octave
 
 Here is a guide to getting started in Matlab or Octave, which are essentially equivalent as programming languages.  Note that Matlab, a commerical product, is more polished than the free and open-source Octave.
 

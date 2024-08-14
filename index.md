@@ -5,11 +5,11 @@ title: Bueler's Math F661 Optimization at UAF
 
 Welcome to the homepage of **Math F661 Optimization** in the [Dept. of Mathematics and Statistics](http://www.uaf.edu/dms/) at the [University of Alaska Fairbanks](http://www.uaf.edu/).
 
-#### Instructor:  [Ed Bueler](http://bueler.github.io/)
+Instructor:  [Ed Bueler](http://bueler.github.io/)
 
 Email me at [elbueler@alaska.edu](mailto:elbueler@alaska.edu).  I hold [office hours](http://bueler.github.io/OffHrs.htm) in Chapman 306C.
 
-### [Canvas course page](https://canvas.alaska.edu/courses/21663)
+### Canvas course page
 
 Log in to [canvas.alaska.edu/courses/21663](https://canvas.alaska.edu/courses/21663) for Homework and Exam solutions, and to see your grades.
 
