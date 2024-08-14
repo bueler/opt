@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage[top=1.0in, bottom=0.5in, left=0.9in, right=1.0in]{geometry}
+
+\usepackage{tabularx,enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{palatino}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,urlcolor=black]{hyperref}
+
+% commands to put defined left and right headers on the top
+% and a page number on the bottom of all pages after 1
+\pagestyle{fancy}
+\makeatletter
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\headsep 5pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+% header content
+\doclabel{Math 661 Optimization}
+\docdate{Fall 2024 (Bueler)}
+
+% macros
+\renewcommand{\d}{\displaystyle}
+\newcommand{\wkday}[3]{\textbf{\large #1\strut}\quad #2\,--\,#3}
+\newcommand{\vacinline}[1]{{\color{OliveGreen} \textsl{#1}}}
+\newcommand{\vac}[1]{\strut \small{\vacinline{#1}}}
+\newcommand{\due}[1]{\strut {\color{BrickRed} \textsl{#1}}}
+\newcommand{\hdue}[1]{\due{#1 due}}
+\newcommand{\proj}[1]{\strut {\color{RedOrange} #1}}
+\newcommand{\ee}[1]{\strut {\color{Blue} \textbf{#1}}}
+\newcommand{\dlinline}[1]{{\color{Purple} \textbf{#1}}}
+\newcommand{\dl}[1]{{\small \dlinline{#1}}}
+
+
+\begin{document}
+\hfill \small \emph{version 1: \today} \normalsize
+
+\bigskip\bigskip
+\centerline{\Large \textbf{Weekly Schedule}}
+
+\bigskip
+This schedule is subject to changes!  See the public course webpage
+
+\medskip
+
+\centerline{\href{https://bueler.github.io/opt/index.html}{\texttt{bueler.github.io/opt/}}}
+
+\noindent for \due{Homework}, \ee{Exams}, and \proj{Project} details, and the link to the Canvas site.  Note the two \dl{deadlines}.  Sections from the textbook (Griva, Nash \& Sofer), covered in lecture, are in black.  Classes are MWF 2:15--3:15pm, Chapman 206.
+
+\bigskip
+
+\begin{tabularx}{1.03\textwidth}{l|>{\raggedright\arraybackslash}X|X|X|}
+\textbf{Week} \quad Dates & M & W & F \\ \hline
+\wkday{1}{8/26}{8/30}    & 5 examples handout & 2.1,2.2 & 2.3 \\ \hline
+
+\wkday{2}{9/2}{9/6}      & \vac{Labor Day} & 2.4 & Apps B.4--B.5 \par \hdue{A1} \,\, \dl{drop}\\ \hline
+
+\wkday{3}{9/9}{9/13}     &  & 2.6 & 3.1 \\ \hline
+
+\wkday{4}{9/16}{9/20}    & 3.2, 3.3 & 4.1 & 4.2 \\ \hline
+
+\wkday{5}{9/23}{9/27}    & 4.3 & 4.4 & \\ \hline
+
+\wkday{6}{9/30}{10/4}    & 5.1,5.2 & 9.1--9.3 & 5.3,5.4 \\ \hline
+
+\wkday{7}{10/7}{10/11}   & 6.1,6.2 &  & 11.1,11.2 \\ \hline
+
+\wkday{8}{10/14}{10/18}  & 2.7 & 2.5 & \ee{Midterm Exam} \par in class \\ \hline
+
+\wkday{9}{10/21}{10/25}  & 11.3 & 12.2 & 11.4 \\ \hline
+
+\wkday{10}{10/28}{11/1}  & 11.5 \par project start & & 12.2(again) \par \dl{withdraw} \\ \hline
+
+\wkday{11}{11/4}{11/8}   & 12.3 & 12.4 & \phantom{x} \par \proj{Project part I due} \\ \hline
+
+\wkday{12}{11/11}{11/15} & 13.5 & 14.1,14.2 & 14.3 \\ \hline
+
+\wkday{13}{11/18}{11/22} & 15.2 & 14.4 & 14.5  \\ \hline
+
+\wkday{14}{11/25}{11/29} & 14.6 & \vac{Thanksgiving} & \vac{Thanksgiving} \\ \hline
+
+\wkday{15}{12/2}{12/6}   & 16.2 & 16.7 &  \\ \hline
+
+\wkday{16}{12/9}{12/13} & \vac{no class} & \ee{Final Exam} \par in class, 1:00--3:00pm & \vac{no class} \par \proj{Project part II due} \\ \hline
+
+\end{tabularx}
+
+
+\end{document}
