@@ -1,0 +1,72 @@
+\documentclass[12pt]{amsart}
+
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage[final]{graphicx}
+
+
+\begin{document}
+
+\title{Your Title Here}
+
+\author{Your Name}
+
+\date{\today}
+
+\maketitle
+
+\section{Introduction}  PUT CONTENT HERE; PERHAPS CITE SOMETHING \cite{einstein}
+
+%here is how to put in a figure:
+%\begin{figure}
+%\includegraphics[width=0.5\textwidth]{foo.png}  % put image "foo.png" in current directory
+%\caption{CAPTION TEXT HERE}
+%\end{figure}
+
+\section{Algorithms [or Examples]}  MORE CONTENT
+
+\section{Examples [or Algorithms]}  CONTENT
+
+\section{Implementation}  CONTENT
+
+\bigskip
+\hrule
+\begin{verbatim}
+% MYCODE  This is my matlab implementation
+x = 1:10;
+y = randn(size(x));
+plot(x,y)
+z = 2+2
+\end{verbatim}
+\hrule
+\bigskip
+
+MORE CONTENT
+
+\bigskip
+\hrule
+\begin{verbatim}
+>> mycode             % here I am running the code
+z = 4
+\end{verbatim}
+\hrule
+
+\section{Results}  CONTENT
+
+\section{Analysis}  CONTENT; CITE SOMETHING? \cite{grivanashsofer}
+
+\section{Conclusion}  CONTENT
+
+\begin{thebibliography}{2}  % "2" because there are two references
+\bibitem{einstein} 
+A.~Einstein (1905). 
+\textit{Zur Elektrodynamik bewegter K{\"o}rper},
+Annalen der Physik, 322 (10), 891--921.
+
+\bibitem{grivanashsofer}
+I.~Griva, S.~Nash, \& A.~Sofer (2009).
+\textit{Linear and Nonlinear Optimization},
+2nd ed., SIAM Press.
+\end{thebibliography}
+
+\end{document}
