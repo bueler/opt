@@ -1,8 +1,10 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Wednesday 28 August
+  covered: '"5 examples", and start Chapter 2'
 - name: Monday 26 August
-  covered: Chapter 1
+  covered: examples (like in Chapter 1)
   handout: worksheets/F24/5exs.pdf
   handoutname: 5 example optimization problems
 #  more: x
