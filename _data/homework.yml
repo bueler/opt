@@ -6,6 +6,9 @@ homework:
   blank: A1.pdf
   seealsopdf: assets/worksheets/F24/5exs.pdf
   seealsoname: 5 example optimization problems
+- name: Assignment 2
+  due: Friday 13 September
+  blank: A2.pdf
 
 #- name: Assignment 7
 #  seealsopdf: assets/slides/sd.pdf
