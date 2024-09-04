@@ -1,8 +1,14 @@
 semester: Fall 2024
 home: assets/
 daily:
-- name: Wednesday 28 August
+- name: Wednesday 4 September
+  covered: sections 2.2 (language), 2.3 (convexity)
+- name: Monday 2 September
+  covered: Labor Day, no class
+- name: Friday 30 August
   covered: '"5 examples", and start Chapter 2'
+- name: Wednesday 28 August
+  covered: '"5 examples"'
 - name: Monday 26 August
   covered: examples (like in Chapter 1)
   handout: worksheets/F24/5exs.pdf
