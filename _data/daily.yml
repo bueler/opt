@@ -1,8 +1,10 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Friday 6 September
+  covered: section 2.3 (convexity)
 - name: Wednesday 4 September
-  covered: sections 2.2 (language), 2.3 (convexity)
+  covered: section 2.2 (language)
 - name: Monday 2 September
   covered: Labor Day, no class
 - name: Friday 30 August
