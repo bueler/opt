@@ -9,7 +9,9 @@ homework:
 - name: Assignment 2
   due: Friday 13 September
   blank: A2.pdf
+- name: Assignment 3
+  due: Monday 23 September
+  blank: A3.pdf
 
-#- name: Assignment 7
 #  seealsopdf: assets/slides/sd.pdf
 #  seealsoname: Steepest descent needs help
