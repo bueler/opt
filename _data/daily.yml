@@ -1,6 +1,16 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Monday 16 September
+  covered: section 2.6 (Taylor series); see Canvas page for zoom recording
+  otherurl: https://bueler.github.io/opt/assets/slides/F24/mon16sep.pdf
+  otherurlname: slides on section 2.6
+- name: Friday 13 September
+  covered: convexity finished; section 2.4 (general optimization algorithm)
+- name: Wednesday 11 September
+  covered: convexity and first derivatives
+- name: Monday 9 September
+  covered: "convexity: local gives global"
 - name: Friday 6 September
   covered: section 2.3 (convexity)
 - name: Wednesday 4 September
