@@ -1,12 +1,16 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Friday 20 September
+  covered: section 3.1 (linear constraints; feasible directions)
+- name: Wednesday 18 September
+  covered: section 2.4 (general optimization algorithm)
 - name: Monday 16 September
   covered: section 2.6 (Taylor series); see Canvas page for zoom recording
   otherurl: https://bueler.github.io/opt/assets/slides/F24/mon16sep.pdf
   otherurlname: slides on section 2.6
 - name: Friday 13 September
-  covered: convexity finished; section 2.4 (general optimization algorithm)
+  covered: convexity finished; descent directions
 - name: Wednesday 11 September
   covered: convexity and first derivatives
 - name: Monday 9 September
