@@ -1,0 +1,162 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.6in} 
+\addtolength{\evensidemargin}{-.6in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\textheight}{.6in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim,fancyvrb}
+
+\usepackage{palatino}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\mtt}{\texttt}
+\usepackage{alltt,xspace}
+\newcommand{\mfile}[1]
+{\medskip\begin{quote}\scriptsize \begin{alltt}\input{#1.m}\end{alltt} \normalsize\end{quote}\medskip}
+
+\usepackage[final]{graphicx}
+\newcommand{\mfigure}[1]{\includegraphics[height=2.5in,
+width=3.5in]{#1.eps}}
+\newcommand{\regfigure}[2]{\includegraphics[height=#2in,
+keepaspectratio=true]{#1.eps}}
+\newcommand{\widefigure}[3]{\includegraphics[height=#2in,
+width=#3in]{#1.eps}}
+
+\usepackage{amssymb}
+
+\usepackage[pdftex, colorlinks=true, plainpages=false, linkcolor=black, citecolor=red, urlcolor=red]{hyperref}
+
+% macros
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+%\renewcommand{\det}{\operatorname{det}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+
+\newcommand{\Julia}{\textsc{Julia}\xspace}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\Python}{\textsc{Python}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\chapexers}[2]{\prob{Chapter #1, pages #2, Exercises:}}
+\newcommand{\exer}[2]{\prob{Exercise #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=ellipse,draw,inner sep=2pt] (char) {#1};}}
+
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 24 September 2024
+\normalsize
+
+\medskip\bigskip
+
+\Large\centerline{\textbf{Assignment \#4}}
+\large
+\bigskip
+
+\centerline{\textbf{Due Monday, 7 October 2024, at the start of class}}
+\bigskip
+\normalsize
+
+\thispagestyle{empty}
+
+\bigskip
+\noindent From the textbook\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.} please read sections 3.1, 3.2, 3.3, 4.1, 4.2, 4.3, 4.4.
+
+\bigskip
+\noindent \textsc{Do the following exercise} from section 3.2, page 58:
+
+\begin{itemize}
+\item Exercise 2.2
+\end{itemize}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 3.3, pages 91--93:
+
+\begin{itemize}
+\item Exercise 3.1
+\item Exercise 3.3
+\item Exercise 3.4
+\end{itemize}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 4.1, pages 98--100:
+
+\begin{itemize}
+\item Exercise 1.1 (i)--(iv)
+\item Exercise 1.2
+\end{itemize}
+
+\prob{Problem P8.}  \emph{You should be able to do Exercise 3.1 above by hand.   In that Exercise, your answer to each part should literally be a \emph{basis} for the null space, that is, you should provide a set of column vectors.  For example, your part (ii) solution should be a set of three vectors from $\RR^4$.}
+
+\medskip
+\noindent Please use \Matlab (or similar) to check that your answers to Exercise 3.1 are correct.  Specifically, for each part,
+%\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+%\begin{enumerate}
+\begin{itemize}
+\item enter the matrix $A$ into \Matlab (or similar),  \hfill {\footnotesize{\texttt{>> A = [...}}}
+\item form the basis vectors into a matrix $Z$, and enter that
+\item[] matrix into \Matlab (or similar),  \hfill {\footnotesize{\texttt{>> Z = [...}}}
+\item confirm that $AZ$ is zero to within rounding error, and  \hfill {\footnotesize{\texttt{>> A * Z}}} \phantom{ldf}
+\item compute the rank of $Z$.  \hfill {\footnotesize{\texttt{>> rank(Z)}}} \phantom{l}
+\end{itemize}
+For the last item, this should confirm that your $Z$ matrix has full column rank.  \emph{Minimize the paper used to show what you did.}
+%\end{enumerate}
+
+
+\prob{Problem P9.}  \emph{This problem is built from the key paragraph at the top of page 87.}
+
+\medskip
+\noindent In \Matlab, or a programming language of your choice, write a short function
+
+\medskip
+\qquad \texttt{function Z = nullmat(A,ind)}
+
+\noindent which extracts $B$ and $N$ from $A$ and then returns the null matrix
+	$$Z = \begin{pmatrix} - B^{-1} N \\ I\end{pmatrix}.$$
+If the user chooses the appropriate indices then $Z$ will be a basis matrix for the null space of $A$.
+
+In more detail, your code should take the matrix $A$ as the first argument, and a list/array of column indices as the second (\texttt{ind}) argument.  It should determine the size of $A$ using \texttt{size()} or similar.  From the \texttt{ind} list, which a good code should check for reasonableness, you will identify/construct the $B$ and $N$ parts of the matrix $A$.  That is, the indices identify $B$.  Your code could check that $B$ is the right kind of object.  Then your code builds and returns $Z$.
+
+% Z = [-A(:,ind)\A(:,setdiff(1:size(A,2),ind)); eye(size(A,1))]
+Without input checking your code could be one busy line of \Matlab.\footnote{Hint. \texttt{setdiff()} is your friend.}  But please do the input checking too!  After writing the code, run it on at least two parts of Exercise 3.1 above, showing that it succeeds in generating a good $Z$.
+
+
+\prob{Problem P10.}  (\emph{I wrote a ratio test \Matlab code for the solutions to Assignment \# 3, and it is posted at the Codes tab of the public site.  You may use it to do this problem, or write your own.  In any case, be careful with the form of the inequality constraints!  They need to be in the form ``$Ax\ge b$'' to use the ratio test as stated on page 81, and to run my code.})
+
+\epart{a}  For part (ii) of Exercise 4.1 above, you should already have a sketch.  Confirm that $x=(6,0)^\top$ is feasible.  (\emph{Or compute $Ax-b$ in e.g.~\Matlab, and check!}) Confirm that $p=(0,1)^\top$ and $p=(1,0)^\top$ are feasible directions at that point.  (\emph{Graphically.})  Compute the $\bar \alpha$ from the ratio test for these directions.  (\emph{Use the code!})  Add the vectors $\bar \alpha p$ to the graph, based at $x$.  (\emph{Make a duplicate graph if you want.})
+
+\epart{b}  Same instructions, but for part (iii) of Exercise 4.1, now using $x=(8,0)^\top$, $p=(-2,1)^\top$, and $p=(-\pi,0)^\top$.
+
+\end{document}
