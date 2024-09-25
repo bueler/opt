@@ -11,6 +11,7 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
   * [.m](assets/codes/F24/.m)
 -->
 
+  * [ratiotest.m](assets/codes/F24/ratiotest.m)
   * [calc_brute.m](assets/codes/F24/calc_brute.m)
   * [calc_bisection.m](assets/codes/F24/calc_bisection.m)
   * [calc_golden.m](assets/codes/F24/calc_golden.m)
