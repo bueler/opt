@@ -1,6 +1,14 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Monday 30 September
+  covered: section 4.1 (visualizable linear programming)
+- name: Friday 27 September
+  covered: section 3.3 (null space matrices)
+- name: Wednesday 25 September
+  covered: section 3.2 (null spaces etc.)
+- name: Monday 23 September
+  covered: linear constraints
 - name: Friday 20 September
   covered: section 3.1 (linear constraints; feasible directions)
 - name: Wednesday 18 September
