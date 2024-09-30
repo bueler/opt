@@ -1,6 +1,8 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Wednesday 2 October
+  covered: section 4.2 (standard form)
 - name: Monday 30 September
   covered: section 4.1 (visualizable linear programming)
 - name: Friday 27 September
