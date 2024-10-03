@@ -15,6 +15,9 @@ homework:
 - name: Assignment 4
   due: Monday 7 October
   blank: A4.pdf
+- name: Assignment 5
+  due: Monday 14 October
+  blank: A5.pdf
 
 #  seealsopdf: assets/slides/sd.pdf
 #  seealsoname: Steepest descent needs help
