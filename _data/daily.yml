@@ -1,6 +1,12 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Wednesday 9 October
+  covered: section 4.4 (representation and optimality)
+- name: Monday 7 October
+  covered: section 4.3 (extreme points same as BFS)
+- name: Friday 4 October
+  covered: standard form
 - name: Wednesday 2 October
   covered: section 4.2 (standard form)
 - name: Monday 30 September
