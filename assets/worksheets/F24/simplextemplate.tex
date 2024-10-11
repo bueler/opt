@@ -1,0 +1,109 @@
+\documentclass[11pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.9in}
+\addtolength{\evensidemargin}{-.9in}
+\addtolength{\topmargin}{-0.95in}
+\addtolength{\textwidth}{1.8in}
+\addtolength{\textheight}{1.65in}
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.05}
+        \tiny\normalsize}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\usepackage{amssymb,fancyvrb,xspace}
+\usepackage{palatino}
+
+\usepackage[final]{graphicx}
+
+\usepackage[pdftex, colorlinks=true, plainpages=false, linkcolor=black, citecolor=red, urlcolor=red]{hyperref}
+
+% macros
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\bT}{\mathbf{T}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\Div}{\nabla\cdot}
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+\newcommand{\RR}{\mathbb{R}}
+
+\newcommand{\prob}[1]{\bigskip\noindent\large\textbf{#1}.\,\normalsize }
+\newcommand{\ppart}[1]{\textbf{(#1)}\,\, }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\,\, }
+
+\newcommand{\pts}[1]{\scriptsize [#1 points] \normalsize}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+
+\newcommand{\blankset}{\Big\{\hspace{0.7in}\Big\}}
+\newcommand{\blankmatrix}{\begin{bmatrix} \hspace{1.0in} \\ \hspace{1.0in} \\ \hspace{1.0in} \\ \hspace{1.0in} \end{bmatrix}}
+\newcommand{\blankcolumn}{\begin{bmatrix} \phantom{mm} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \end{bmatrix}}
+
+\newcommand{\boxint}{\boxed{\phantom{m\big|}}}
+
+\newcommand{\longblankset}{\Big\{\hspace{1.5in}\Big\}}
+\newcommand{\blanktallcolumn}{\begin{bmatrix} \phantom{mm} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \\ \phantom{m} \end{bmatrix}}
+\newcommand{\wideblankmatrix}{\begin{bmatrix} \hspace{2.0in} \\ \hspace{2.0in} \\ \hspace{2.0in} \\ \hspace{2.0in} \end{bmatrix}}
+
+\newcommand{\stacksarrow}[2]{\quad {\small \begin{matrix} #1 \\ \to \\ #2 \end{matrix}} \quad}
+
+\newcommand{\lpstep}{%
+\noindent\hrulefill
+
+\vspace{-3mm}
+\begin{align*}
+\mathcal{B} &= \blankset, & B &= \blankmatrix, & c_B &= \blankcolumn, & \underline{B x_B = b} \implies x_B = \hat b &= \blankcolumn \\
+\mathcal{N} &= \blankset, & N &= \blankmatrix, & c_N &= \blankcolumn
+\end{align*}
+$$\underline{B^\top y = c_B} \implies y = \blankcolumn \qquad \implies \qquad \underline{\hat c_N = c_N - N^\top y} = \blankcolumn$$
+
+\noindent $\boxed{\hat c_N \ge 0 \text{ ?: stop, optimum}}$ \quad $\hat c_N \stacksarrow{\text{index from $\mathcal{N}$}}{\text{of min}} \stackrel{\text{entering}}{t = \boxint}$ \, $\to$ \, $\underline{B \hat A_t = A_t} \implies \hat A_t = \begin{bmatrix} \hat a_{1,t} \\ \vdots \\ \hat a_{m,t} \end{bmatrix} = \blankcolumn$
+
+\medskip
+\noindent $\boxed{\hat A_t \le 0 \text{ ?: stop, unbounded}}$ \quad $\Big\{\frac{\hat b_i}{\hat a_{i,t}}\Big\} = \longblankset \quad \stacksarrow{\text{index from $\mathcal{B}$ of}}{\text{min over } \hat a_{i,t}>0} \quad \stackrel{\text{leaving}}{s = \boxint}$}
+
+
+\begin{document}
+\scriptsize
+\phantom{bob} \vspace{-0.1in}
+\noindent \hfill \emph{Math 661 Optimization (Bueler)}
+\normalsize
+\normalspacing
+\thispagestyle{empty}
+
+\medskip
+$\min \,c^\top x  \qquad \text{subject to } Ax = b, \quad x \ge 0$\qquad where
+
+\vspace{-2mm}
+  $$A = \wideblankmatrix, \quad b = \blankcolumn, \quad c = \blanktallcolumn$$
+
+\medskip
+\lpstep
+
+\medskip
+\lpstep
+
+\newpage
+\lpstep
+
+\bigskip\bigskip
+\lpstep
+\vfill
+
+\end{document}

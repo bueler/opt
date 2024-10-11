@@ -1,6 +1,10 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Friday 11 October
+  covered: section 5.2 (simplex method)
+  handout: worksheets/F24/simplextemplate.pdf
+  handoutname: simplex method template
 - name: Wednesday 9 October
   covered: section 4.4 (representation and optimality)
 - name: Monday 7 October
