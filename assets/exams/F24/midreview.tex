@@ -1,0 +1,230 @@
+\documentclass[12pt]{amsart}
+\addtolength{\topmargin}{-0.6in} % usually -0.25in
+\addtolength{\textheight}{1.1in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.5in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.05}\tiny\normalsize}
+\newcommand{\bigspacing}{\renewcommand{\baselinestretch}{1.13}\tiny\normalsize}
+\newcommand{\tablespacing}{\renewcommand{\baselinestretch}{1.0}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amssymb,xspace}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+
+\usepackage[final]{graphicx}
+\newcommand{\regfigure}[3]{\includegraphics[height=#2in,width=#3in]{#1.eps}}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+
+\newcommand{\mtt}{\texttt}
+\newcommand{\mtl}[1]{{\texttt{>>#1}}}
+\usepackage{alltt}
+\usepackage{fancyvrb}
+
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+\newcommand{\erf}{\operatorname{erf}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\Arg}{\operatorname{Arg}}
+
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+\newcommand{\trace}{\operatorname{tr}}
+\newcommand{\Null}{\operatorname{null}}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+\newcommand{\longMOP}{\textsc{Matlab}\big|\textsc{Octave}\big|\textsc{pylab}\xspace}
+\newcommand{\MOP}{\textsc{M}\big|\textsc{O}\big|\textsc{p}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\large\textbf{#1.} \normalsize}
+\newcommand{\bookprob}[1]{\bigskip\noindent\large\textbf{Exercise #1.} \normalsize}
+\newcommand{\probpart}[1]{\smallskip\noindent\textbf{(#1)}\quad }
+\newcommand{\aprobpart}[1]{\textbf{(#1)}\quad }
+
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill \today
+\thispagestyle{empty}
+
+\bigskip
+\Large\textbf{\centerline{Review Guide for in-class Midterm Exam}}
+
+\Large\textbf{\centerline{on Friday, 18 October 2024}}
+
+\normalsize
+\bigskip
+The in-class Midterm Exam will cover the sections listed below from Griva, Nash, Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., 2009.  It will only cover topics that have appeared on homework and in lecture.  You are \emph{not} responsible for any material in Chapters 6, 7, 8, 10, 12, 13, 14, 15, or 16.
+
+The Exam is \emph{closed book, no internet, and no calculator}.  You may bring your own notes on \emph{half} of a single sheet of letter-sized paper, but you can use both sides of that half sheet.
+
+The problems will be of these types: state definitions, state or prove certain theorems (see below), prove or show propositions which follow directly from the definitions or from known facts, give examples with certain properties, describe or sketch concepts, or compute a step or two of certain algorithms.
+
+I encourage you to get together with other students and work through this Review Guide.  Be honest with yourself about what you do and don't know, and talk it through and learn!
+
+The list of Definitions below has blanks for some page numbers.  Please use it as a ``take-home worksheet;'' you can study by finding the page where the term is defined.  On Wednesday 10/26 I will post ``solutions'' for these page numbers at the website.
+
+\bigskip
+\bigspacing
+\noindent \textbf{Sections}.  You are responsible for the following material in these Sections:
+\begin{itemize}
+\item 1.1--1.6 % not 1.7 = example applications
+\item 2.1--2.6 % not 2.7 = Newton for systems
+\item 3.1--3.3 (but \emph{not} 3.3.2--3.3.4)
+\item 4.1--4.4
+\item 5.1--5.2 (but \emph{not} 5.2.3, 5.2.4, or any other material on tableaus)
+% not 5.3, 5.4
+%\item 6.1--6.2
+%\item 9.1--9.3
+%\item 11.1--11.2
+\item Appendices A.3--A.5, A.7.1
+\item Appendices B.1--B.7
+\end{itemize}
+
+\vfill
+
+\newcommand{\pb}{\hfill p.~\underline{\phantom{foobar}}}
+\newcommand{\psb}{\hfill pp.~\underline{\phantom{foobar}}}
+
+\medskip
+\bigspacing
+\noindent \textbf{Definitions}.  Be able to define the term (word or phrase).  Understand and/or use the term correctly.  Be able to prove things that follow immediately from the definition:
+\begin{itemize}
+\item \emph{transpose} $A^\top$ of an $m\times n$ matrix $A$ \pb
+\item \emph{symmetric} matrix \pb
+\item \emph{nonsingular} matrix \pb
+\item \emph{positive definite} matrix \pb
+\item \emph{gradient} $\grad f(x)$ of a function $f:\RR^n\to\RR$ \pb
+\item \emph{Hessian} $\grad^2 f(x)$ of a function $f:\RR^n\to\RR$ \pb
+\item \emph{Jacobian} $\grad f(x)^\top$ of a function $f:\RR^n\to\RR^m$ \pb
+\item \emph{feasible set} $S \subseteq \RR^n$, e.g.~as defined by constraints on page 43 \pb
+\item \emph{feasible point} \pb
+\item \emph{active} constraint at $x\in S$ \pb
+\item \emph{inactive} inequality constraint at $x\in S$ \pb
+\item \emph{global minimizer} of $f$ in $S$ \pb
+\item \emph{strict global minimizer} \pb
+\item \emph{local minimizer} of $f$ in $S$ \pb
+\item \emph{strict local minimizer} \pb
+\item \emph{convex} set $S$ \pb
+\item \emph{convex} function $f$ on a convex set $S$ \pb
+\item \emph{strictly convex} function \pb
+\item \emph{convex optimization problem} \pb
+\item \emph{convex combination} of a finite set of points in $\RR^n$ \pb
+\item \emph{search direction} in an optimization algorithm \pb
+\item \emph{step length} \pb
+\item \emph{descent direction} \pb
+\item \emph{feasible direction} \pb
+\item \emph{feasible descent direction} \pb
+%\item \emph{line search} \pb
+%\item \emph{linear (rate of) convergence} for a convergent sequence \pb
+%\item \emph{superlinear (rate of) convergence} \pb
+%\item \emph{quadratic (rate of) convergence} \pb
+\item \emph{null space} of an $m\times n$ matrix $A$ \pb
+\item \emph{range space} of $A$ (or $A^\top$) \pb
+%\item \emph{orthogonal subspaces} \pb
+\item \emph{null space matrix} of $A$ \pb
+\item \emph{standard form} of a linear programming problem (l.p.p.) \pb
+\item \emph{free variable} \pb
+\item \emph{slack variable} \pb
+\item \emph{excess variable} \pb
+\item \emph{extreme point} (or \emph{vertex}) of a convex set $S$ \pb
+\item \emph{feasible solution} of a standard form l.p.p. \pb
+\item \emph{basic feasible solution} of a standard form l.p.p. \pb
+\item \emph{optimal basic feasible solution} of a standard form l.p.p. \pb
+%\item \emph{degenerate vertex} of a standard form l.p.p. \pb
+\item \emph{unbounded direction} of a standard form l.p.p. \pb
+%\item \emph{dual problem} for a standard form l.p.p. \pb
+%\item \emph{primal problem} \pb
+%\item \emph{stationary point} \pb
+%\item \emph{first-order necessary conditions} (unconstrained) \pb
+%\item \emph{second-order necessary conditions} (unconstrained) \pb
+%\item \emph{second-order sufficient conditions} (unconstrained) \pb
+\end{itemize}
+
+%\vfill
+\vspace{10mm}
+
+\newcommand{\pg}[1]{\hfill p.~#1}
+\newcommand{\pgs}[1]{\hfill pp.~#1}
+
+%\newpage
+\bigspacing
+\noindent \textbf{Algorithms and Methods}.  Be able to state the algorithm or method.  (For some, a pseudocode is an appropriate style.)  Be able to apply/execute it in simple cases.
+\begin{itemize}
+\item General Optimization Algorithm II \pg{55}
+\item Newton's method for a single equation in one variable \pg{67}
+%\item Newton's method for $n$ equations in $n$ unknowns \pg{73}
+\item rules for converting LP problems to standard form (be able to \emph{apply}) \pgs{101--102}
+\item simplex method for a LP problem in standard form \pg{131}
+%\item dual of a standard-form LP problem \pg{177}
+\end{itemize}
+
+%\vfill
+
+%\newcommand{\noprove}[1]{\quad\textbf{[\emph{Proof#1 will not be requested.}]}}
+\newcommand{\proveit}{\quad\textbf{\emph{be able to prove}}}
+
+\newpage
+\medskip
+\noindent \textbf{Theorems}.  Understand these theorems, and be able to use them as facts.  Be able to illustrate with an example or a sketch.  Be able to prove those that say so.
+\begin{itemize}
+\item Theorem 2.1 (global solutions of convex problems) \proveit \pg{49}
+\item characterizations of convexity: \pg{51}
+    \begin{itemize}
+    \item[$\circ$] $f$ is convex if it is above its tangent planes: $f(y) \ge f(x) + \grad f(x)^\top (y-x)$
+    \item[$\circ$] $f$ is strictly convex if its Hessian $\grad^2 f(x)$ is positive definite for all $x$
+    \end{itemize}
+\item Taylor series, and Taylor's theorem with remainder, in one dimension \pgs{64--65}
+\item Taylor series, and Taylor's theorem with remainder, in $\RR^n$, to $O(\|p\|^2)$ \pgs{64--65}
+\item Theorem 2.6 (quadratic convergence of Newton's method for equations) \pg{69}
+\item Theorem 4.4 (extreme point $\iff$ basic feasible solution) \pg{110}
+\item Theorem 4.6 (representation of $x$ as convex combination of b.f.s.) \pg{120}
+\item Theorem 4.7 ($x$ optimal $\implies$ there is optimal b.f.s.) \pg{121}
+%\item Theorem 6.4 (weak duality) \proveit \pg{179}
+%\item Corollaries 6.6 and 6.7 \proveit \pg{179}
+%\item Theorem 6.9 (strong duality) \pg{180}
+%\item Theorem 6.11 (complementary slackness) \pg{183}
+\end{itemize}
+
+%\vfill
+
+\bigskip
+\noindent \textbf{Theorem about feasible directions for linear constraints}.  (\emph{Ideas from Section 3.1 are stated separately here.})
+
+\medskip
+\noindent Understand the following things, be able to prove them, and be able to use them as facts.  Be able to illustrate with an example or a sketch.
+\begin{itemize}
+\item notation for constraints:
+   $$\mathcal{E} \text{ is index set for } a_i^\top x = b_i, \qquad \mathcal{I} \text{ is index set for } a_i^\top x \ge b_i$$
+and $\hat{\mathcal{I}}$ denotes active inequality constraints at a given point $\bar x$
+\item $p$ is a feasible direction at feasible point $\bar x$ if and only if \pg{80}
+        $$a_i^\top p = 0 \text{ for } i\in \mathcal{E} \qquad \text{ and } \qquad  a_i^\top p \ge 0 \text{ for }i \in \hat{\mathcal{I}}$$
+\item given a feasible direction $p$, only the inactive inequality constraints are relevant when determining an upper bound on step length $\alpha$ \pg{81}
+\item if $a_i^\top p \ge 0$ for all inactive inequality constraints then an arbitrarily-large step can be taken while staying feasible; there is no upper bound on $\alpha$ \pg{81}
+\item otherwise the maximum allowed step length arises from the \emph{ratio test}: \pg{81}
+        $$\bar \alpha = \min \left\{\frac{(a_i^\top \bar x - b)}{-a_i^\top p} \,:\, i \text{ is inactive at $\bar x$ and } a_i^\top p < 0\right\}$$
+\end{itemize}
+
+%\vfill
+
+\end{document}
+
