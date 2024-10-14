@@ -14,6 +14,7 @@
 \usepackage{amssymb,xspace}
 \usepackage[pdftex,colorlinks=true]{hyperref}
 
+\usepackage[dvipsnames]{xcolor}
 \usepackage[final]{graphicx}
 \newcommand{\regfigure}[3]{\includegraphics[height=#2in,width=#3in]{#1.eps}}
 
@@ -63,7 +64,7 @@
 
 
 \begin{document}
-\scriptsize \noindent Math 661 Optimization (Bueler) \hfill \today
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill (\today; {\color{BrickRed} version 2})
 \thispagestyle{empty}
 
 \bigskip
@@ -168,10 +169,10 @@ The list of Definitions below has blanks for some page numbers.  Please use it a
 
 %\newpage
 \bigspacing
-\noindent \textbf{Algorithms and Methods}.  Be able to state the algorithm or method.  (For some, a pseudocode is an appropriate style.)  Be able to apply/execute it in simple cases.
+\noindent \textbf{Algorithms and Methods}.  {\color{BrickRed} (updated)}  Be able to state the algorithm or method.  (For some, a pseudocode is an appropriate style.)  Be able to apply/execute it in simple cases.
 \begin{itemize}
 \item General Optimization Algorithm II \pg{55}
-\item Newton's method for a single equation in one variable \pg{67}
+%\item Newton's method for a single equation in one variable \pg{67}
 %\item Newton's method for $n$ equations in $n$ unknowns \pg{73}
 \item rules for converting LP problems to standard form (be able to \emph{apply}) \pgs{101--102}
 \item simplex method for a LP problem in standard form \pg{131}
@@ -185,7 +186,7 @@ The list of Definitions below has blanks for some page numbers.  Please use it a
 
 \newpage
 \medskip
-\noindent \textbf{Theorems}.  Understand these theorems, and be able to use them as facts.  Be able to illustrate with an example or a sketch.  Be able to prove those that say so.
+\noindent \textbf{Theorems}.  {\color{BrickRed} (updated)}  Understand these theorems, and be able to use them as facts.  Be able to illustrate with an example or a sketch.  Be able to prove those that say so.
 \begin{itemize}
 \item Theorem 2.1 (global solutions of convex problems) \proveit \pg{49}
 \item characterizations of convexity: \pg{51}
@@ -195,7 +196,7 @@ The list of Definitions below has blanks for some page numbers.  Please use it a
     \end{itemize}
 \item Taylor series, and Taylor's theorem with remainder, in one dimension \pgs{64--65}
 \item Taylor series, and Taylor's theorem with remainder, in $\RR^n$, to $O(\|p\|^2)$ \pgs{64--65}
-\item Theorem 2.6 (quadratic convergence of Newton's method for equations) \pg{69}
+%\item Theorem 2.6 (quadratic convergence of Newton's method for equations) \pg{69}
 \item Theorem 4.4 (extreme point $\iff$ basic feasible solution) \pg{110}
 \item Theorem 4.6 (representation of $x$ as convex combination of b.f.s.) \pg{120}
 \item Theorem 4.7 ($x$ optimal $\implies$ there is optimal b.f.s.) \pg{121}
