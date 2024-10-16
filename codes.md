@@ -11,7 +11,7 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
   * [.m](assets/codes/F24/.m)
 -->
 
-  * simplex method bundle (all 6 are in [simplex.zip](assets/codes/F24/simplex.zip)):
+  * simplex method bundle (all 7 codes are in [simplex.zip](assets/codes/F24/simplex.zip)):
       1. [sfsimplex.m](assets/codes/F24/simplex/sfsimplex.m)
       2. [ezsimplex.m](assets/codes/F24/simplex/ezsimplex.m)
       3. [myexSF.m](assets/codes/F24/simplex/myexSF.m)
