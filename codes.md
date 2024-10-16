@@ -18,6 +18,7 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
       4. [myexEZ.m](assets/codes/F24/simplex/myexEZ.m)
       5. [bookexSF.m](assets/codes/F24/simplex/bookexSF.m)
       6. [bookexEZ.m](assets/codes/F24/simplex/bookexEZ.m)
+      7. [kleeminty.m](assets/codes/F24/simplex/kleeminty.m)
   * [nullmat.m](assets/codes/F24/nullmat.m)
   * [ratiotest.m](assets/codes/F24/ratiotest.m)
   * [calc_brute.m](assets/codes/F24/calc_brute.m)
