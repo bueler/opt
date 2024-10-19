@@ -1,0 +1,152 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.6in} 
+\addtolength{\evensidemargin}{-.6in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\textheight}{.6in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim,fancyvrb}
+
+\usepackage{palatino}
+
+\usepackage[dvipsnames]{xcolor}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\usepackage{xspace}
+
+\usepackage{amssymb}
+
+\usepackage[pdftex, colorlinks=true, plainpages=false, linkcolor=black, citecolor=red, urlcolor=red]{hyperref}
+
+% macros
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+%\renewcommand{\det}{\operatorname{det}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+
+\newcommand{\Julia}{\textsc{Julia}\xspace}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\Python}{\textsc{Python}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\chapexers}[2]{\prob{Chapter #1, pages #2, Exercises:}}
+\newcommand{\exer}[2]{\prob{Exercise #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=ellipse,draw,inner sep=2pt] (char) {#1};}}
+
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 21 October 2024
+\normalsize
+
+\medskip\bigskip
+
+\Large\centerline{\textbf{Assignment \#6}}
+\large
+\bigskip
+
+\centerline{\textbf{Due Wednesday 30 October 2024, at the start of class}}
+\bigskip
+\normalsize
+
+\thispagestyle{empty}
+
+\bigskip
+\noindent From the textbook\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.} please read sections 5.2--5.4 on the simplex method, but note that you can skip subsections 5.2.3, 5.2.4, and 5.4.2.  (\emph{That is, skip the stuff on tableaus and the ``big-M'' method.})  You can read section 5.3 lightly, and what you actually need from section 5.4 is on pages 149--150.  To complete our coverage of linear programming, please read sections 6.1--6.2 on duality and sections 9.1--9.3 on computational complexity.
+
+\medskip \noindent Regarding linear programming generally, consider spending some time with the \href{https://en.wikipedia.org/wiki/Linear_programming}{linear programming} Wikipedia page.  Note the list of software.  See also the \href{https://en.wikipedia.org/wiki/Revised_simplex_method}{revised simplex method} page.
+
+\medskip \noindent We are transitioning to nonlinear optimization.  Please read sections 2.5 on rates of convergence and 2.7 on Newton's method for nonlinear systems.
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 2.7, pages 74--75:
+
+\begin{itemize}
+\item Exercise 7.1
+\item Exercise 7.10
+\end{itemize}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 6.2, pages 185--189:
+
+\begin{itemize}
+\item Exercise 2.4 \quad \emph{Hint.  It is merely a corollary of weak duality (Theorem 6.4).}
+%\item Exercise 2.8  \quad \begin{minipage}[t]{4.0in}
+%\emph{This is a canonical-form minimization problem, so its dual is a canonical-form maximization problem.  You can guess at optimums for both problems.  Then prove you are right using duality theorems.}
+%\end{minipage}
+\item Exercise 2.11 \, \emph{Hint.  Use strong duality (Theorem 6.9) and then Corollary 6.6.}
+\end{itemize}
+
+
+\prob{Problem P11.}  I have posted \texttt{kleeminty.m}, \texttt{ezsimplex.m}, and \texttt{sfsimplex.m} at
+
+\centerline{\href{https://bueler.github.io/opt/codes.html}{\texttt{bueler.github.io/opt/codes.html}}}
+
+\noindent Please download these codes; they are in \texttt{simplex.zip} at the same page.\footnote{For Python and Julia people I recommend just slumming it with the rest of us for \textbf{P11}--\textbf{P13}.  Do them in Octave online, or Matlab online, etc.?  Rewriting all my codes would be tedious.}  The code \texttt{kleeminty.m}\footnote{The specifics of the \textbf{P11} \texttt{kleeminty.m} example are from the \href{https://en.wikipedia.org/wiki/Klee-Minty_cube}{Klee-Minty cube} Wikipedia page.  The version in section 9.3 of the textbook is essentially the same, but its coefficients grow unnecessarily fast.} sets up a Klee-Minty cube example in ``EZ'' form for any size $n$.  Note that \texttt{kleeminty.m} calls \texttt{ezsimplex.m}, which calls \texttt{sfsimplex.m}, so they all need to be in the current directory to work.
+
+Now, on your machine, for how big an $n$ can you run \texttt{kleeminty(n)} in under 10 seconds?  For this maximum $n$ value, how many iterations does it take to find the optimal solution?  What are the number of constraints and the number of variables if you were to put this maximum $n$ problem in standard form?  Note the exponential relation between the number of variables and the number of iterations.
+% 2024 lemur: tic,kleeminty(13),toc in 6.7 seconds;  m=13, n=26, iterations=8192=2^13
+
+
+\prob{Problem P12.}  Suppose we have an LP problem in standard form, with $n$ variables and $m$ equality constraints as usual, but suppose that we do \emph{not} know a basic feasible solution.  As explained on the first two pages of section 5.4, one can set up a \emph{phase-1 problem} with one added artificial variable $a_i$ for each equality constraint, $i=1,\dots,m$, and then change the objective to
+    $$\text{minimize} \qquad z' = a_1 + a_2 + \dots + a_m.$$
+This creates a new LP problem in standard form, now with $n+m$ variables, but with $m$ equality constraints as before.  However, now a basic feasible solution (BFS) is clear!  (\emph{Why?  Note you can set the original variables to zero and use the constraints to solve for the artificial variables.  Confirm that this is a BFS to the new problem.})
+
+Write a running code or complete pseudocode\footnote{Either code or pseudocode is fine but running a code is more fun!} which implements this phase-1 strategy and generates an initial BFS.  Your (pseudo-)code should have signature
+
+\centerline{\texttt{function x = phaseone(A,b)}}
+
+\medskip
+\noindent Your code or pseudocode should call a standard-form simplex method once it sets-up the new LP problem; you are not expected to implement the simplex method here.\footnote{However, it is easy to use my implementation.  Given how my code \texttt{sfsimplex.m} works, the line\par
+\centerline{\texttt{>> [x, z] = sfsimplex(c,A,b,phaseone(A,b))}}\par
+\noindent solves the standard form problem, from the data $c,A,b$, by the two-phase method, in a case where you don't know an initial BFS.  Note \texttt{sfsimplex.m} gets called twice in this one-line command!}  Your code or pseudocode should report failure when the original problem is not feasible; how is that detected?
+
+
+\prob{Problem P13.}  Return to problem \texttt{salmon} on \href{https://bueler.github.io/opt/assets/worksheets/F24/5exs.pdf}{the 5 example optimization problems} handout.  Put it in standard form, figure out a BFS, and solve it using the simplex method.\footnote{You may do \textbf{P13} all by hand, or use my \texttt{sfsimplex.m}, or use even use the 2-phase method if you implemented that in \textbf{P12}.  If you don't use 2-phase you'll have to find a BFS by hand.}  Of course, you can refer to Assignment \#1 for the correct answer.
+
+
+\prob{Problem P14.}  \emph{This problem replaces, simplifies, and clarifies Exercise 5.1 in section 2.5.}
+
+\medskip \noindent For each of the following 3 sequences, determine the limit $x_*$.  Then determine the rate of convergence; is it linear, superlinear, or quadratic?  Specifically, recalling $e_k=x_k - x_*$, determine $r\ge 1$ and $0<C<+\infty$ in the limit
+    $$\lim_{k\to\infty} \frac{\|e_{k+1}\|}{\|e_k\|^r} = C.$$
+
+\begin{itemize}
+\item[(i)] The sequence with general term $x_k = 2^{-k}$, for $k=1,2,\dots$
+\item[(ii)] The sequence $1.05, 1.0005, 1.000005, \dots$ with general term $x_k = 1 + 5 \times 10^{-2k}$, for $k=1,2,3,\dots$
+\item[(iii)] The sequence with general term $\displaystyle x_k = 2^{-(2^k)}$.
+\end{itemize}
+
+%\noindent Finally, as part (iv), how is the sequence (iii) generated recursively?  That is, give a function $f(z)$ so that the formula $x_{k+1} = f(x_k)$ generates this sequence.  Note that $x_0=1/2$.
+
+\end{document}
