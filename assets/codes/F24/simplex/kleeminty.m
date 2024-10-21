@@ -5,14 +5,14 @@ function kleeminty(n)
 %     https://en.wikipedia.org/wiki/Klee-Minty_cube
 % for detailed problem.  Here it is a minimization LP problem in
 % dimension n in convenient form:
-%     min   z = - 2^(n-1) x1 - 2^(n-2) x2 - ... - xn
-%     s.t.  x1                                           <= 5
-%           4 x1 + x2                                    <= 25
-%           8 x1 + 4 x2 + x3                             <= 125
-%           16 x1 + 8 x2 + 4 x3 + x4                     <= 625
+%     min   z = - 2^(n-1) x_1 - 2^(n-2) x_2 - ... - x_n
+%     s.t.  x_1                                            <= 5
+%           4 x_1 + x_2                                    <= 25
+%           8 x_1 + 4 x_2 + x_3                            <= 125
+%           16 x_1 + 8 x2 + 4 x_3 + x_4                    <= 625
 %           ...
-%           2^n x1 + 2^(n-1) x2 + ... + 4 x_{n-1} + x_n  <= 5^n
-%           x1 >= 0, x2 >= 0, ..., x_n >= 0
+%           2^n x_1 + 2^(n-1) x_2 + ... + 4 x_{n-1} + x_n  <= 5^n
+%           x_1 >= 0, x_2 >= 0, ..., x_n >= 0
 % (The Griva, Nash, Sofer (2009) textbook has a differently-scaled
 % version in section 9.3.)
 % This code also serves as another test of EZSIMPLEX.
