@@ -8,8 +8,8 @@ function [x, z, iters] = sfsimplex(c,A,b,x,showiters,maxiters)
 % simplex method.  This code does not claim to be efficient.  See Griva,
 % Nash, Sofer (2009) section 5.2 for the algorithm.
 % Usage:  [x, z] = sfsimplex(c,A,b,x)
-%         [x, z] = mysimplex(c,A,b,x,true)    % show iterations
-%         [x, z] = mysimplex(c,A,b,x,?,K)     % maximum of K iterations
+%         [x, z] = sfsimplex(c,A,b,x,true)    % show iterations
+%         [x, z] = sfsimplex(c,A,b,x,?,K)     % maximum of K iterations
 
 % set optional arguments to defaults
 if nargin < 5,  showiters = false;  end
