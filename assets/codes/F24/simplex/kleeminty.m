@@ -42,5 +42,5 @@ disp(b')
 
 % call simplex method
 [x, z, iters] = ezsimplex(c,A,b,true,2^n+1)   % show iterations; raise maxiter
-assert(iters, 2^n)  % run correctly, tour every vertex!!
+assert(iters == 2^n)  % run correctly, tour every vertex!!
 fprintf('PASS\n')
