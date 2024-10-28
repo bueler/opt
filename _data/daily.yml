@@ -1,6 +1,14 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Monday 28 October
+  covered: duality
+- name: Friday 25 October
+  covered: section 6.1, 6.2 (duality)
+- name: Wednesday 23 October
+  covered: section 9.1--9.3 (Klee-Minty example)
+- name: Monday 21 October
+  covered: simplex method
 - name: Friday 18 October
   covered: Midterm Exam
   more: see Exams tab for Review Guide PDF
