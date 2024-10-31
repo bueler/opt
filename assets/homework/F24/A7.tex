@@ -1,0 +1,161 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.6in} 
+\addtolength{\evensidemargin}{-.6in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\textheight}{.6in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim,fancyvrb}
+
+\usepackage{palatino}
+
+\usepackage[dvipsnames]{xcolor}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\usepackage{xspace}
+
+\usepackage{amssymb}
+
+\usepackage[pdftex, colorlinks=true, plainpages=false, linkcolor=black, citecolor=red, urlcolor=red]{hyperref}
+
+% macros
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+%\renewcommand{\det}{\operatorname{det}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+
+\newcommand{\Julia}{\textsc{Julia}\xspace}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\Python}{\textsc{Python}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\chapexers}[2]{\prob{Chapter #1, pages #2, Exercises:}}
+\newcommand{\exer}[2]{\prob{Exercise #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=ellipse,draw,inner sep=2pt] (char) {#1};}}
+
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 1 November 2024
+\normalsize
+
+\medskip\bigskip
+
+\Large\centerline{\textbf{Assignment \#7}}
+\large
+\bigskip
+
+\centerline{\textbf{Due Monday 11 November 2024, at the start of class}}
+\bigskip
+\normalsize
+
+\thispagestyle{empty}
+
+\bigskip
+\noindent From the textbook\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.} please read sections 2.5, 2.7, 11.2, 11.3, 11.4, 11.5, 12.1, and 12.2.  (Sections 11.4 and 11.5 are important to know where we are going, but they are not needed for this Assignment.)  Please also read the online slides \emph{Steepest descent needs help} at
+
+  \centerline{\href{https://bueler.github.io/opt/assets/slides/F24/sd.pdf}{\texttt{bueler.github.io/opt/assets/slides/F24/sd.pdf}}}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 11.2, pages 361--364:
+
+\begin{itemize}
+\item Exercise 2.7
+\item Exercise 2.10
+\item Exercise 2.14
+\end{itemize}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 11.3, pages 369--371:
+
+\begin{itemize}
+\item Exercise 3.3 \quad \emph{Note: You are only asked to show that you have a \emph{local} minimum.}
+\item Exercise 3.4
+\item Exercise 3.6 \quad \begin{minipage}[t]{0.7\textwidth} \emph{Hint: Do \emph{\textbf{P15}} first, and then use any result from it.  You may assume $Q$ is symmetric.}\end{minipage}
+\end{itemize}
+
+
+\prob{Problem P15.}  \emph{This problem collects together some basic facts about quadratic objective functions.  These facts are assumed in Chapters 11 and 12.  See Appendix B.5.}
+
+\medskip \noindent Let $c\in\RR^n$ be any vector, let $d\in\RR$ be any number, and suppose $Q\in \RR^{n\times n}$ is a symmetric positive definite matrix.  Consider this quadratic function on $x\in\RR^n$:
+\begin{equation*}
+    f(x) = \frac{1}{2} x^\top Q x - c^\top x + d.   \label{quad}
+\end{equation*}
+
+\medskip
+\renewcommand{\labelenumi}{\textbf{\alph{enumi})}}
+\begin{enumerate}
+\item Show that $\grad f(x) = Q x - c$.
+\item Compute the Hessian $\grad^2 f(x)$.
+\item Show that $f$ is strictly convex.  (\emph{Hint.  Easy.  You may use facts from section 2.3.})
+\item Suppose $p$ is a descent direction at $x$, so that $p^\top \grad f(x)<0$.  Prove that the exact solution of the line search problem $\min_{\alpha>0} f(x+\alpha p)$ is
+    $$\alpha = \frac{-p^\top \grad f(x)}{p^\top Q p}.$$
+(\emph{Hint.  Define $g(\alpha)=f(x+\alpha p)$, expand it, and compute $g'(\alpha)$. Etc.})
+\end{enumerate}
+
+
+\prob{Problem P16.}  In the online slides (linked above) I show a \Matlab implementation of steepest descent using back-tracking line search, something we will cover carefully in section 11.5.  When the objective function $f(x)$ is quadratic then we can instead use the result in \textbf{P15 c)} to choose the step size.
+\begin{enumerate}
+\item Implement steepest descent with optimal step size for quadratic functions $f(x) = \frac{1}{2} x^\top Q x - c^\top x$:
+
+\centerline{\texttt{function z = sdquad(x0,Q,c,tol)}}
+
+\noindent Stop iterating when $\|\grad f(x_k)\| < $ \texttt{tol}.  (\emph{Hint.  From the code in the slides, only small modifications are needed:  Replace evaluations of $f$ and $\grad f$ by formulas for the quadratic case, and replace back-tracking by the result from }\textbf{P15 c)}.)
+\item Use \texttt{sdquad()} to reproduce the result of Example 12.1 on pages 404--405 of the textbook.  Specifically, you should get $k=216$ iterations using \texttt{tol} $=10^{-8}$.
+\item Now change $Q$ to
+    $$Q = \begin{pmatrix}
+    2.3   &  0.19 & -0.89 \\
+    0.19  &  1.84 &  0.32 \\
+    -0.89 &  0.32 &  1.86
+    \end{pmatrix}$$
+but keep the same $c$, $x_0$, and \texttt{tol} as in part \textbf{b)}.  What is $x_*$?  How many iterations does \texttt{sdquad()} need?  Why is this problem easier than part \textbf{b)}?  (\emph{Hint.  What does} \texttt{eig(Q)} \emph{tell you?})
+\end{enumerate}
+
+
+\prob{Problem P17.}  \emph{This problem extends Exercise 3.8 in section 11.3.}
+
+\medskip \noindent Though section 2.5 fails to make this clear, a good definition of \emph{superlinear convergence} is that, for sequences $\{x_k\}$ which converge to $x_*$,
+    $$\lim_{k\to\infty} \frac{\|e_{k+1}\|}{\|e_k\|} = 0$$
+(Recall $e_k = x_k - x_*$.)
+
+\begin{enumerate}
+\item Let $\{x_k\}$ be a sequence which converges super-linearly to $x_*$.  Show that
+    $$\lim_{k\to\infty} \frac{\|x_{k+1} - x_k\|}{\|x_k - x_*\|} = 1.$$
+\item Explain why a super-linearly converging iterative algorithm for approximating some unknown number $x_*$ can stop according to the criterion $\|x_{k+1} - x_k\| < $ \texttt{tol}, for some user-supplied tolerance \texttt{tol} $ > 0$.  That is, explain why, with this criterion, the iterations only stops when $x_k$ is close to $x_*$.
+\item Should we apply the same stopping criterion from \textbf{b)} to iterations which converge only linearly? 
+\end{enumerate}
+
+
+
+\end{document}
