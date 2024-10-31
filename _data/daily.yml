@@ -1,6 +1,10 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Friday 1 November
+  covered: section 11.1, 11.2 (unconstrained optimization)
+- name: Wednesday 30 October
+  covered: section 2.7 (Newton's method)
 - name: Monday 28 October
   covered: duality
 - name: Friday 25 October
