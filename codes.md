@@ -16,6 +16,7 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
       2. [sdbt.m](assets/codes/F24/sdbt.m)
       3. [easyq.m](assets/codes/F24/easyq.m)
       4. [bt.m](assets/codes/F24/bt.m)
+  * The simplex method bundle [simplex.zip](assets/codes/F24/simplex.zip) also includes Python3 versions written by Kaelin Ellis; see the `py-simplex/` subdirectory when you extract.  (Thanks Kaelin!)
   * Simplex method bundle (all 7 `.m` codes are in [simplex.zip](assets/codes/F24/simplex.zip)):
       1. [sfsimplex.m](assets/codes/F24/simplex/sfsimplex.m)
       2. [ezsimplex.m](assets/codes/F24/simplex/ezsimplex.m)
@@ -24,8 +25,6 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
       5. [bookexSF.m](assets/codes/F24/simplex/bookexSF.m)
       6. [bookexEZ.m](assets/codes/F24/simplex/bookexEZ.m)
       7. [kleeminty.m](assets/codes/F24/simplex/kleeminty.m)
-
-    The simplex method bundle [simplex.zip](assets/codes/F24/simplex.zip) also includes Python3 versions written by Kaelin Ellis; see the `py-simplex/` subdirectory when you extract.  (Thanks Kaelin!)
   * [nullmat.m](assets/codes/F24/nullmat.m)
   * [ratiotest.m](assets/codes/F24/ratiotest.m)
   * [calc_brute.m](assets/codes/F24/calc_brute.m)
