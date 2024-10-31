@@ -11,6 +11,11 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
   * [.m](assets/codes/F24/.m)
 -->
 
+  * These four codes go with my [slides on why steepest descent needs help](assets/slides/F24/sdneedshelp.pdf):
+      1. [sdbtrecord.m](assets/codes/F24/sdbtrecord.m)
+      2. [sdbt.m](assets/codes/F24/sdbt.m)
+      3. [easyq.m](assets/codes/F24/easyq.m)
+      4. [bt.m](assets/codes/F24/bt.m)
   * Simplex method bundle (all 7 `.m` codes are in [simplex.zip](assets/codes/F24/simplex.zip)):
       1. [sfsimplex.m](assets/codes/F24/simplex/sfsimplex.m)
       2. [ezsimplex.m](assets/codes/F24/simplex/ezsimplex.m)
