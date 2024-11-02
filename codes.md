@@ -11,6 +11,7 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
   * [.m](assets/codes/F24/.m)
 -->
 
+  * [POPDIP](https://github.com/bueler/popdip) is my fairly-polished-by-now class project.  It lives it its own Github repository.  It implements a primal-dual interior point method, from section 16.7 of our textbook (Griva, Nash, & Sofer 2009).  To try the Matlab/Octave code you should either [clone the popdip repository](https://github.com/bueler/popdip) or [download a .zip release](https://github.com/bueler/popdip/releases/tag/v1.2).  Either way you will get the codes, [documentation](https://github.com/bueler/popdip/blob/main/doc.pdf), and [slides](https://github.com/bueler/popdip/blob/main/slides.pdf).
   * These four codes go with my [slides on why steepest descent needs help](assets/slides/F24/sdneedshelp.pdf):
       1. [sdbtrecord.m](assets/codes/F24/sdbtrecord.m)
       2. [sdbt.m](assets/codes/F24/sdbt.m)
