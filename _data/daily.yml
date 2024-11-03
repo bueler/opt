@@ -1,6 +1,10 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Monday 4 November
+  covered: steepest descent
+  otherurl: https://bueler.github.io/opt/assets/slides/F24/sdneedshelp.pdf
+  otherurlname: "slides: Steepest descent needs help"
 - name: Friday 1 November
   covered: section 11.1, 11.2 (unconstrained optimization)
 - name: Wednesday 30 October
