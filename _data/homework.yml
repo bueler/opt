@@ -24,6 +24,5 @@ homework:
 - name: Assignment 7
   due: Monday 11 November
   blank: A7.pdf
-
-#  seealsopdf: assets/slides/sd.pdf
-#  seealsoname: Steepest descent needs help
+  seealsopdf: assets/slides/F24/sdneedshelp.pdf
+  seealsoname: Steepest descent needs help
