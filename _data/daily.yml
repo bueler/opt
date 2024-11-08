@@ -1,6 +1,10 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Friday 8 November
+  covered: section 11.4 (guaranteeing descent)
+- name: Wednesday 6 November
+  covered: section 11.3 (Newton's method <i>for optimization</i>)
 - name: Monday 4 November
   covered: steepest descent
   otherurl: https://bueler.github.io/opt/assets/slides/F24/sdneedshelp.pdf
