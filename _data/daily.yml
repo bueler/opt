@@ -1,8 +1,12 @@
 semester: Fall 2024
 home: assets/
 daily:
-- name: Friday 8 November
+- name: Wednesday 13 November
+  covered: section 11.5 (line search)
+- name: Monday 11 November
   covered: section 11.4 (guaranteeing descent)
+- name: Friday 8 November
+  covered: cont.
 - name: Wednesday 6 November
   covered: section 11.3 (Newton's method <i>for optimization</i>)
 - name: Monday 4 November
