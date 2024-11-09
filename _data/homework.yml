@@ -1,28 +1,31 @@
 semester: Fall 2024
 home: assets/homework/F24
 homework:
-- name: Assignment 1
-  due: Friday 6 September
-  blank: A1.pdf
-  seealsopdf: assets/worksheets/F24/5exs.pdf
-  seealsoname: 5 example optimization problems
-- name: Assignment 2
-  due: Wednesday 18 September [updated]
-  blank: A2.pdf
-- name: Assignment 3
-  due: Wednesday 25 September [updated]
-  blank: A3.pdf
-- name: Assignment 4
-  due: Monday 7 October
-  blank: A4.pdf
-- name: Assignment 5
-  due: Wednesday 16 October [updated]
-  blank: A5.pdf
-- name: Assignment 6
-  due: Friday 1 November [updated]
-  blank: A6.pdf
+- name: Assignment 8
+  due: Wednesday 20 November
+  blank: A8.pdf
 - name: Assignment 7
   due: Monday 11 November
   blank: A7.pdf
   seealsopdf: assets/slides/F24/sdneedshelp.pdf
   seealsoname: Steepest descent needs help
+- name: Assignment 6
+  due: Friday 1 November [updated]
+  blank: A6.pdf
+- name: Assignment 5
+  due: Wednesday 16 October [updated]
+  blank: A5.pdf
+- name: Assignment 4
+  due: Monday 7 October
+  blank: A4.pdf
+- name: Assignment 3
+  due: Wednesday 25 September [updated]
+  blank: A3.pdf
+- name: Assignment 2
+  due: Wednesday 18 September [updated]
+  blank: A2.pdf
+- name: Assignment 1
+  due: Friday 6 September
+  blank: A1.pdf
+  seealsopdf: assets/worksheets/F24/5exs.pdf
+  seealsoname: 5 example optimization problems

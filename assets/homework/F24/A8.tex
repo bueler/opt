@@ -1,0 +1,154 @@
+\documentclass[12pt]{amsart}
+%prepared in AMSLaTeX, under LaTeX2e
+\addtolength{\oddsidemargin}{-.6in} 
+\addtolength{\evensidemargin}{-.6in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\textheight}{.6in}
+
+\renewcommand{\baselinestretch}{1.05}
+
+\usepackage{verbatim,fancyvrb}
+
+\usepackage{palatino}
+
+\usepackage[dvipsnames]{xcolor}
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{remark}{Remark}
+
+\usepackage{xspace}
+
+\usepackage{amssymb}
+
+\usepackage[pdftex, colorlinks=true, plainpages=false, linkcolor=black, citecolor=red, urlcolor=red]{hyperref}
+
+% macros
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\grad}{\nabla}
+\newcommand{\lam}{\lambda}
+\newcommand{\lap}{\triangle}
+
+\newcommand{\ip}[2]{\ensuremath{\left<#1,#2\right>}}
+
+%\renewcommand{\det}{\operatorname{det}}
+\newcommand{\onull}{\operatorname{null}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\range}{\operatorname{range}}
+
+\newcommand{\Julia}{\textsc{Julia}\xspace}
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\Python}{\textsc{Python}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1}\quad }
+
+\newcommand{\chapexers}[2]{\prob{Chapter #1, pages #2, Exercises:}}
+\newcommand{\exer}[2]{\prob{Exercise #1}}
+
+\newcommand{\pts}[1]{(\emph{#1 pts}) }
+\newcommand{\epart}[1]{\medskip\noindent\textbf{(#1)}\quad }
+\newcommand{\ppart}[1]{\,\textbf{(#1)}\quad }
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=ellipse,draw,inner sep=2pt] (char) {#1};}}
+
+
+\begin{document}
+\scriptsize \noindent Math 661 Optimization (Bueler) \hfill 11 November 2024
+\normalsize
+
+\medskip\bigskip
+
+\Large\centerline{\textbf{Assignment \#8}}
+\large
+\bigskip
+
+\centerline{\textbf{Due Wednesday 20 November 2024, at the start of class}}
+\bigskip
+\normalsize
+
+\thispagestyle{empty}
+
+\bigskip
+\noindent From the textbook\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.} please read sections 11.3, 11.4, 11.5, 12.1, 12.2, and 12.3.  Significant goals of this Assignment are to understand the benefits of a line search (section 11.5), and the motivation for the quasi-Newton approach (section 12.3).  Regarding several of the problems, you will need the exact line search formula for quadratic functions; it is the conclusion of Exercise 5.3 on page 386.
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 11.4, pages 374--375:
+
+\begin{itemize}
+\item Exercise 4.4
+\end{itemize}
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 11.5, pages 385--391:
+
+\begin{itemize}
+\item Exercise 5.2 \quad \emph{Note: the sufficient decrease condition is at the bottom of page 377.}
+\item Exercise 5.5 \quad \begin{minipage}[t]{115mm}  \emph{Hint: Define $F(\alpha)=f(x_k+\alpha p_k)$ and write down the condition at the minimizing $\alpha$.  This proof is short.}
+\end{minipage}
+\end{itemize}
+
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 12.2, pages 408--411:
+
+\begin{itemize}
+\item Exercise 2.3
+\end{itemize}
+
+
+\bigskip
+\noindent \textsc{Do the following exercises} from section 12.3, pages 420--421:
+
+\begin{itemize}
+\item Exercise 3.1 \quad \begin{minipage}[t]{115mm}  \emph{Hints:  Write a code to do this; it is easier than doing even one step by hand (in my opinion).  The symmetric rank-one update $B_{k+1}=B_k+\dots$ is on page 413, and again on page 414.}\end{minipage}
+%\item Exercise 3.7
+\end{itemize}
+
+
+
+
+
+\prob{Problem P18.}  Consider a one-variable problem
+    $$\min_{x\in\RR} f(x)$$
+where $f:\RR\to\RR$ is smooth.  Recall that the Newton method for this problem solves $f'(x)=0$ by the formulas $p_k = - f'(x_k)/f''(x_k)$ and $x_{k+1} = x_k + p_k$.  The \emph{secant method for minimization} only differs from the Newton method by replacing the second derivative with a difference quotient approximation based on the last two iterates:
+    $$f''(x_k) \approx \frac{f'(x_k) - f'(x_{k-1})}{x_k - x_{k-1}}.$$
+Thus the secant method computes the step (search vector) by
+    $$p_k = - \frac{(x_k - x_{k-1}) f'(x_k)}{f'(x_k) - f'(x_{k-1})},$$
+and then it uses $x_{k+1} = x_k + p_k$ as before.
+
+\epart{a} Implement the secant method.  Include a stopping criterion $|f'(x_k)| <$\texttt{tol}.
+
+\epart{b} Use your code to accurately solve $\min_{x\in\RR} f(x)$, e.g.~with \texttt{tol}$=10^{-8}$, for the following functions and initial iterates:
+    \renewcommand{\labelenumi}{\roman{enumi})}
+    \begin{enumerate}
+    \item $f(x)=x^3-2\sin x$, \quad $x_0=0$, \quad $x_1=1$
+    \item $f(x)=3x^4-4x^3+3x^2-6x$, \quad $x_0=-1$, \quad $x_1=0$
+    \end{enumerate}
+
+\epart{c} In part ii) above the exact minimum is at $x_*=1$.  Compute the errors $e_k=x_k-x_*$.  Give evidence that the convergence is superlinear.  Using the notation of section 2.5, what is your estimate of the rate (exponent) $r$?
+
+
+\prob{Problem P19.}  Please read the discussion in Section 12.2 of why the steepest descent method is slow when applied to minimizing a quadratic function
+    $$f(x)= \frac{1}{2} x^\top Q x - c^\top x.$$
+The conclusion of Lemma 12.4 will make the most sense if you know that the level sets ($=$ contours in $\RR^2$) of $f(x)$ are generalized ellipses, and that the eccentricity of these sets is closely related to the condition number of $Q$.  This question simply asks you to check this idea on a 2D example.
+
+\epart{a} Consider $f(x) = x_1^2 + 2 x_2^2 - 3 x_1$.  What are $Q$ and $c$ in this case, and where is the minimizer $x_*$?  Consider a contour $f(x)=\ell$ for some $\ell\in\RR$.  If nonempty, this contour is an ellipse; complete the square to put it in standard form
+	$$\frac{(x_1-\gamma)^2}{\alpha^2} + \frac{(x_2-\delta)^2}{\beta^2}=1.$$
+State $\alpha,\beta,\gamma,\delta$ in terms of $\ell$.  What is the ratio $\alpha/\beta$?
+
+\epart{b}  Use a contour plotter to plot some contours of the same function $f(x)$.  Use \texttt{axis equal} or similar to make sure that the axes have the same scaling.  What is the ratio of the largest to smallest dimensions of the ellipses you see?  Compute $\operatorname{cond}(Q)$, and relate this value to the ellipses.
+\end{document}
