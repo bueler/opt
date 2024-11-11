@@ -1,4 +1,4 @@
-function [x, z] = newtsafe(f, x0, tol)
+function [x, z, xlist, fixlist] = newtsafe(f, x0, tol)
 % NEWTSAFE  Newton's method for optimization with two
 % significant "safety" mechanisms:
 %   1. *slow* eigenvalue-based guarantee that each search
@@ -7,19 +7,26 @@ function [x, z] = newtsafe(f, x0, tol)
 % There are additional error checks, and a warning if the
 % Hessian is badly conditioned.
 % Usage:  [x, z] = newtsafe(f, x0, tol)
+%         [x, z, xlist, fixlist] = newtsafe(f, x0, tol)
 %   where the user's f(x) must return the objective value
 %   and the gradient and the Hessian.
+% Example: see TESTNEWTSAFE
 % Calls: BT for backtracking.
-% Warning: This is not a professional qualit method!
+% Warning: This is not a professional-quality method!
 
 x = x0(:);
+if nargout > 2
+    xlist = x;
+    fixlist = [];
+end
 n = length(x);
 maxiter = 100;  % make larger if desired
 for j = 1:maxiter
     [fk, dfk, Hfk] = f(x);  % user's code must return all 3
     if norm(dfk) < tol
         z = fk;
-        break
+        iters = j - 1;
+        return
     end
     lam = eig(Hfk);  % get vector of eigenvalues
     if ~ isreal(lam)
@@ -28,6 +35,13 @@ for j = 1:maxiter
     if min(lam) <= 0.0  % if Hfk is not positive definite
         E = - min(lam) + 0.01 * abs(max(lam));
         Hfk = Hfk + E * eye(n,n);  % now Hfk is pos def!
+        if nargout > 2
+            fixlist = [fixlist, 1];
+        end
+    else
+        if nargout > 2
+            fixlist = [fixlist, 0];
+        end
     end
     if cond(Hfk) > 1.0e14
         warning('Newton step equation badly conditioned; search direction may be poor')
@@ -41,5 +55,8 @@ for j = 1:maxiter
         error('huh? alpha is not positive')
     end
     x = x + alpha * pk;  % take step
+    if nargout > 2
+        xlist = [xlist, x];
+    end
 end
 error('maximum iterations reached')
