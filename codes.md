@@ -11,6 +11,8 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
   * [.m](assets/codes/F24/.m)
 -->
 
+  * [sdquad.m](assets/codes/F24/sdquad.m)
+  * [exer3p3.m](assets/codes/F24/exer3p3.m)
   * [testnewtsafe.m](assets/codes/F24/testnewtsafe.m)
   * [newtsafe.m](assets/codes/F24/newtsafe.m)  (calls [bt.m](assets/codes/F24/bt.m))
   * [newtsec.m](assets/codes/F24/newtsec.m)
