@@ -1,4 +1,4 @@
-function [z, xlist] = sdbtrecord(f, x0, tol)
+function [z, xlist] = sdbtrecord(f, x0, tol, maxiters)
 % SDBTRECORD  Solve unconstrained optimization problem
 %   min f(x)
 % by steepest descent (gradient descent) with back-tracking
@@ -17,7 +17,7 @@ function [z, xlist] = sdbtrecord(f, x0, tol)
 % Compare SDBT, which does not do that.
 
 xlist = [x0(:)];
-maxiters = 10000;
+if nargin < 4,  maxiters = 10000;  end
 for k = 1:maxiters
     [fk, dfk] = f(xlist(:,k));           % get objective value and gradient
     if norm(dfk) < tol
