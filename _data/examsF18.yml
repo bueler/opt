@@ -5,7 +5,7 @@ exams:
   info: in-class
   blank: mid.pdf
   solutions: mid-solns.pdf
-- name: Final Exam
-  info: take home
-  blank: final.pdf
-  solutions: final-solns.pdf
+#- name: Final Exam
+#  info: take home
+#  blank: final.pdf
+#  solutions: final-solns.pdf
