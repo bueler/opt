@@ -13,5 +13,5 @@ exams:
 - name: Final Exam
   date: Wednesday 11 December
   info: <b>in class</b>, Chapman 206, 1:00pm--3:00pm
-  #doc: finalessays.pdf
-  #rubric: finalrubric.pdf
+  doc: finalessays.pdf
+  rubric: finalrubric.pdf
