@@ -1,6 +1,9 @@
 semester: Fall 2024
 home: assets/homework/F24
 homework:
+- name: Assignment 9
+  due: Friday 6 December
+  blank: A9.pdf
 - name: Assignment 8
   due: Friday 22 November [updated]
   blank: A8.pdf
