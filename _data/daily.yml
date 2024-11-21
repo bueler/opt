@@ -1,6 +1,14 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Friday 22 November
+  covered: unconstrained ideas; section 14.2 (optimality conditions)
+- name: Wednesday 20 November
+  covered: section 12.3 (quasi-Newton)
+- name: Monday 18 November
+  covered: section 12.2 (steepest descent on quadratics)
+- name: Friday 15 November
+  covered: theorem 11.7
 - name: Wednesday 13 November
   covered: section 11.5 (line search)
 - name: Monday 11 November
