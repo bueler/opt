@@ -11,6 +11,8 @@ The Matlab/Octave codes below come from examples I did in lecture, or they are f
   * [.m](assets/codes/F24/.m)
 -->
 
+  * [sr1quadratic.m](assets/codes/F24/sr1quadratic.m)
+  * [secant1d.m](assets/codes/F24/secant1d.m)
   * [rosencompare.m](assets/codes/F24/rosencompare.m)
   * [sr1bt.m](assets/codes/F24/sr1bt.m)
   * [rosenbrock.m](assets/codes/F24/rosenbrock.m)
