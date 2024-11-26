@@ -17,6 +17,8 @@
 
 \newtheorem*{thm}{Theorem}
 \newtheorem*{defn}{Definition}
+
+\theoremstyle{definition}
 \newtheorem*{example}{Example}
 \newtheorem*{problem}{Problem}
 \newtheorem*{remark}{Remark}
@@ -77,21 +79,22 @@ frame=lines,framerule=0.1mm,framesep=2mm,xleftmargin=4mm,fontsize=\footnotesize}
 
 \medskip\bigskip
 \Large
-\centerline{KKT conditions for nonlinear optimization}
+\centerline{KKT conditions for general nonlinear optimization}
 
 \bigskip\medskip
 \normalsize
 
 \thispagestyle{empty}
 
-Let us start from the most general optimization problem considered in this course.  It is a nonlinear constrained optimization problem over $x\in\RR^n$.  We will assume that all functions are as differentiable as needed:
+These short notes are about the most general problem considered in this course, a nonlinear constrained optimization problem over $x\in\RR^n$:
 \begin{alignat*}{2}
     \text{minimize}   &&  &f(x) \\
     \text{subject to} && \qquad g_i(x) &= 0, \quad i=1,\dots,\ell \\
                       &&       h_i(x) &\ge 0, \quad i=1,\dots,m
 \end{alignat*}
+We will assume that all functions $f,g_i,h_i$ are as differentiable as needed.
 
-Define $g(x)$ to be the vector formed from $g_1(x),\dots,g_\ell(x)$, and $h(x)$ to be the vector formed from $h_1(x),\dots,h_m(x)$.  In these terms we can write
+Define $g(x)$ to be the vector formed from $g_1(x),\dots,g_\ell(x)$, and $h(x)$ from $h_1(x),\dots,h_m(x)$.  In these terms we can write
 \begin{equation}
 \begin{matrix}
     \text{minimize}   & f(x) \\
@@ -100,25 +103,27 @@ Define $g(x)$ to be the vector formed from $g_1(x),\dots,g_\ell(x)$, and $h(x)$ 
 \end{matrix} \label{prob}
 \end{equation}
 
-We will need a definition which is given in section 14.5 of the textbook.\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.}  For a feasible point $x$, let $\tilde h(x)$ be the column vector formed from the \emph{active} constraints $h_i(x)$ at $x$, i.e.~for which $h_i(x)=0$. Note that the inactive inequality constraints are not relevant in this definition.  This definition is called the \emph{linearly independent constraint qualification (LIQC)} in some books.
+We will need a definition which is given in section 14.5 of the textbook.\footnote{Griva, Nash, and Sofer, \emph{Linear and Nonlinear Optimization}, 2nd ed., SIAM Press 2009.}  For a feasible point $x$, let $\tilde h(x)$ be the vector of length $\tilde m$ formed from the \emph{active} constraints $h_i(x)$ at $x$, i.e.~for which $h_i(x)=0$.
 
-\begin{defn}  a feasible point $x_*$ is a \emph{regular point} of the constraints if the matrix
+\begin{defn}  A feasible point $x_*$ is a \emph{regular point} of the constraints if the matrix
     $$\begin{bmatrix}
-    \grad g(x_*) & \grad {\tilde h}(x_*)
+    \grad g_1(x_*) & \dots & \grad g_\ell(x_*) & \grad {\tilde h}_1(x_*) & \dots & \grad {\tilde h}_{\tilde m}(x_*)
     \end{bmatrix}$$
-has linearly independent columns.
+has linearly independent columns.  This matrix has $n$ rows and $\ell + \tilde m$ columns.  (Here the gradient of a scalar-valued function is a column vector.)
 \end{defn}
+
+\noindent Conceptually, at a regular point each active constraint provides new information; there are no redundancies.  Note that the inactive inequality constraints are not relevant in this definition.  This definition is called the \emph{linearly independent constraint qualification (LIQC)} in some books.
 
 The Lagrangian for the problem is
 \begin{align*}
 \mathcal{L}(x,\lambda,\mu) &= f(x) - \sum_{i=1}^\ell \lambda_i g_i(x) - \sum_{j=1}^m \mu_j h_j(x) \\
   &= f(x) - \lambda^\top g(x) - \mu^\top h(x)
 \end{align*}
-where $\lambda\in\RR^\ell$ and $\mu\in\RR^m$.  Note that $h(x)$, not $\tilde h(x)$, is used here.
+where $\lambda\in\RR^\ell$ and $\mu\in\RR^m$ are column vectors.  In the second form we must conceive of $g(x)$ and $h(x)$ as column vectors.  Note that $h(x)$, not $\tilde h(x)$, is used here.
 
 The following KKT theorem\footnote{\href{https://en.wikipedia.org/wiki/Karush-Kuhn-Tucker_conditions}{\texttt{en.wikipedia.org/wiki/Karush-Kuhn-Tucker\_conditions}}} states the first-order necessary conditions.
 
-\begin{thm}[Karush-Kuhn-Tucker, 1939]  Suppose $x_*$ is a local minimizer of problem \eqref{prob}, and assume it is a regular point of the constraints.  Then there exist vectors $\lambda_*\in\RR^\ell$ and $\mu_*\in\RR^m$ so that
+\begin{thm}[Karush-Kuhn-Tucker, 1939 \& 1951]  Suppose $x_*$ is a local minimizer of problem \eqref{prob}, and assume it is a regular point of the constraints.  Then there exist vectors $\lambda_*\in\RR^\ell$ and $\mu_*\in\RR^m$ so that
 \begin{align*}
 \grad_x \mathcal{L}(x_*,\lambda_*,\mu_*) &= 0 &&\text{stationarity} \\
 g(x_*) &= 0  &&\text{primal feasibility: equality constraints} \\
@@ -130,9 +135,45 @@ h(x_*) &\ge 0  &&\text{primal feasibility: inequality constraints} \\
 
 \medskip
 \noindent The stationarity condition can be written
-    $$\grad f(x_*) = \grad g(x_*) \lambda_* + \grad h(x_*) \mu_*$$
-That is, the gradient of $f$ at the solution can be written as a linear combination of the gradients of the constraints.  For the inequality constraints, however, complementary slackness will cause some of the multipliers $\mu_i$ to be zero.  The fact that $x_*$ is a regular point implies that the linear combination is unique, thust that the Lagrange multipliers $\lambda_*,\mu_*$ are unique.
+\begin{align*}
+\grad f(x_*) &= \grad g(x_*) \lambda_* + \grad h(x_*) \mu_* \\
+  &= (\lambda_*)_1 \grad g_1(x_*) + \dots + (\lambda_*)_\ell \grad g_\ell(x_*) + (\mu_*)_1 \grad h_1(x_*) + \dots + (\mu_*)_m \grad h_m(x_*)
+\end{align*}
+That is, the gradient of $f$ at the solution can be written as a linear combination of the gradients of the constraints.  For the inequality constraints, however, complementary slackness will cause some of the multipliers $\mu_i$ to be zero.  The fact that $x_*$ is a regular point implies that the linear combination is unique, thus that the Lagrange multipliers $\lambda_*,\mu_*$ are unique.
 
+It will be helpful to do an example with both equality and inequality constraints, and with more than one inequality constraint so we can see complementary slackness in action.
+
+\begin{example}
+    $$\begin{matrix}
+    \text{minimize}   & f(x) = \frac{1}{2} \left(x_1^2 + x_2^2\right) \\
+    \text{subject to} & x_1 + x_2 = 1 \\
+                      & x_1 \ge 1 \\
+                      & x_2 \ge -1
+\end{matrix}$$
+Here $g_1(x) = x_1 + x_2 -1$, $h_1(x) = x_1 - 1$, and $h_2(x) = x_2 + 1$.  The Lagrangian is
+	$$\mathcal{L}(x,\lambda,\mu) = \frac{1}{2} \left(x_1^2 + x_2^2\right) - \lambda_1(x_1 + x_2 - 1) - \mu_1 (x_1 - 1) - \mu_2(x_2 + 1)$$
+and 
+The 5 conditions of the KKT theorem are now 8 facts that must be true at the solution:
+\begin{align*}
+x_1 - \lambda_1 - \mu_1 &= 0 &&\text{\emph{stationarity}} \\
+x_2 - \lambda_1 - \mu_2 &= 0 \\
+x_1 + x_2 -1 &= 0  &&\text{\emph{primal feasibility: equality constraint}} \\
+x_1 - 1 &\ge 0  &&\text{\emph{primal feasibility: inequality constraints}} \\
+x_2 + 1 &\ge 0 \\
+\mu_1 &\ge 0 &&\text{\emph{dual feasibility}} \\
+\mu_2 &\ge 0 \\
+\mu_1 (x_1 - 1) + \mu_2 (x_2 + 1) &= 0 &&\text{\emph{complementary slackness}}
+\end{align*}
+On the other hand, if you draw the $x_1,x_2$ plane then the feasible set is the closed line segment between the points $(1,0)$ and $(2,-1)$, and the objective is essentially the square of the distance to the origin.  So we believe that $x_*=(1,0)$ is the solution, and that the first inequality constraint is active while the second is not.   This means that $\mu_2=0$.  The complementary slackness condition is $\mu_1 (x_1-1)=0$, so $x_1=1$ assuming $\mu_1>0$, which we will check.  The system of the remaining \emph{equations} is now reduced to
+\begin{align*}
+1 - \lambda_1 - \mu_1 &= 0 \\
+x_2 - \lambda_1 &= 0 \\
+x_2 &= 0 \\
+\end{align*}
+which is a set of 3 equations for $x_2,\lambda_1,\mu_1$.  It is easy to see $x_2=0$, $\lambda_1=0$, and $\mu_1=1$.  That is,
+   $$(x_1,x_2,\lambda_1,\mu_1,\mu_2) = (1,0,0,1,0).$$
+It is easy to check that with these values all 8 KKT conditions hold.  In particular, complementary slackness says $1 \cdot 0 + 0 \cdot 1 = 0$, and strict complementarity holds.
+\end{example}
 
 \end{document}
 
