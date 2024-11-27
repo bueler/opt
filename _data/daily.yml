@@ -1,6 +1,12 @@
 semester: Fall 2024
 home: assets/
 daily:
+- name: Monday 2 December
+  covered: section 14.3 (linear inequality constraints; KKT)
+  handout: worksheets/F24/kkt.pdf
+  handoutname: KKT conditions in general
+- name: Monday 25 November
+  covered: section 14.2 (linear equality constraints)
 - name: Friday 22 November
   covered: unconstrained ideas; section 14.2 (optimality conditions)
 - name: Wednesday 20 November
