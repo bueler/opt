@@ -1,12 +1,16 @@
 semester: Fall 2024
 home: assets/
 daily:
-- name: Monday 2 December
-  covered: section 14.3 (linear inequality constraints; KKT)
+- name: Wednesday 4 December
+  covered: section 15.4, 14.5, 16.7 (active set method, KKT, POPDIP)
   handout: worksheets/F24/kkt.pdf
   handoutname: KKT conditions in general
+  otherurl: https://github.com/bueler/popdip/blob/main/slides.pdf
+  otherurlname: "slides: POPDIP slides"
+- name: Monday 2 December
+  covered: section 14.4 (linear inequality constraints)
 - name: Monday 25 November
-  covered: section 14.2 (linear equality constraints)
+  covered: section 14.2, 14.3 (linear equality constraints)
 - name: Friday 22 November
   covered: unconstrained ideas; section 14.2 (optimality conditions)
 - name: Wednesday 20 November
@@ -75,7 +79,7 @@ daily:
 - name: Monday 16 September
   covered: section 2.6 (Taylor series); see Canvas page for zoom recording
   otherurl: https://bueler.github.io/opt/assets/slides/F24/mon16sep.pdf
-  otherurlname: slides on section 2.6
+  otherurlname: "slides: section 2.6"
 - name: Friday 13 September
   covered: convexity finished; descent directions
 - name: Wednesday 11 September
