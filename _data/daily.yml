@@ -1,12 +1,14 @@
 semester: Fall 2024
 home: assets/
 daily:
-- name: Wednesday 4 December
-  covered: section 15.4, 14.5, 16.7 (active set method, KKT, POPDIP)
-  handout: worksheets/F24/kkt.pdf
-  handoutname: KKT conditions in general
+- name: Friday 6 December
+  covered: section 16.7 (POPDIP)
   otherurl: https://github.com/bueler/popdip/blob/main/slides.pdf
   otherurlname: "slides: POPDIP slides"
+- name: Wednesday 4 December
+  covered: section 15.4, 14.5 (active set method, KKT)
+  handout: worksheets/F24/kkt.pdf
+  handoutname: KKT conditions in general
 - name: Monday 2 December
   covered: section 14.4 (linear inequality constraints)
 - name: Monday 25 November
