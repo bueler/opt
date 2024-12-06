@@ -4,7 +4,7 @@ daily:
 - name: Friday 6 December
   covered: section 16.7 (POPDIP)
   otherurl: https://github.com/bueler/popdip/blob/main/slides.pdf
-  otherurlname: "slides: POPDIP slides"
+  otherurlname: "PDF slides: POPDIP slides"
 - name: Wednesday 4 December
   covered: section 15.4, 14.5 (active set method, KKT)
   handout: worksheets/F24/kkt.pdf
@@ -32,7 +32,7 @@ daily:
 - name: Monday 4 November
   covered: steepest descent
   otherurl: https://bueler.github.io/opt/assets/slides/F24/sdneedshelp.pdf
-  otherurlname: "slides: Steepest descent needs help"
+  otherurlname: "PDF slides: Steepest descent needs help"
 - name: Friday 1 November
   covered: section 11.1, 11.2 (unconstrained optimization)
 - name: Wednesday 30 October
@@ -81,7 +81,7 @@ daily:
 - name: Monday 16 September
   covered: section 2.6 (Taylor series); see Canvas page for zoom recording
   otherurl: https://bueler.github.io/opt/assets/slides/F24/mon16sep.pdf
-  otherurlname: "slides: section 2.6"
+  otherurlname: "PDF slides: section 2.6"
 - name: Friday 13 September
   covered: convexity finished; descent directions
 - name: Wednesday 11 September
