@@ -94,6 +94,8 @@ iters = k;
     % ISBFS  Checks if x is a nondegenerate basic feasible solution
     % to a standard form linear programming problem.
     if any(x < 0), p = false; return, end    % x not feasible
+    [m, t] = size(A(:,x>0));
+    if t ~= m, p = false; return, end % B cannot be invertible because not square
     if cond(A(:,x > 0)) > 1.0e15, p = false; return, end  % B not invertible
     if norm(A * x - b) > 1.0e-6 * norm(b)
         warning('x is not close to a solution of Ax=b')
